@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.0.3] - 2026-04-16
+
+### Changed
+
+- Workspace versions and internal package references bumped to `0.0.3`
+- Release pipeline cleanup and packaging workflow standardized across publishable packages
+
 ## [0.0.2] - 2026-04-16
 
 ### Added

@@ -2,6 +2,13 @@
 
 All notable changes to `localization-gen-react-adapter` are documented in this file.
 
+## [0.0.3] - 2026-04-16
+
+### Changed
+
+- Package version bumped to `0.0.3` for synchronized monorepo release
+- Internal dependency range updated to `localization-gen-core@^0.0.3`
+
 ## [0.0.2] - 2026-04-16
 
 ### Added

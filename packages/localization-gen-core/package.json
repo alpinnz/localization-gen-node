@@ -1,6 +1,6 @@
 {
   "name": "localization-gen-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Core compiler, validator, runtime primitives, and CLI for modular localization generation.",
   "license": "MIT",
   "repository": {
