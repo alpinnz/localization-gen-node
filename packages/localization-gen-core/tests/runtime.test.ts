@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { interpolate, resolveString } from "../src/runtime/index.js";
+import { interpolate, lookupMessage } from "../src/runtime/index.js";
 
 describe("runtime", () => {
   it("interpolates placeholders", () => {
@@ -7,7 +7,7 @@ describe("runtime", () => {
   });
 
   it("falls back locale for missing key", () => {
-    const value = resolveString(
+    const value = lookupMessage(
       {
         locale: "id",
         fallbackLocale: "en",

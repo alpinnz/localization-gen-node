@@ -16,7 +16,7 @@ npm run test
 | Package | Description |
 |---|---|
 | `localization-gen-core` | Core CLI, compiler, validator, runtime helpers |
-| `localization-gen-react-adapter` | React provider + `useLocalizationHelpers` hook |
+| `localization-gen-react-adapter` | React provider + `useLocalization` hook |
 | `localization-gen-react-example` | Runnable React demo app (private) |
 | `localization-gen-vue-adapter` | Vue plugin + `useLocalization` composable |
 | `localization-gen-vue-example` | Runnable Vue demo app (private) |
@@ -27,7 +27,7 @@ Both adapters expose a consistent helper surface:
 
 | Method | Description |
 |---|---|
-| `translate(key)` | Plain string resolver with locale fallback |
+| `translate(key, fallbackValue?)` | Plain string resolver with locale fallback and optional UI fallback |
 | `format(key, params)` | Resolver + `{placeholder}` interpolation |
 | `plural(key, count)` | Structured plural resolver |
 | `gender(key, variant, params)` | Structured gender resolver |

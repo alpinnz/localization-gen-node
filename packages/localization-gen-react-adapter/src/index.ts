@@ -1,7 +1,6 @@
 export { default as LocalizationProvider } from "./provider/LocalizationProvider.js";
 export { useLocalization } from "./hooks/useLocalization.js";
 export { useAppLocalization } from "./hooks/useAppLocalization.js";
-export { useLocalizationHelpers } from "./hooks/useLocalizationHelpers.js";
 export { createReactLocalizationStore } from "./bridge/create-react-localization-store.js";
 export { mapRuntimeManifest } from "./bridge/map-runtime-manifest.js";
 export { createLazyLocaleLoader } from "./lazy/create-lazy-locale-loader.js";

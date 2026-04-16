@@ -1,6 +1,6 @@
 {
   "name": "localization-gen-vue-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -18,8 +18,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "localization-gen-core": "0.0.1",
-    "localization-gen-vue-adapter": "0.0.1",
+    "localization-gen-core": "0.0.2",
+    "localization-gen-vue-adapter": "0.0.2",
     "vue": "^3.5.12"
   },
   "devDependencies": {

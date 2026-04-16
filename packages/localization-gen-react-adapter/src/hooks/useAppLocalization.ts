@@ -12,8 +12,8 @@ function toSegments(key: string): string[] {
  * Builds a nested object API from manifest entries for ergonomic app consumption.
  *
  * @remarks
- * - Non-placeholder entries resolve to strings.
- * - Placeholder entries resolve to functions accepting interpolation params.
+ * - Non-placeholder entries become strings.
+ * - Placeholder entries become functions accepting interpolation params.
  * - This helper is useful for apps that prefer object navigation over flat keys.
  */
 export function useAppLocalization() {

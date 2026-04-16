@@ -9,7 +9,7 @@
  * interpolate("Hello, {name}", { name: "Alfin" }) // "Hello, Alfin"
  *
  * @remarks
- * Missing params keep their original token (`{token}`) so unresolved values
+ * Missing params keep their original token (`{token}`) so missing values
  * are visible during development.
  */
 export function interpolate(value: string, params: Record<string, string | number> = {}): string {

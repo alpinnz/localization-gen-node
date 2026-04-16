@@ -2,6 +2,15 @@
 
 All notable changes to `localization-gen-core` are documented in this file.
 
+## [0.0.2] - 2026-04-16
+
+### Changed
+
+- React and Vue adapter integration docs updated to use `useLocalization` as the primary helper API
+- Adapter integration examples now show reusable hook/composable fallback via `useLocalization({ fallback })`
+- Helper API table updated to document `translate(key, fallbackValue?)` as an override-friendly call
+- Runtime helper naming standardized from `resolve*` to canonical `lookup*`/`pick*` names (`lookupMessage`, `pickPluralVariant`, `pickStructured*Variant`, and `parseModuleLocale`)
+
 ## [0.0.1] - 2026-04-16
 
 ### Added

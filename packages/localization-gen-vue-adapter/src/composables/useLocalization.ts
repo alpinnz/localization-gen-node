@@ -1,10 +1,10 @@
 import { computed } from "vue";
 import {
   interpolate,
-  resolveString,
-  resolveStructuredContext,
-  resolveStructuredGender,
-  resolveStructuredPlural
+  lookupMessage,
+  pickStructuredContextVariant,
+  pickStructuredGenderVariant,
+  pickStructuredPluralVariant
 } from "localization-gen-core/runtime";
 import { useLocalizationContext } from "../plugin/createLocalizationPlugin.js";
 
@@ -30,10 +30,31 @@ function setNested(target: Record<string, unknown>, path: string[], value: unkno
 
 export type InterpolationParams = Record<string, string | number>;
 export type GenderVariant = "male" | "female" | "other";
+export type TranslationFallback =
+  | string
+  | Record<string, string>
+  | ((key: string) => string | undefined);
+
+export interface UseLocalizationOptions {
+  fallback?: TranslationFallback;
+}
+
+function pickFallbackText(fallback: TranslationFallback | undefined, key: string): string | undefined {
+  if (!fallback) {
+    return undefined;
+  }
+  if (typeof fallback === "string") {
+    return fallback;
+  }
+  if (typeof fallback === "function") {
+    return fallback(key);
+  }
+  return fallback[key];
+}
 
 export interface NamespacedLocalizer {
   /** Resolves plain string key in current namespace. */
-  translate(key: string): string;
+  translate(key: string, fallbackValue?: string): string;
   /** Resolves and interpolates placeholder key in current namespace. */
   format(key: string, params: InterpolationParams): string;
   /** Resolves structured plural key in current namespace. */
@@ -43,13 +64,15 @@ export interface NamespacedLocalizer {
   /** Resolves structured context key in current namespace. */
   context(key: string, context: string, params?: InterpolationParams): string;
 }
-export function useLocalization() {
+
+export function useLocalization(options: UseLocalizationOptions = {}) {
   const { store, manifest } = useLocalizationContext();
+  const fallback = options.fallback;
 
   const locale = computed(() => store.state.locale);
 
-  const t = (key: string) =>
-    resolveString(
+  const readTranslation = (key: string) =>
+    lookupMessage(
       {
         locale: locale.value,
         fallbackLocale: manifest.fallback_locale,
@@ -58,7 +81,16 @@ export function useLocalization() {
       key
     );
 
-  const ti = (key: string, params: InterpolationParams) => interpolate(t(key), params);
+  const translate = (key: string, fallbackValue?: string) => {
+    const translatedValue = readTranslation(key);
+    if (!translatedValue || translatedValue === key) {
+      return fallbackValue ?? pickFallbackText(fallback, key) ?? translatedValue;
+    }
+    return translatedValue;
+  };
+
+  const format = (key: string, params: InterpolationParams) =>
+    interpolate(translate(key), params);
 
   /** Returns the raw stored value (plain string or JSON-encoded structured variants). */
   const raw = (key: string) => {
@@ -66,22 +98,23 @@ export function useLocalization() {
     return manifest.messages[loc]?.[key] ?? manifest.messages[manifest.fallback_locale]?.[key] ?? "";
   };
 
-  const tp = (key: string, count: number) => resolveStructuredPlural(raw(key), count);
-  const tg = (key: string, gender: GenderVariant, params: InterpolationParams) =>
-    interpolate(resolveStructuredGender(raw(key), gender), params);
-  const tc = (key: string, context: string, params?: InterpolationParams) => {
-    const value = resolveStructuredContext(raw(key), context);
+  const plural = (key: string, count: number) => pickStructuredPluralVariant(raw(key), count);
+  const gender = (key: string, genderValue: GenderVariant, params: InterpolationParams) =>
+    interpolate(pickStructuredGenderVariant(raw(key), genderValue), params);
+  const context = (key: string, contextValue: string, params?: InterpolationParams) => {
+    const value = pickStructuredContextVariant(raw(key), contextValue);
     return params ? interpolate(value, params) : value;
   };
 
   const namespace = (scope: string): NamespacedLocalizer => ({
-    translate: (key: string) => t(`${scope}.${key}`),
-    format: (key: string, params: InterpolationParams) => ti(`${scope}.${key}`, params),
-    plural: (key: string, count: number) => tp(`${scope}.${key}`, count),
-    gender: (key: string, gender: GenderVariant, params: InterpolationParams) =>
-      tg(`${scope}.${key}`, gender, params),
-    context: (key: string, context: string, params?: InterpolationParams) =>
-      tc(`${scope}.${key}`, context, params)
+    translate: (key: string, fallbackValue?: string) =>
+      translate(`${scope}.${key}`, fallbackValue),
+    format: (key: string, params: InterpolationParams) => format(`${scope}.${key}`, params),
+    plural: (key: string, count: number) => plural(`${scope}.${key}`, count),
+    gender: (key: string, genderValue: GenderVariant, params: InterpolationParams) =>
+      gender(`${scope}.${key}`, genderValue, params),
+    context: (key: string, contextValue: string, params?: InterpolationParams) =>
+      context(`${scope}.${key}`, contextValue, params)
   });
 
   const entriesForLocale = computed(() =>
@@ -117,11 +150,11 @@ export function useLocalization() {
     appLocalization,
     manifest,
     raw,
-    translate: t,
-    format: ti,
-    plural: tp,
-    gender: tg,
-    context: tc,
+    translate,
+    format,
+    plural,
+    gender,
+    context,
     namespace,
     entriesForLocale
   };

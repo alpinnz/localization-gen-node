@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.0.2] - 2026-04-16
+
+### Added
+
+- Hook/composable-level fallback configuration via `useLocalization({ fallback })` in React and Vue adapters
+- Optional per-call fallback override on `translate(key, fallbackValue?)`
+
+### Changed
+
+- React and Vue examples now use full translation keys directly for easier JSON comparison
+- Adapter docs and core integration docs aligned to `useLocalization` as primary helper API with reusable fallback setup
+- Runtime/helper naming standardized from ambiguous `resolve*` patterns to canonical `lookup*`/`pick*` terminology across core and adapters
+
+### Removed
+
+- React `useLocalizationHelpers` API surface in favor of `useLocalization`
+
 ## [0.0.1] - 2026-04-16
 
 ### Added

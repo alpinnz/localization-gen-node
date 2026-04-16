@@ -1,4 +1,4 @@
-import {useLocalizationHelpers} from "localization-gen-react-adapter";
+import {useLocalization} from "localization-gen-react-adapter";
 import * as React from "react";
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
@@ -28,14 +28,28 @@ function Section({title, children}: { title: string; children: React.ReactNode }
 
 // ─── App ──────────────────────────────────────────────────────────────────────
 export default function App() {
-    const {locale, setLocale, manifest, namespace, entriesForLocale} = useLocalizationHelpers();
+    const fallbackByKey = React.useMemo(() => ({
+        "common.app_title": "App",
+        "common.app_powered": "Powered by localization-gen",
+        "auth.strings.login_title": "Login",
+        "auth.consent.privacy_policy": "Privacy policy not available",
+        "auth.consent.terms_conditions": "Terms not available",
+        "home.strings.home_title": "Home",
+        "home.strings.headline": "Welcome",
+        "settings.strings.settings_title": "Settings",
+        "settings.strings.privacy_title": "Privacy",
+        "settings.title": "Settings",
+        "settings.preferences.language": "Language",
+        "http.http_404_title": "Not Found",
+        "http.http_404_message": "The requested resource was not found",
+        "fallback.fb500_h": "Technical Issue",
+        "fallback.fb500_d": "Please try again in a moment",
+        "fallback.support_label": "Contact support"
+    }), []);
 
-    const commonNs = namespace("common");
-    const authNs = namespace("auth");
-    const homeNs = namespace("home");
-    const settingsNs = namespace("settings");
-    const httpNs = namespace("http");
-    const fallbackNs = namespace("fallback");
+    const {locale, setLocale, manifest, translate, format, plural, gender, context, entriesForLocale} = useLocalization({
+        fallback: fallbackByKey
+    });
 
     const allMergedEntries = entriesForLocale;
     const [mergedQuery, setMergedQuery] = React.useState("");
@@ -91,62 +105,62 @@ export default function App() {
             </div>
 
             <Section title="(1) Common merged keys">
-                <Row label="common.app_title" value={commonNs.translate("app_title")}/>
-                <Row label="common.app_powered" value={commonNs.translate("app_powered")}/>
+                <Row label="common.app_title" value={translate("common.app_title")}/>
+                <Row label="common.app_powered" value={translate("common.app_powered")}/>
             </Section>
 
             <Section title="(2) Auth detailed + merged keys">
-                <Row label="auth.strings.login_title" value={authNs.translate("strings.login_title")}/>
+                <Row label="auth.strings.login_title" value={translate("auth.strings.login_title")}/>
                 <Row label="auth.placeholders.welcome_back"
-                     value={authNs.format("placeholders.welcome_back", {name: "Alfin"})}/>
+                     value={format("auth.placeholders.welcome_back", {name: "Alfin"})}/>
                 <Row label="auth.placeholders.otp_sent"
-                     value={authNs.format("placeholders.otp_sent", {phone: "+62-812-0000-1111", expires_in: "01:30"})}/>
-                <Row label="auth.structured.lock_message(3)" value={authNs.plural("structured.lock_message", 3)}/>
+                     value={format("auth.placeholders.otp_sent", {phone: "+62-812-0000-1111", expires_in: "01:30"})}/>
+                <Row label="auth.structured.lock_message(3)" value={plural("auth.structured.lock_message", 3)}/>
                 <Row label="auth.structured.channel_label(email)"
-                     value={authNs.context("structured.channel_label", "email")}/>
+                     value={context("auth.structured.channel_label", "email")}/>
                 <Row label="auth.structured.account_title(other)"
-                     value={authNs.gender("structured.account_title", "other", {last_name: "Doe"})}/>
+                     value={gender("auth.structured.account_title", "other", {last_name: "Doe"})}/>
                 <Row label="auth.consent.privacy_policy (preview)"
-                     value={authNs.translate("consent.privacy_policy").slice(0, 120) + "..."}/>
+                     value={translate("auth.consent.privacy_policy").slice(0, 120) + "..."}/>
                 <Row label="auth.consent.terms_conditions (preview)"
-                     value={authNs.translate("consent.terms_conditions").slice(0, 120) + "..."}/>
+                     value={translate("auth.consent.terms_conditions").slice(0, 120) + "..."}/>
             </Section>
 
             <Section title="(3) Home detailed keys">
-                <Row label="home.strings.home_title" value={homeNs.translate("strings.home_title")}/>
-                <Row label="home.strings.headline" value={homeNs.translate("strings.headline")}/>
+                <Row label="home.strings.home_title" value={translate("home.strings.home_title")}/>
+                <Row label="home.strings.headline" value={translate("home.strings.headline")}/>
                 <Row label="home.placeholders.greeting_time"
-                     value={homeNs.format("placeholders.greeting_time", {time_of_day: "morning", name: "Alfin"})}/>
+                     value={format("home.placeholders.greeting_time", {time_of_day: "morning", name: "Alfin"})}/>
                 <Row label="home.placeholders.stats_summary"
-                     value={homeNs.format("placeholders.stats_summary", {tasks: 4, points: 120})}/>
-                <Row label="home.structured.notifications(2)" value={homeNs.plural("structured.notifications", 2)}/>
-                <Row label="home.structured.banner(retention)" value={homeNs.context("structured.banner", "retention")}/>
+                     value={format("home.placeholders.stats_summary", {tasks: 4, points: 120})}/>
+                <Row label="home.structured.notifications(2)" value={plural("home.structured.notifications", 2)}/>
+                <Row label="home.structured.banner(retention)" value={context("home.structured.banner", "retention")}/>
                 <Row label="home.structured.host_title(female)"
-                     value={homeNs.gender("structured.host_title", "female", {last_name: "Rahma"})}/>
+                     value={gender("home.structured.host_title", "female", {last_name: "Rahma"})}/>
             </Section>
 
             <Section title="(4) Settings detailed + legacy keys">
-                <Row label="settings.strings.settings_title" value={settingsNs.translate("strings.settings_title")}/>
-                <Row label="settings.strings.privacy_title" value={settingsNs.translate("strings.privacy_title")}/>
+                <Row label="settings.strings.settings_title" value={translate("settings.strings.settings_title")}/>
+                <Row label="settings.strings.privacy_title" value={translate("settings.strings.privacy_title")}/>
                 <Row label="settings.placeholders.auto_lock_minutes"
-                     value={settingsNs.format("placeholders.auto_lock_minutes", {minutes: 10})}/>
+                     value={format("settings.placeholders.auto_lock_minutes", {minutes: 10})}/>
                 <Row label="settings.placeholders.region_value"
-                     value={settingsNs.format("placeholders.region_value", {region: "APAC"})}/>
-                <Row label="settings.structured.devices(1)" value={settingsNs.plural("structured.devices", 1)}/>
+                     value={format("settings.placeholders.region_value", {region: "APAC"})}/>
+                <Row label="settings.structured.devices(1)" value={plural("settings.structured.devices", 1)}/>
                 <Row label="settings.structured.backup_status(synced)"
-                     value={settingsNs.context("structured.backup_status", "synced")}/>
+                     value={context("settings.structured.backup_status", "synced")}/>
                 <Row label="settings.structured.owner_label(male)"
-                     value={settingsNs.gender("structured.owner_label", "male", {last_name: "Wijaya"})}/>
-                <Row label="settings.title (legacy)" value={settingsNs.translate("title")}/>
-                <Row label="settings.preferences.language (legacy)" value={settingsNs.translate("preferences.language")}/>
+                     value={gender("settings.structured.owner_label", "male", {last_name: "Wijaya"})}/>
+                <Row label="settings.title (legacy)" value={translate("settings.title")}/>
+                <Row label="settings.preferences.language (legacy)" value={translate("settings.preferences.language")}/>
             </Section>
 
             <Section title="(5) HTTP + Fallback merged keys">
-                <Row label="http.http_404_title" value={httpNs.translate("http_404_title")}/>
-                <Row label="http.http_404_message" value={httpNs.translate("http_404_message")}/>
-                <Row label="fallback.fb500_h" value={fallbackNs.translate("fb500_h")}/>
-                <Row label="fallback.fb500_d" value={fallbackNs.translate("fb500_d")}/>
-                <Row label="fallback.support_label" value={fallbackNs.translate("support_label")}/>
+                <Row label="http.http_404_title" value={translate("http.http_404_title")}/>
+                <Row label="http.http_404_message" value={translate("http.http_404_message")}/>
+                <Row label="fallback.fb500_h" value={translate("fallback.fb500_h")}/>
+                <Row label="fallback.fb500_d" value={translate("fallback.fb500_d")}/>
+                <Row label="fallback.support_label" value={translate("fallback.support_label")}/>
             </Section>
 
             <Section title="(6) All merged keys from active locale">

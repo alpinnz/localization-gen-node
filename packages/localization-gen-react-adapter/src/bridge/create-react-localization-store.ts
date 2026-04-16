@@ -1,4 +1,4 @@
-import { interpolate, resolveString } from "localization-gen-core/runtime";
+import { interpolate, lookupMessage } from "localization-gen-core/runtime";
 import type { RuntimeManifest } from "localization-gen-core";
 
 /**
@@ -28,7 +28,7 @@ export function createReactLocalizationStore(manifest: RuntimeManifest, initialL
       locale = nextLocale;
     },
     t(key, params) {
-      const value = resolveString(
+      const value = lookupMessage(
         {
           locale,
           fallbackLocale: manifest.fallback_locale,

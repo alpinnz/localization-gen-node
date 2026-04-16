@@ -2,6 +2,23 @@
 
 All notable changes to `localization-gen-react-adapter` are documented in this file.
 
+## [0.0.2] - 2026-04-16
+
+### Added
+
+- `useLocalization({ fallback })` support for reusable fallback text at hook level
+- Optional per-call fallback override on `translate(key, fallbackValue?)`
+
+### Changed
+
+- `useLocalization` now exposes full high-level helper surface (`translate`, `format`, `plural`, `gender`, `context`, `namespace`, `entriesForLocale`)
+- Internal runtime imports now use canonical `lookup*`/`pick*` helper names from `localization-gen-core/runtime`
+
+### Removed
+
+- `useLocalizationHelpers` export and hook; use `useLocalization` instead
+- Standalone `createFallbackTranslator` export; fallback behavior is now owned by `useLocalization`
+
 ## [0.0.1] - 2026-04-16
 
 ### Added
@@ -18,6 +35,6 @@ All notable changes to `localization-gen-react-adapter` are documented in this f
 
 ### Removed
 
-- Deprecated helper aliases: `t`, `ti`, `tp`, `tg`, `tc`, `interpolate`, `resolvePlural`, `resolveGender`, `resolveContext`
+- Deprecated helper aliases: `t`, `ti`, `tp`, `tg`, `tc`, `interpolate`, and legacy variant aliases for plural/gender/context
 - Deprecated `ns(scope)` alias; use `namespace(scope)` instead
 - Deprecated `createNamespace(scope)`; renamed to `namespace(scope)`

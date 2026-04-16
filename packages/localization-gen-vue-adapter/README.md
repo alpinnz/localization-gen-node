@@ -36,15 +36,20 @@ const {
   locale,
   setLocale,
   manifest,
-  translate,   // plain string resolver with locale fallback
-  format,      // resolver + placeholder interpolation
-  plural,      // structured plural resolver
-  gender,      // structured gender resolver
-  context,     // structured context resolver
+  translate,   // plain string helper with locale fallback + optional fallback value
+  format,      // helper + placeholder interpolation
+  plural,      // structured plural helper
+  gender,      // structured gender helper
+  context,     // structured context helper
   namespace,   // creates a module-scoped helper object
   entriesForLocale,
   appLocalization,
-} = useLocalization();
+} = useLocalization({
+  fallback: {
+    "auth.strings.login_title": "Login",
+    "common.strings.app_title": "App",
+  },
+});
 
 // Top-level helpers
 translate("auth.strings.login_title");
@@ -53,13 +58,11 @@ plural("auth.structured.lock_message", 3);
 gender("common.structured.user_title", "female", { last_name: "Smith" });
 context("auth.structured.channel_label", "email");
 
-// Namespace-scoped helpers (keys are relative to the module)
-const authNs = namespace("auth");
-authNs.translate("strings.login_title");
-authNs.format("placeholders.welcome_back", { name: "Alfin" });
-authNs.plural("structured.lock_message", 3);
-authNs.gender("structured.account_title", "other", { last_name: "Doe" });
-authNs.context("structured.channel_label", "email");
+// Optional per-call fallback still works (overrides configured fallback)
+translate("auth.strings.login_title", "Sign In");
+
+// Namespace-scoped helpers are still available when needed
+namespace("auth").translate("strings.login_title");
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 /**
- * Runtime input consumed by localization resolver functions.
+ * Runtime input consumed by localization lookup/variant helper functions.
  *
  * @remarks
  * `messages` is a two-level map:

@@ -2,6 +2,22 @@
 
 All notable changes to `localization-gen-vue-adapter` are documented in this file.
 
+## [0.0.2] - 2026-04-16
+
+### Added
+
+- `useLocalization({ fallback })` support for reusable fallback text at composable level
+- Optional per-call fallback override on `translate(key, fallbackValue?)`
+
+### Changed
+
+- Vue example and docs now default to full-key helper usage for consistency with merged JSON output
+- Internal runtime imports now use canonical `lookup*`/`pick*` helper names from `localization-gen-core/runtime`
+
+### Removed
+
+- Standalone `createFallbackTranslator` export; fallback behavior is now owned by `useLocalization`
+
 ## [0.0.1] - 2026-04-16
 
 ### Added
@@ -17,6 +33,6 @@ All notable changes to `localization-gen-vue-adapter` are documented in this fil
 
 ### Removed
 
-- Deprecated helper aliases: `t`, `ti`, `tp`, `tg`, `tc`, `interpolate`, `resolvePlural`, `resolveGender`, `resolveContext`
+- Deprecated helper aliases: `t`, `ti`, `tp`, `tg`, `tc`, `interpolate`, and legacy variant aliases for plural/gender/context
 - Deprecated `ns(scope)` alias; use `namespace(scope)` instead
 - Deprecated `createNamespace(scope)`; renamed to `namespace(scope)`

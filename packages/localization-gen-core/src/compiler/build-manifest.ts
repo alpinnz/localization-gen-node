@@ -10,7 +10,7 @@ export function buildManifest(project: NormalizedProject, config: LocalizationGe
     for (const message of Object.values(entry.messages)) {
       const localeMessages = (messages[entry.locale] ??= {});
       const fullKey = `${entry.module}.${message.key}`;
-      // Structured keys: store JSON-encoded variants so runtime can resolve them.
+      // Structured keys: store JSON-encoded variants so runtime can pick variants from them.
       // Plain keys: store the string value directly.
       localeMessages[fullKey] = message.structured
         ? JSON.stringify(message.structured.variants)

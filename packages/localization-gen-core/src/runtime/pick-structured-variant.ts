@@ -1,6 +1,6 @@
-import { resolveContext } from "./resolve-context.js";
-import { resolveGender } from "./resolve-gender.js";
-import { resolvePlural } from "./resolve-plural.js";
+import { pickContextVariant } from "./pick-context-variant.js";
+import { pickGenderVariant } from "./pick-gender-variant.js";
+import { pickPluralVariant } from "./pick-plural-variant.js";
 import { interpolate } from "./interpolate.js";
 
 /**
@@ -29,14 +29,14 @@ export function parseStructuredVariants(raw: string): Record<string, string> | n
 }
 
 /**
- * Resolves a context-structured runtime value and optionally interpolates params.
+ * Picks a context-structured runtime value and optionally interpolates params.
  *
  * @param raw Raw runtime value (`JSON` for structured entries or plain string).
  * @param context Context key, for example `formal`, `casual`, `primary`.
  * @param params Placeholder parameters for interpolation.
- * @returns Resolved display string; returns `raw` unchanged when `raw` is not structured.
+ * @returns Display string; returns `raw` unchanged when `raw` is not structured.
  */
-export function resolveStructuredContext(
+export function pickStructuredContextVariant(
   raw: string,
   context: string,
   params?: Record<string, string | number>
@@ -45,18 +45,18 @@ export function resolveStructuredContext(
   if (!variants) {
     return raw;
   }
-  return interpolate(resolveContext(variants, context), params);
+  return interpolate(pickContextVariant(variants, context), params);
 }
 
 /**
- * Resolves a gender-structured runtime value and interpolates placeholders.
+ * Picks a gender-structured runtime value and interpolates placeholders.
  *
  * @param raw Raw runtime value (`JSON` for structured entries or plain string).
  * @param gender Gender selector (`male`, `female`, `other`, ...).
  * @param params Placeholder parameters for interpolation.
- * @returns Resolved display string; returns `raw` unchanged when `raw` is not structured.
+ * @returns Display string; returns `raw` unchanged when `raw` is not structured.
  */
-export function resolveStructuredGender(
+export function pickStructuredGenderVariant(
   raw: string,
   gender: string,
   params?: Record<string, string | number>
@@ -65,18 +65,18 @@ export function resolveStructuredGender(
   if (!variants) {
     return raw;
   }
-  return interpolate(resolveGender(variants, gender), params);
+  return interpolate(pickGenderVariant(variants, gender), params);
 }
 
 /**
- * Resolves a plural-structured runtime value and injects `count` into interpolation params.
+ * Picks a plural-structured runtime value and injects `count` into interpolation params.
  *
  * @param raw Raw runtime value (`JSON` for structured entries or plain string).
  * @param count Quantity used for plural branch selection.
  * @param params Additional placeholder parameters.
- * @returns Resolved display string; returns `raw` unchanged when `raw` is not structured.
+ * @returns Display string; returns `raw` unchanged when `raw` is not structured.
  */
-export function resolveStructuredPlural(
+export function pickStructuredPluralVariant(
   raw: string,
   count: number,
   params?: Record<string, string | number>
@@ -85,5 +85,5 @@ export function resolveStructuredPlural(
   if (!variants) {
     return raw;
   }
-  return interpolate(resolvePlural(variants, count), { count, ...params });
+  return interpolate(pickPluralVariant(variants, count), { count, ...params });
 }

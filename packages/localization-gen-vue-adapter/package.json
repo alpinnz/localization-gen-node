@@ -1,11 +1,11 @@
 {
   "name": "localization-gen-vue-adapter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue plugin and composables for runtime consumption of localization-gen-node generated output.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alpinnz/localization-gen-node.git",
+    "url": "git+https://github.com/alpinnz/localization-gen-node.git",
     "directory": "packages/localization-gen-vue-adapter"
   },
   "bugs": {
@@ -55,6 +55,6 @@
     "vue": "^3.4.0"
   },
   "dependencies": {
-    "localization-gen-core": "^0.0.1"
+    "localization-gen-core": "^0.0.2"
   }
 }

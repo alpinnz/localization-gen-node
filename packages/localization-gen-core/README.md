@@ -95,14 +95,14 @@ Use helpers in your components:
 
 ```tsx
 // App.tsx
-import { useLocalizationHelpers } from "localization-gen-react-adapter";
+import { useLocalization } from "localization-gen-react-adapter";
 
 export default function App() {
-  const { locale, setLocale, manifest, translate, format, plural, gender, context, namespace } =
-    useLocalizationHelpers();
-
-  const authNs = namespace("auth");
-  const homeNs = namespace("home");
+  const { locale, setLocale, manifest, translate, format, plural, gender, context } = useLocalization({
+    fallback: {
+      "auth.strings.login_title": "Login",
+    },
+  });
 
   return (
     <>
@@ -111,20 +111,20 @@ export default function App() {
         <button key={l} onClick={() => setLocale(l)}>{l.toUpperCase()}</button>
       ))}
 
-      {/* Plain string */}
-      <h1>{authNs.translate("strings.login_title")}</h1>
+      {/* Plain string with optional hook-level fallback */}
+      <h1>{translate("auth.strings.login_title")}</h1>
 
       {/* Placeholder interpolation */}
-      <p>{authNs.format("placeholders.welcome_back", { name: "Alfin" })}</p>
+      <p>{format("auth.placeholders.welcome_back", { name: "Alfin" })}</p>
 
       {/* Structured plural */}
-      <p>{authNs.plural("structured.lock_message", 3)}</p>
+      <p>{plural("auth.structured.lock_message", 3)}</p>
 
       {/* Structured gender */}
-      <p>{homeNs.gender("structured.host_title", "female", { last_name: "Rahma" })}</p>
+      <p>{gender("home.structured.host_title", "female", { last_name: "Rahma" })}</p>
 
       {/* Structured context */}
-      <p>{authNs.context("structured.channel_label", "email")}</p>
+      <p>{context("auth.structured.channel_label", "email")}</p>
     </>
   );
 }
@@ -161,10 +161,11 @@ Use the composable in your components:
 <script setup lang="ts">
 import { useLocalization } from "localization-gen-vue-adapter";
 
-const { locale, setLocale, manifest, namespace } = useLocalization();
-
-const authNs = namespace("auth");
-const homeNs = namespace("home");
+const { locale, setLocale, manifest, translate, format, plural, gender, context } = useLocalization({
+  fallback: {
+    "auth.strings.login_title": "Login",
+  },
+});
 </script>
 
 <template>
@@ -173,20 +174,20 @@ const homeNs = namespace("home");
     {{ l.toUpperCase() }}
   </button>
 
-  <!-- Plain string -->
-  <h1>{{ authNs.translate("strings.login_title") }}</h1>
+  <!-- Plain string with optional hook-level fallback -->
+  <h1>{{ translate("auth.strings.login_title") }}</h1>
 
   <!-- Placeholder interpolation -->
-  <p>{{ authNs.format("placeholders.welcome_back", { name: "Alfin" }) }}</p>
+  <p>{{ format("auth.placeholders.welcome_back", { name: "Alfin" }) }}</p>
 
   <!-- Structured plural -->
-  <p>{{ authNs.plural("structured.lock_message", 3) }}</p>
+  <p>{{ plural("auth.structured.lock_message", 3) }}</p>
 
   <!-- Structured gender -->
-  <p>{{ homeNs.gender("structured.host_title", "female", { last_name: "Rahma" }) }}</p>
+  <p>{{ gender("home.structured.host_title", "female", { last_name: "Rahma" }) }}</p>
 
   <!-- Structured context -->
-  <p>{{ authNs.context("structured.channel_label", "email") }}</p>
+  <p>{{ context("auth.structured.channel_label", "email") }}</p>
 </template>
 ```
 
@@ -198,7 +199,7 @@ All helpers are available both at the top level and via `namespace(scope)` (keys
 
 | Method | Signature | Description |
 |---|---|---|
-| `translate` | `(key) → string` | Plain string with locale fallback |
+| `translate` | `(key, fallbackValue?) → string` | Plain string with locale fallback, optional hook fallback, and optional per-call override |
 | `format` | `(key, params) → string` | String with `{placeholder}` interpolation |
 | `plural` | `(key, count) → string` | Structured plural form |
 | `gender` | `(key, "male"\|"female"\|"other", params) → string` | Structured gender form |
@@ -215,17 +216,17 @@ runtime functions directly:
 ```ts
 import {
   interpolate,
-  resolveString,
-  resolveStructuredPlural,
-  resolveStructuredGender,
-  resolveStructuredContext,
+  lookupMessage,
+  pickStructuredPluralVariant,
+  pickStructuredGenderVariant,
+  pickStructuredContextVariant,
 } from "localization-gen-core/runtime";
 
-resolveString(ctx, "auth.strings.login_title");
+lookupMessage(ctx, "auth.strings.login_title");
 interpolate("Hello, {name}!", { name: "Alfin" });
-resolveStructuredPlural(rawValue, 3);
-resolveStructuredGender(rawValue, "female");
-resolveStructuredContext(rawValue, "email");
+pickStructuredPluralVariant(rawValue, 3);
+pickStructuredGenderVariant(rawValue, "female");
+pickStructuredContextVariant(rawValue, "email");
 ```
 
 > **Note:** Root entry (`localization-gen-core`) is Node-only (CLI/compiler).

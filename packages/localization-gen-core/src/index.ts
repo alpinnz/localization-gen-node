@@ -7,6 +7,16 @@ export { runGenerate } from "./cli/generate.js";
 export { runValidate } from "./cli/validate.js";
 export { runClean } from "./cli/clean.js";
 export { runCoverage } from "./cli/coverage.js";
-export { interpolate, resolveString, resolveContext, resolveGender, resolvePlural, resolveStructuredContext, resolveStructuredGender, resolveStructuredPlural, parseStructuredVariants } from "./runtime/index.js";
+export {
+  interpolate,
+  lookupMessage,
+  pickContextVariant,
+  pickGenderVariant,
+  pickPluralVariant,
+  pickStructuredContextVariant,
+  pickStructuredGenderVariant,
+  pickStructuredPluralVariant,
+  parseStructuredVariants
+} from "./runtime/index.js";
 export * from "./types/public-api.js";
 

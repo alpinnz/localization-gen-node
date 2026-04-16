@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { createReactLocalizationStore } from "../src/bridge/create-react-localization-store.js";
 
 describe("react adapter", () => {
-  it("switches locale and resolves translated string", () => {
+  it("switches locale and returns translated string", () => {
     const store = createReactLocalizationStore({
       base_locale: "en",
       fallback_locale: "en",
@@ -19,6 +19,20 @@ describe("react adapter", () => {
     expect(store.t("common.simple.hello")).toBe("Hello");
     store.setLocale("id");
     expect(store.t("common.simple.hello")).toBe("Halo");
+  });
+
+  it("returns key when translation is not found", () => {
+    const store = createReactLocalizationStore({
+      base_locale: "en",
+      fallback_locale: "en",
+      locales: ["en"],
+      entries: [],
+      messages: {
+        en: {}
+      }
+    });
+
+    expect(store.t("common.missing_key")).toBe("common.missing_key");
   });
 });
 

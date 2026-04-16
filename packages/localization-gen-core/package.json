@@ -1,11 +1,11 @@
 {
   "name": "localization-gen-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core compiler, validator, runtime primitives, and CLI for modular localization generation.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alpinnz/localization-gen-node.git",
+    "url": "git+https://github.com/alpinnz/localization-gen-node.git",
     "directory": "packages/localization-gen-core"
   },
   "bugs": {
