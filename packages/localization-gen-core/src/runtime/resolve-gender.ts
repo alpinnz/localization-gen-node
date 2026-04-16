@@ -1,0 +1,10 @@
+/**
+ * Resolves a gender-based variant (`@gender`) from a variant dictionary.
+ *
+ * @param variants Gender-to-message map, commonly `male`, `female`, `other`.
+ * @param gender Requested gender key.
+ * @returns Matching variant, then `other`, then first available variant, else empty string.
+ */
+export function resolveGender(variants: Record<string, string>, gender: string): string {
+  return variants[gender] ?? variants.other ?? Object.values(variants)[0] ?? "";
+}

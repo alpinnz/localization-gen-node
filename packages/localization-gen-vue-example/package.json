@@ -1,0 +1,30 @@
+{
+  "name": "localization-gen-vue-example",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "localization-gen:init": "localization-gen init",
+    "localization-gen:generate": "localization-gen generate",
+    "localization-gen:watch": "localization-gen generate --watch",
+    "localization-gen:validate": "localization-gen validate",
+    "localization-gen:clean": "localization-gen clean",
+    "localization-gen:coverage": "localization-gen coverage",
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json && vite build",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts,.vue",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "localization-gen-core": "0.0.1",
+    "localization-gen-vue-adapter": "0.0.1",
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "vite": "^5.4.10"
+  }
+}
+

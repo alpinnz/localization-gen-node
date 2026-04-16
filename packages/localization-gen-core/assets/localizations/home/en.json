@@ -1,0 +1,15 @@
+{
+  "@@module": "home",
+  "@@locale": "en",
+  "strings": {
+    "home_title": "Home",
+    "emoji_like": "Use symbols: © ™ →"
+  },
+  "meta": {
+    "user_label": {
+      "@value": "User",
+      "@description": "Shown in profile section",
+      "@example": "User"
+    }
+  }
+}

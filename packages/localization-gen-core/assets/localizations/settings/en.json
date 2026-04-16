@@ -1,0 +1,15 @@
+{
+  "@@module": "settings",
+  "@@locale": "en",
+  "strings": {
+    "settings_title": "Settings"
+  },
+  "contextual": {
+    "tone": {
+      "@context": {
+        "formal": "Good evening",
+        "casual": "Hi there"
+      }
+    }
+  }
+}

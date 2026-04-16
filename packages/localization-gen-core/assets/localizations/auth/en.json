@@ -1,0 +1,18 @@
+{
+  "@@module": "auth",
+  "@@locale": "en",
+  "strings": {
+    "login_title": "Sign in"
+  },
+  "placeholders": {
+    "invalid_code_errors": "Code {code} has {count} errors"
+  },
+  "structured": {
+    "messages": {
+      "@plural": {
+        "one": "You have one message",
+        "other": "You have {count} messages"
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "auth.banner.email_first.message": [
+    "d"
+  ],
+  "auth.banner.wa_first.message": [
+    "d"
+  ],
+  "auth.login_by_google_account.error.nama.invalid_char": [
+    "x"
+  ],
+  "auth.login.banner.error.mismatch": [
+    "attempts"
+  ],
+  "auth.login.form.password_incorrect.error": [
+    "attempts"
+  ],
+  "auth.otp_whatsapp.message": [
+    "otp_code"
+  ],
+  "auth.placeholders.otp_sent": [
+    "expires_in",
+    "phone"
+  ],
+  "auth.placeholders.welcome_back": [
+    "name"
+  ],
+  "auth.resend_email.resend.button.disabled": [
+    "seconds"
+  ],
+  "auth.verifikasi_wa.resend.button.disabled": [
+    "seconds"
+  ],
+  "auth.verify.success.redirect": [
+    "xx"
+  ],
+  "home.placeholders.greeting_time": [
+    "name",
+    "time_of_day"
+  ],
+  "home.placeholders.stats_summary": [
+    "points",
+    "tasks"
+  ],
+  "settings.placeholders.auto_lock_minutes": [
+    "minutes"
+  ],
+  "settings.placeholders.region_value": [
+    "region"
+  ]
+}

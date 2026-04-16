@@ -1,0 +1,15 @@
+{
+  "@@module": "home",
+  "@@locale": "id",
+  "strings": {
+    "home_title": "Beranda",
+    "emoji_like": "Gunakan simbol: © ™ →"
+  },
+  "meta": {
+    "user_label": {
+      "@value": "Pengguna",
+      "@description": "Ditampilkan di bagian profil",
+      "@example": "Pengguna"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "@@module": "settings",
+  "@@locale": "id",
+  "strings": {
+    "settings_title": "Pengaturan"
+  },
+  "contextual": {
+    "tone": {
+      "@context": {
+        "formal": "Selamat malam",
+        "casual": "Hai"
+      }
+    }
+  }
+}

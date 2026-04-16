@@ -1,0 +1,65 @@
+{
+  "@@module": "home",
+  "@@locale": "en",
+  "strings": {
+    "home_title": "Home",
+    "headline": "Your dashboard"
+  },
+  "placeholders": {
+    "greeting_time": {
+      "@value": "Good {time_of_day}, {name}.",
+      "@description": "Greeting that includes time period and user name.",
+      "@example": "Good morning, Alfin.",
+      "@placeholders": {
+        "time_of_day": "Time period label",
+        "name": "User display name"
+      }
+    },
+    "stats_summary": {
+      "@value": "You completed {tasks} tasks and earned {points} points.",
+      "@description": "Daily progress summary.",
+      "@example": "You completed 4 tasks and earned 120 points.",
+      "@placeholders": {
+        "tasks": "Completed task count",
+        "points": "Reward points"
+      }
+    }
+  },
+  "structured": {
+    "notifications": {
+      "@plural": {
+        "zero": "No new notifications",
+        "one": "1 new notification",
+        "other": "{count} new notifications"
+      },
+      "@notifications": {
+        "description": "Notification count on home header.",
+        "placeholders": {
+          "count": "Notification count"
+        }
+      }
+    },
+    "banner": {
+      "@context": {
+        "onboarding": "Complete your profile to get better recommendations.",
+        "retention": "Welcome back! Continue where you left off."
+      },
+      "@banner": {
+        "description": "Banner copy by lifecycle context."
+      }
+    },
+    "host_title": {
+      "@gender": {
+        "male": "Hosted by Mr. {last_name}",
+        "female": "Hosted by Ms. {last_name}",
+        "other": "Hosted by Mx. {last_name}"
+      },
+      "@host_title": {
+        "description": "Host label by gender.",
+        "placeholders": {
+          "last_name": "Host family name"
+        }
+      }
+    }
+  }
+}

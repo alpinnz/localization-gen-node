@@ -1,0 +1,60 @@
+{
+  "name": "localization-gen-vue-adapter",
+  "version": "0.0.1",
+  "description": "Vue plugin and composables for runtime consumption of localization-gen-node generated output.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alpinnz/localization-gen-node.git",
+    "directory": "packages/localization-gen-vue-adapter"
+  },
+  "bugs": {
+    "url": "https://github.com/alpinnz/localization-gen-node/issues"
+  },
+  "homepage": "https://github.com/alpinnz/localization-gen-node/tree/main/packages/localization-gen-vue-adapter",
+  "keywords": [
+    "vue",
+    "i18n",
+    "l10n",
+    "localization",
+    "adapter"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist",
+    "prepack": "npm run clean && npm run build",
+    "release:check": "npm run typecheck && npm run test && npm run build",
+    "release:pack": "npm pack",
+    "release:dry-run": "npm publish --dry-run",
+    "release:pack:clean": "find . -maxdepth 1 -name \"*.tgz\" -delete"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "dependencies": {
+    "localization-gen-core": "^0.0.1"
+  }
+}

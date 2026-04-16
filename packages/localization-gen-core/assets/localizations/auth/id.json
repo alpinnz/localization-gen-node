@@ -1,0 +1,18 @@
+{
+  "@@module": "auth",
+  "@@locale": "id",
+  "strings": {
+    "login_title": "Masuk"
+  },
+  "placeholders": {
+    "invalid_code_errors": "Kode {code} memiliki {count} kesalahan"
+  },
+  "structured": {
+    "messages": {
+      "@plural": {
+        "one": "Anda punya satu pesan",
+        "other": "Anda punya {count} pesan"
+      }
+    }
+  }
+}

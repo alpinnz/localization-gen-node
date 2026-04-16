@@ -1,0 +1,65 @@
+{
+  "@@module": "home",
+  "@@locale": "id",
+  "strings": {
+    "home_title": "Beranda",
+    "headline": "Dasbor Anda"
+  },
+  "placeholders": {
+    "greeting_time": {
+      "@value": "Selamat {time_of_day}, {name}.",
+      "@description": "Sapaan berisi periode waktu dan nama pengguna.",
+      "@example": "Selamat pagi, Alfin.",
+      "@placeholders": {
+        "time_of_day": "Label periode waktu",
+        "name": "Nama tampilan pengguna"
+      }
+    },
+    "stats_summary": {
+      "@value": "Anda menyelesaikan {tasks} tugas dan mendapatkan {points} poin.",
+      "@description": "Ringkasan progres harian.",
+      "@example": "Anda menyelesaikan 4 tugas dan mendapatkan 120 poin.",
+      "@placeholders": {
+        "tasks": "Jumlah tugas selesai",
+        "points": "Poin hadiah"
+      }
+    }
+  },
+  "structured": {
+    "notifications": {
+      "@plural": {
+        "zero": "Tidak ada notifikasi baru",
+        "one": "1 notifikasi baru",
+        "other": "{count} notifikasi baru"
+      },
+      "@notifications": {
+        "description": "Jumlah notifikasi pada header beranda.",
+        "placeholders": {
+          "count": "Jumlah notifikasi"
+        }
+      }
+    },
+    "banner": {
+      "@context": {
+        "onboarding": "Lengkapi profil Anda untuk rekomendasi yang lebih baik.",
+        "retention": "Selamat datang kembali! Lanjutkan dari progres terakhir Anda."
+      },
+      "@banner": {
+        "description": "Teks banner berdasarkan konteks siklus pengguna."
+      }
+    },
+    "host_title": {
+      "@gender": {
+        "male": "Dipandu Bpk. {last_name}",
+        "female": "Dipandu Ibu {last_name}",
+        "other": "Dipandu Sdr. {last_name}"
+      },
+      "@host_title": {
+        "description": "Label pemandu berdasarkan gender.",
+        "placeholders": {
+          "last_name": "Nama keluarga pemandu"
+        }
+      }
+    }
+  }
+}
