@@ -2,6 +2,13 @@
 
 All notable changes to `localization-gen-core` are documented in this file.
 
+## [0.0.4] - 2026-04-20
+
+### Changed
+
+- Build script now applies executable permission to `dist/cli/index.js` so workspace CLI invocations remain runnable after clean/build cycles
+- Package version bumped to `0.0.4` for synchronized monorepo release
+
 ## [0.0.3] - 2026-04-16
 
 ### Changed

@@ -1,6 +1,6 @@
 {
   "name": "localization-gen-core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Core compiler, validator, runtime primitives, and CLI for modular localization generation.",
   "license": "MIT",
   "repository": {
@@ -50,7 +50,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json && chmod +x dist/cli/index.js",
     "dev": "tsc -w -p tsconfig.build.json",
     "lint": "eslint src --ext .ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",

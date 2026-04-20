@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.0.4] - 2026-04-20
+
+### Changed
+
+- Root and workspace-local localization scripts now rebuild `localization-gen-core` before invoking CLI commands, so `clean` no longer breaks `generate`/`validate`/`watch`
+- Core build now marks `dist/cli/index.js` executable to avoid permission errors from workspace bin shims
+- Workspace versions and internal package references bumped to `0.0.4`
+
 ## [0.0.3] - 2026-04-16
 
 ### Changed

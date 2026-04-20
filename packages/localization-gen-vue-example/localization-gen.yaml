@@ -14,7 +14,7 @@ generated:
   runtime_manifest_file: app-localization.manifest.json
 
 validation:
-  max_depth: 6
+  max_depth: 10
   require_key_parity: true
   require_placeholder_parity: true
   require_structured_parity: true

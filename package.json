@@ -1,7 +1,7 @@
 {
   "name": "localization-gen-node-monorepo",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "npm@10.8.2",
   "workspaces": [
     "packages/*"
@@ -13,6 +13,7 @@
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
     "clean": "turbo run clean",
+    "core:build": "npm run build --workspace=localization-gen-core",
     "react:init": "npm run localization-gen:init --workspace=localization-gen-react-example",
     "react:generate": "npm run localization-gen:generate --workspace=localization-gen-react-example",
     "react:watch": "npm run localization-gen:watch --workspace=localization-gen-react-example",
