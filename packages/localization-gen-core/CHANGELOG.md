@@ -6,9 +6,9 @@ All notable changes to `localization-gen-core` are documented in this file.
 
 ### Added
 
-- `nest` added as a supported `framework` value in `localization-gen.yaml` — enables generating localization manifests for NestJS projects
-- `Framework` type updated: `"react" | "vue" | "nest"`
-- Config validator updated to accept `nest` alongside `react` and `vue`
+- `"nest"` added as a valid value for the `framework` field in `localization-gen.yaml`
+- `Framework` type updated from `"react" | "vue"` to `"react" | "vue" | "nest"` in `types/config.ts`
+- Config validator (`validateConfig`) now accepts `nest` alongside `react` and `vue`; throws a descriptive error if an unknown framework is supplied
 
 ## [0.0.4] - 2026-04-20
 

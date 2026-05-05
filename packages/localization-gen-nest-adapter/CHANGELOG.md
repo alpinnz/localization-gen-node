@@ -6,14 +6,31 @@ All notable changes to `localization-gen-nest-adapter` are documented in this fi
 
 ### Added
 
-- Initial release of NestJS runtime adapter
-- `LocalizationModule.forRoot(manifest, options)` – NestJS dynamic module wiring
-- `LocalizationService` – injectable singleton service: `translate`, `format`, `plural`, `gender`, `context`, `namespace`, `entriesForLocale`, `getCurrentLocale`, `runWithLocale`
-- `LocalizationInterceptor` – HTTP interceptor for per-request locale detection via `Accept-Language` header, `?locale` query param, or custom header; powered by `AsyncLocalStorage` (no REQUEST scope needed)
-- `@RequestLocale()` – controller parameter decorator that reads the active locale for the current request
-- `createNestLocalizationStore` – low-level store factory with no NestJS dependency
-- `createLazyLocaleLoader` – async per-locale message loader
-- `mapRuntimeManifest` – identity passthrough manifest helper
-- Peer dependency: `@nestjs/common ^10 || ^11`, `rxjs ^7`
-- Requires `localization-gen-core ^0.0.5`
+- **`LocalizationModule`** — NestJS dynamic module; register with `LocalizationModule.forRoot(manifest, options)`
+  - `options.isGlobal` — makes the module globally available without per-module imports
+  - `options.localeHeader` — custom HTTP header name for locale detection (e.g. `"x-locale"`)
+  - `options.localeQueryParam` — query param name for locale detection (default `"locale"`)
+- **`LocalizationService`** — injectable singleton service (no REQUEST scope required):
+  - `translate(key, fallbackValue?, locale?)` — resolves a plain string key with optional fallback
+  - `format(key, params, locale?)` — resolves and interpolates `{placeholder}` values
+  - `plural(key, count, locale?)` — picks the correct `@plural` structured variant by count
+  - `gender(key, genderValue, params, locale?)` — picks the `@gender` structured variant and interpolates
+  - `context(key, contextValue, params?, locale?)` — picks the `@context` structured variant and interpolates
+  - `namespace(scope, locale?)` — returns a scoped helper that prefixes every key with `scope`
+  - `entriesForLocale(locale?)` — returns all `[key, value]` pairs for a locale, sorted alphabetically
+  - `getCurrentLocale()` — returns the locale bound to the current async context (or `base_locale` fallback)
+  - `runWithLocale(locale, fn)` — runs `fn` inside an async context where `getCurrentLocale()` returns `locale`; useful for background jobs and tests
+  - `raw(key, locale?)` — returns the raw stored string (plain or JSON-encoded structured variants)
+  - `getManifest()` — returns the full `RuntimeManifest` instance
+- **`LocalizationInterceptor`** — NestJS HTTP interceptor powered by `AsyncLocalStorage`:
+  - Detects locale in priority order: custom header → query param → `Accept-Language` first tag → `base_locale`
+  - Only accepts locales listed in `manifest.locales`; unknown values fall back to `base_locale`
+  - Binds detected locale to the async context for the full request lifecycle
+- **`@RequestLocale()`** — controller parameter decorator that reads `request.activeLocale` set by the interceptor; falls back to `Accept-Language` first tag when the interceptor has not run (e.g. WebSocket contexts)
+- **`createNestLocalizationStore(manifest, initialLocale?)`** — low-level mutable store (no NestJS dependency): exposes `getLocale()`, `setLocale(locale)`, `t(key, params?)`
+- **`createLazyLocaleLoader(manifest)`** — returns an async `(locale) => Record<string, string>` loader for per-locale message access
+- **`mapRuntimeManifest(manifest)`** — identity passthrough helper for manifest transformation pipelines
+- **`LOCALIZATION_MANIFEST_TOKEN`** / **`LOCALIZATION_OPTIONS_TOKEN`** — injection tokens exported for advanced DI scenarios
+- Peer dependencies: `@nestjs/common ^10 || ^11`, `rxjs ^7`
+- Runtime dependency: `localization-gen-core ^0.0.5`
 
