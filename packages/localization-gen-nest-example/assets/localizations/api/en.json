@@ -1,0 +1,54 @@
+{
+  "@@module": "api",
+  "@@locale": "en",
+  "status_ok": "Request successful",
+  "status_created": "Resource created successfully",
+  "status_not_found": "Resource not found",
+  "status_unauthorized": "Authentication required",
+  "status_forbidden": "You do not have permission to access this resource",
+  "status_error": "An error occurred. Please try again.",
+  "items_count": {
+    "@plural": {
+      "zero": "No items found",
+      "one": "1 item found",
+      "other": "{count} items found"
+    },
+    "@items_count": {
+      "description": "Shows the number of items returned",
+      "placeholders": {
+        "count": "Total item count"
+      }
+    }
+  },
+  "user_role": {
+    "@context": {
+      "admin": "Administrator",
+      "user": "Regular User",
+      "guest": "Guest"
+    },
+    "@user_role": {
+      "description": "Label for user role type"
+    }
+  },
+  "user_title": {
+    "@gender": {
+      "male": "Mr. {last_name}",
+      "female": "Ms. {last_name}",
+      "other": "Mx. {last_name}"
+    },
+    "@user_title": {
+      "description": "Honorific title by gender",
+      "placeholders": {
+        "last_name": "Family name"
+      }
+    }
+  },
+  "paginator": {
+    "@value": "Page {page} of {total}",
+    "@placeholders": {
+      "page": "Current page number",
+      "total": "Total pages"
+    }
+  }
+}
+

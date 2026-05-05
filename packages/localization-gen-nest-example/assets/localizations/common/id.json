@@ -1,0 +1,17 @@
+{
+  "@@module": "common",
+  "@@locale": "id",
+  "greeting": "Halo",
+  "farewell": "Selamat tinggal",
+  "welcome_user": {
+    "@value": "Selamat datang, {name}!",
+    "@description": "Pesan salam dengan nama pengguna",
+    "@placeholders": {
+      "name": "Nama tampilan pengguna"
+    }
+  },
+  "app_name": "Demo Lokalisasi NestJS",
+  "not_found": "Sumber daya yang diminta tidak ditemukan",
+  "server_error": "Terjadi kesalahan internal pada server"
+}
+

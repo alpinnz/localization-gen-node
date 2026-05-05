@@ -1,0 +1,9 @@
+{
+  "api.paginator": [
+    "page",
+    "total"
+  ],
+  "common.welcome_user": [
+    "name"
+  ]
+}

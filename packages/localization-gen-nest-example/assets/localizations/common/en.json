@@ -1,0 +1,17 @@
+{
+  "@@module": "common",
+  "@@locale": "en",
+  "greeting": "Hello",
+  "farewell": "Goodbye",
+  "welcome_user": {
+    "@value": "Welcome, {name}!",
+    "@description": "Greeting message with user name",
+    "@placeholders": {
+      "name": "User display name"
+    }
+  },
+  "app_name": "NestJS Localization Demo",
+  "not_found": "The requested resource was not found",
+  "server_error": "An internal server error occurred"
+}
+

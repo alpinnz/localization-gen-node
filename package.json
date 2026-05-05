@@ -21,7 +21,11 @@
     "vue:init": "npm run localization-gen:init --workspace=localization-gen-vue-example",
     "vue:generate": "npm run localization-gen:generate --workspace=localization-gen-vue-example",
     "vue:watch": "npm run localization-gen:watch --workspace=localization-gen-vue-example",
-    "vue:validate": "npm run localization-gen:validate --workspace=localization-gen-vue-example"
+    "vue:validate": "npm run localization-gen:validate --workspace=localization-gen-vue-example",
+    "nest:init": "npm run localization-gen:init --workspace=localization-gen-nest-example",
+    "nest:generate": "npm run localization-gen:generate --workspace=localization-gen-nest-example",
+    "nest:watch": "npm run localization-gen:watch --workspace=localization-gen-nest-example",
+    "nest:validate": "npm run localization-gen:validate --workspace=localization-gen-nest-example"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.1",

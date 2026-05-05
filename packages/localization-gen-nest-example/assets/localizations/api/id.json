@@ -1,0 +1,54 @@
+{
+  "@@module": "api",
+  "@@locale": "id",
+  "status_ok": "Permintaan berhasil",
+  "status_created": "Sumber daya berhasil dibuat",
+  "status_not_found": "Sumber daya tidak ditemukan",
+  "status_unauthorized": "Autentikasi diperlukan",
+  "status_forbidden": "Anda tidak memiliki izin untuk mengakses sumber daya ini",
+  "status_error": "Terjadi kesalahan. Silakan coba lagi.",
+  "items_count": {
+    "@plural": {
+      "zero": "Tidak ada item",
+      "one": "1 item ditemukan",
+      "other": "{count} item ditemukan"
+    },
+    "@items_count": {
+      "description": "Menampilkan jumlah item yang dikembalikan",
+      "placeholders": {
+        "count": "Total jumlah item"
+      }
+    }
+  },
+  "user_role": {
+    "@context": {
+      "admin": "Administrator",
+      "user": "Pengguna Biasa",
+      "guest": "Tamu"
+    },
+    "@user_role": {
+      "description": "Label untuk jenis peran pengguna"
+    }
+  },
+  "user_title": {
+    "@gender": {
+      "male": "Bapak {last_name}",
+      "female": "Ibu {last_name}",
+      "other": "Sdr. {last_name}"
+    },
+    "@user_title": {
+      "description": "Sapaan berdasarkan jenis kelamin",
+      "placeholders": {
+        "last_name": "Nama keluarga"
+      }
+    }
+  },
+  "paginator": {
+    "@value": "Halaman {page} dari {total}",
+    "@placeholders": {
+      "page": "Nomor halaman saat ini",
+      "total": "Total halaman"
+    }
+  }
+}
+

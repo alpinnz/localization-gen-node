@@ -1,0 +1,117 @@
+{
+  "base_locale": "en",
+  "fallback_locale": "en",
+  "locales": [
+    "en",
+    "id"
+  ],
+  "entries": [
+    {
+      "key": "api.items_count",
+      "placeholders": []
+    },
+    {
+      "key": "api.paginator",
+      "placeholders": [
+        "page",
+        "total"
+      ]
+    },
+    {
+      "key": "api.status_created",
+      "placeholders": []
+    },
+    {
+      "key": "api.status_error",
+      "placeholders": []
+    },
+    {
+      "key": "api.status_forbidden",
+      "placeholders": []
+    },
+    {
+      "key": "api.status_not_found",
+      "placeholders": []
+    },
+    {
+      "key": "api.status_ok",
+      "placeholders": []
+    },
+    {
+      "key": "api.status_unauthorized",
+      "placeholders": []
+    },
+    {
+      "key": "api.user_role",
+      "placeholders": []
+    },
+    {
+      "key": "api.user_title",
+      "placeholders": []
+    },
+    {
+      "key": "common.app_name",
+      "placeholders": []
+    },
+    {
+      "key": "common.farewell",
+      "placeholders": []
+    },
+    {
+      "key": "common.greeting",
+      "placeholders": []
+    },
+    {
+      "key": "common.not_found",
+      "placeholders": []
+    },
+    {
+      "key": "common.server_error",
+      "placeholders": []
+    },
+    {
+      "key": "common.welcome_user",
+      "placeholders": [
+        "name"
+      ]
+    }
+  ],
+  "messages": {
+    "en": {
+      "api.items_count": "{\"one\":\"1 item found\",\"other\":\"{count} items found\",\"zero\":\"No items found\"}",
+      "api.paginator": "Page {page} of {total}",
+      "api.status_created": "Resource created successfully",
+      "api.status_error": "An error occurred. Please try again.",
+      "api.status_forbidden": "You do not have permission to access this resource",
+      "api.status_not_found": "Resource not found",
+      "api.status_ok": "Request successful",
+      "api.status_unauthorized": "Authentication required",
+      "api.user_role": "{\"admin\":\"Administrator\",\"guest\":\"Guest\",\"user\":\"Regular User\"}",
+      "api.user_title": "{\"female\":\"Ms. {last_name}\",\"male\":\"Mr. {last_name}\",\"other\":\"Mx. {last_name}\"}",
+      "common.app_name": "NestJS Localization Demo",
+      "common.farewell": "Goodbye",
+      "common.greeting": "Hello",
+      "common.not_found": "The requested resource was not found",
+      "common.server_error": "An internal server error occurred",
+      "common.welcome_user": "Welcome, {name}!"
+    },
+    "id": {
+      "api.items_count": "{\"one\":\"1 item ditemukan\",\"other\":\"{count} item ditemukan\",\"zero\":\"Tidak ada item\"}",
+      "api.paginator": "Halaman {page} dari {total}",
+      "api.status_created": "Sumber daya berhasil dibuat",
+      "api.status_error": "Terjadi kesalahan. Silakan coba lagi.",
+      "api.status_forbidden": "Anda tidak memiliki izin untuk mengakses sumber daya ini",
+      "api.status_not_found": "Sumber daya tidak ditemukan",
+      "api.status_ok": "Permintaan berhasil",
+      "api.status_unauthorized": "Autentikasi diperlukan",
+      "api.user_role": "{\"admin\":\"Administrator\",\"guest\":\"Tamu\",\"user\":\"Pengguna Biasa\"}",
+      "api.user_title": "{\"female\":\"Ibu {last_name}\",\"male\":\"Bapak {last_name}\",\"other\":\"Sdr. {last_name}\"}",
+      "common.app_name": "Demo Lokalisasi NestJS",
+      "common.farewell": "Selamat tinggal",
+      "common.greeting": "Halo",
+      "common.not_found": "Sumber daya yang diminta tidak ditemukan",
+      "common.server_error": "Terjadi kesalahan internal pada server",
+      "common.welcome_user": "Selamat datang, {name}!"
+    }
+  }
+}

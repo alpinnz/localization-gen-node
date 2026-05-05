@@ -4,7 +4,9 @@ export default defineWorkspace([
   "packages/localization-gen-core/vitest.config.ts",
   "packages/localization-gen-react-adapter/vitest.config.ts",
   "packages/localization-gen-vue-adapter/vitest.config.ts",
+  "packages/localization-gen-nest-adapter/vitest.config.ts",
   "packages/localization-gen-react-example/vitest.config.ts",
-  "packages/localization-gen-vue-example/vitest.config.ts"
+  "packages/localization-gen-vue-example/vitest.config.ts",
+  "packages/localization-gen-nest-example/vitest.config.ts"
 ]);
 

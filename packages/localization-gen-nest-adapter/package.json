@@ -1,28 +1,29 @@
 {
-  "name": "localization-gen-core",
+  "name": "localization-gen-nest-adapter",
   "version": "0.0.5",
-  "description": "Core compiler, validator, runtime primitives, and CLI for modular localization generation.",
+  "description": "NestJS module, service and interceptor for runtime consumption of localization-gen-node generated output.",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alpinnz/localization-gen-node.git",
-    "directory": "packages/localization-gen-core"
+    "directory": "packages/localization-gen-nest-adapter"
   },
   "bugs": {
     "url": "https://github.com/alpinnz/localization-gen-node/issues"
   },
-  "homepage": "https://github.com/alpinnz/localization-gen-node/tree/main/packages/localization-gen-core",
+  "homepage": "https://github.com/alpinnz/localization-gen-node/tree/main/packages/localization-gen-nest-adapter",
   "keywords": [
+    "nestjs",
+    "nest",
     "i18n",
     "l10n",
     "localization",
-    "json",
-    "codegen",
-    "cli"
+    "adapter"
   ],
   "engines": {
     "node": ">=20"
   },
+  "sideEffects": false,
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,18 +31,7 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    },
-    "./runtime": {
-      "types": "./dist/browser.d.ts",
-      "default": "./dist/browser.js"
-    },
-    "./browser": {
-      "types": "./dist/browser.d.ts",
-      "default": "./dist/browser.js"
     }
-  },
-  "bin": {
-    "localization-gen": "dist/cli/index.js"
   },
   "files": [
     "dist",
@@ -50,7 +40,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && chmod +x dist/cli/index.js",
+    "build": "tsc -p tsconfig.build.json",
     "dev": "tsc -w -p tsconfig.build.json",
     "lint": "eslint src --ext .ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
@@ -62,8 +52,12 @@
     "release:dry-run": "npm publish --dry-run",
     "release:pack:clean": "find . -maxdepth 1 -name \"*.tgz\" -delete"
   },
+  "peerDependencies": {
+    "@nestjs/common": "^10 || ^11",
+    "rxjs": "^7"
+  },
   "dependencies": {
-    "chokidar": "^3.6.0",
-    "yaml": "^2.5.1"
+    "localization-gen-core": "^0.0.5"
   }
 }
+
