@@ -57,7 +57,7 @@
     "rxjs": "^7"
   },
   "dependencies": {
-    "localization-gen-core": "^0.0.5"
+    "localization-gen-core": "^0.0.4"
   }
 }
 
