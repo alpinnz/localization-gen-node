@@ -62,10 +62,13 @@ bootstrap();
 
 ### 4. Use in controllers / services
 
+Import `appLocalization` from the generated manifest for type-safe key references:
+
 ```ts
 // app.controller.ts
 import { Controller, Get } from "@nestjs/common";
 import { LocalizationService } from "localization-gen-nest-adapter";
+import { appLocalization } from "./assets/localizations/app-localization";
 
 @Controller()
 export class AppController {
@@ -74,12 +77,12 @@ export class AppController {
   @Get("hello")
   hello() {
     // Locale is resolved automatically from Accept-Language / ?locale= by the interceptor
-    return { message: this.l10n.translate("common.greeting") };
+    return { message: this.l10n.translate(appLocalization.common.greeting) };
   }
 
   @Get("welcome")
   welcome() {
-    return { message: this.l10n.format("common.welcome_user", { name: "Alfin" }) };
+    return { message: this.l10n.format(appLocalization.common.welcome_user, { name: "Alfin" }) };
   }
 }
 ```

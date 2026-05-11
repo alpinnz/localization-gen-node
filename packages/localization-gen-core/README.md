@@ -128,11 +128,12 @@ Use helpers in your components:
 ```tsx
 // App.tsx
 import { useLocalization } from "localization-gen-react-adapter";
+import { appLocalization } from "./assets/localizations/app-localization";
 
 export default function App() {
   const { locale, setLocale, manifest, translate, format, plural, gender, context } = useLocalization({
     fallback: {
-      "auth.strings.login_title": "Login",
+      [appLocalization.auth.strings.login_title]: "Login",
     },
   });
 
@@ -144,19 +145,19 @@ export default function App() {
       ))}
 
       {/* Plain string with optional hook-level fallback */}
-      <h1>{translate("auth.strings.login_title")}</h1>
+      <h1>{translate(appLocalization.auth.strings.login_title)}</h1>
 
       {/* Placeholder interpolation */}
-      <p>{format("auth.placeholders.welcome_back", { name: "Alfin" })}</p>
+      <p>{format(appLocalization.auth.placeholders.welcome_back, { name: "Alfin" })}</p>
 
       {/* Structured plural */}
-      <p>{plural("auth.structured.lock_message", 3)}</p>
+      <p>{plural(appLocalization.auth.structured.lock_message, 3)}</p>
 
       {/* Structured gender */}
-      <p>{gender("home.structured.host_title", "female", { last_name: "Rahma" })}</p>
+      <p>{gender(appLocalization.home.structured.host_title, "female", { last_name: "Rahma" })}</p>
 
       {/* Structured context */}
-      <p>{context("auth.structured.channel_label", "email")}</p>
+      <p>{context(appLocalization.auth.structured.channel_label, "email")}</p>
     </>
   );
 }
@@ -192,10 +193,11 @@ Use the composable in your components:
 <!-- App.vue -->
 <script setup lang="ts">
 import { useLocalization } from "localization-gen-vue-adapter";
+import { appLocalization } from "./assets/localizations/app-localization";
 
 const { locale, setLocale, manifest, translate, format, plural, gender, context } = useLocalization({
   fallback: {
-    "auth.strings.login_title": "Login",
+    [appLocalization.auth.strings.login_title]: "Login",
   },
 });
 </script>
@@ -207,19 +209,19 @@ const { locale, setLocale, manifest, translate, format, plural, gender, context 
   </button>
 
   <!-- Plain string with optional hook-level fallback -->
-  <h1>{{ translate("auth.strings.login_title") }}</h1>
+  <h1>{{ translate(appLocalization.auth.strings.login_title) }}</h1>
 
   <!-- Placeholder interpolation -->
-  <p>{{ format("auth.placeholders.welcome_back", { name: "Alfin" }) }}</p>
+  <p>{{ format(appLocalization.auth.placeholders.welcome_back, { name: "Alfin" }) }}</p>
 
   <!-- Structured plural -->
-  <p>{{ plural("auth.structured.lock_message", 3) }}</p>
+  <p>{{ plural(appLocalization.auth.structured.lock_message, 3) }}</p>
 
   <!-- Structured gender -->
-  <p>{{ gender("home.structured.host_title", "female", { last_name: "Rahma" }) }}</p>
+  <p>{{ gender(appLocalization.home.structured.host_title, "female", { last_name: "Rahma" }) }}</p>
 
   <!-- Structured context -->
-  <p>{{ context("auth.structured.channel_label", "email") }}</p>
+  <p>{{ context(appLocalization.auth.structured.channel_label, "email") }}</p>
 </template>
 ```
 

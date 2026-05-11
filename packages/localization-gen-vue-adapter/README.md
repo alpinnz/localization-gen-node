@@ -28,9 +28,12 @@ app.use(createLocalizationPlugin(appLocalizationManifest));
 
 ## Usage with `useLocalization`
 
+Use the generated `appLocalization` constant for type-safe key references:
+
 ```vue
 <script setup lang="ts">
 import { useLocalization } from "localization-gen-vue-adapter";
+import { appLocalization } from "./assets/localizations/app-localization";
 
 const {
   locale,
@@ -43,30 +46,37 @@ const {
   context,     // structured context helper
   namespace,   // creates a module-scoped helper object
   entriesForLocale,
-  appLocalization,
 } = useLocalization({
   fallback: {
-    "auth.strings.login_title": "Login",
-    "common.strings.app_title": "App",
+    [appLocalization.auth.strings.login_title]: "Login",
+    [appLocalization.common.app_title]: "App",
   },
 });
 
-// Top-level helpers
-translate("auth.strings.login_title");
-format("auth.placeholders.welcome_back", { name: "Alfin" });
-plural("auth.structured.lock_message", 3);
-gender("common.structured.user_title", "female", { last_name: "Smith" });
-context("auth.structured.channel_label", "email");
+// Top-level helpers — keys are always type-safe via appLocalization.*
+translate(appLocalization.auth.strings.login_title);
+format(appLocalization.auth.placeholders.welcome_back, { name: "Alfin" });
+plural(appLocalization.auth.structured.lock_message, 3);
+gender(appLocalization.home.structured.host_title, "female", { last_name: "Rahma" });
+context(appLocalization.auth.structured.channel_label, "email");
 
 // Optional per-call fallback still works (overrides configured fallback)
-translate("auth.strings.login_title", "Sign In");
+translate(appLocalization.auth.strings.login_title, "Sign In");
 
 // Namespace-scoped helpers are still available when needed
 namespace("auth").translate("strings.login_title");
 </script>
 
 <template>
-  <h1>{{ appLocalization.strings.appTitle }}</h1>
+  <button v-for="l in manifest.locales" :key="l" @click="setLocale(l)">
+    {{ l.toUpperCase() }}
+  </button>
+
+  <h1>{{ translate(appLocalization.auth.strings.login_title) }}</h1>
+  <p>{{ format(appLocalization.auth.placeholders.welcome_back, { name: "Alfin" }) }}</p>
+  <p>{{ plural(appLocalization.auth.structured.lock_message, 3) }}</p>
+  <p>{{ gender(appLocalization.home.structured.host_title, "female", { last_name: "Rahma" }) }}</p>
+  <p>{{ context(appLocalization.auth.structured.channel_label, "email") }}</p>
 </template>
 ```
 
