@@ -8,6 +8,7 @@ export const DEFAULT_CONFIG: LocalizationGenConfig = {
   base_locale: "en",
   fallback_locale: "en",
   strict: true,
+  namespace_prefix: "module",
   generated: {
     runtime_entry_file: "app-localization.ts",
     runtime_types_file: "app-localization.types.ts",

@@ -13,5 +13,8 @@ export function validateConfig(config: LocalizationGenConfig): void {
   if (config.framework !== "react" && config.framework !== "vue" && config.framework !== "nest") {
     throw new Error("Config validation failed: framework must be react, vue, or nest.");
   }
+  if (config.namespace_prefix !== "module" && config.namespace_prefix !== "none") {
+    throw new Error("Config validation failed: namespace_prefix must be \"module\" or \"none\".");
+  }
 }
 

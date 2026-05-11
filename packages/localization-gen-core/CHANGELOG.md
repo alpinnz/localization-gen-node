@@ -2,6 +2,30 @@
 
 All notable changes to `localization-gen-core` are documented in this file.
 
+## [0.0.6] - 2026-05-11
+
+### Added
+
+- **`namespace_prefix`** config field in `localization-gen.yaml` — controls whether the module folder name is prepended to every generated key as a namespace prefix
+  - `"module"` (default) — keys are emitted as `auth.login.page_title`
+  - `"none"` — keys are emitted as `login.page_title`; use only when all key paths are globally unique across modules
+- **`NamespacePrefix`** type (`"module" | "none"`) exported from public API (`localization-gen-core`)
+- Generated `app-localization.ts` now exports **`AppLocalization`** type (`typeof appLocalization`) so consumers can annotate props and function parameters without redundant type declarations
+- Generated `app-localization.types.ts` now exports **`AppLocalizationNode`** — a recursive base type for the accessor tree (`{ readonly [key: string]: string | AppLocalizationNode }`)
+- `appLocalization` constant in generated file now uses **`as const satisfies AppLocalizationNode`** — shape is validated at compile time while all leaf literal string types are preserved
+
+### Fixed
+
+- **`appLocalization` accessor tree** previously stripped the module prefix from every path segment (`.slice(1)`), causing:
+  - `appLocalization.auth` to not exist — tree started from the second segment
+  - Silent key collisions when two modules shared a sub-path (e.g. `auth.strings.*` and `home.strings.*` both resolved to `strings.*`)
+  - Now the full key path is mirrored exactly: `appLocalization.auth.login.page_title` → `"auth.login.page_title"`
+
+### Tests
+
+- `compiler.test.ts`: added coverage for `namespace_prefix: "module"` (key includes module) and `namespace_prefix: "none"` (key excludes module)
+- `config.test.ts`: added coverage for invalid `namespace_prefix` rejection and valid `namespace_prefix: "none"` acceptance
+
 ## [0.0.5] - 2026-05-05
 
 ### Added

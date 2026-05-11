@@ -2,6 +2,18 @@
 
 All notable changes to `localization-gen-nest-adapter` are documented in this file.
 
+## [0.0.6] - 2026-05-11
+
+### Changed
+
+- Package version bumped to `0.0.6` for synchronized monorepo release
+- Peer dependency updated to `localization-gen-core@^0.0.6`
+
+### Notes
+
+- Generated `app-localization.ts` now exports `AppLocalization` type and uses `as const satisfies AppLocalizationNode` — no adapter code changes required; consumers benefit automatically after re-running `localization-gen generate`
+- `appLocalization` accessor tree now includes the module name as the top-level key (e.g. `appLocalization.auth.login.page_title`); previously the module prefix was incorrectly stripped
+
 ## [0.0.5] - 2026-05-05
 
 ### Added

@@ -20,6 +20,18 @@ export interface ReportingConfig {
   coverage_format: "json" | "html";
 }
 
+/**
+ * Controls whether the module folder name is prepended to every generated key
+ * as a namespace prefix.
+ *
+ * - `"module"` (default) → `auth.login.page_title`
+ * - `"none"`             → `login.page_title`
+ *
+ * Use `"none"` only when all modules have globally-unique key paths.
+ * Collisions across modules will silently overwrite each other at runtime.
+ */
+export type NamespacePrefix = "module" | "none";
+
 export interface LocalizationGenConfig {
   input_dir: string;
   output_dir: string;
@@ -28,6 +40,11 @@ export interface LocalizationGenConfig {
   base_locale: string;
   fallback_locale: string;
   strict: boolean;
+  /**
+   * Whether to prepend the module name as a namespace prefix to generated keys.
+   * Defaults to `"module"`.
+   */
+  namespace_prefix: NamespacePrefix;
   generated: GeneratedConfig;
   validation: ValidationConfig;
   reporting: ReportingConfig;

@@ -8,6 +8,14 @@ base_locale: en
 fallback_locale: en
 strict: true
 
+# Controls whether the module folder name is prepended to every generated key
+# as a namespace prefix.
+#
+#   "module" (default) → auth.login.page_title
+#   "none"             → login.page_title  (use only when all keys are globally unique)
+#
+namespace_prefix: module
+
 generated:
   runtime_entry_file: app-localization.ts
   runtime_types_file: app-localization.types.ts

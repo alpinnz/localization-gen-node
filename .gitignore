@@ -6,6 +6,13 @@ node_modules/
 **/coverage/
 **/*.tsbuildinfo
 
+# TypeScript emit artifacts inside example src/ directories
+# (examples use Vite for compilation; tsc runs in noEmit/type-check mode only)
+packages/*-example/src/**/*.js
+packages/*-example/src/**/*.js.map
+packages/*-example/src/**/*.d.ts
+!packages/*-example/assets
+
 # Caches
 .turbo/
 .npm/

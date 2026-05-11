@@ -37,10 +37,9 @@ export function buildRuntimeModel(manifest: RuntimeManifest): RuntimeModel {
   const placeholderFns: string[] = [];
 
   for (const entry of manifest.entries) {
-    // Strip module prefix for accessor path; leaf stays the original full message key.
-    const segments = entry.key
-      .split(".")
-      .slice(1); // remove module prefix
+    // Keep the full key path so the accessor tree mirrors the key structure exactly.
+    // e.g. "auth.strings.login_title" → appLocalization.auth.strings.login_title
+    const segments = entry.key.split(".");
 
     setNested(stringsTree, segments, entry.key);
 

@@ -64,6 +64,38 @@ localization-gen coverage --format=html --output=coverage.html
 
 ---
 
+## Configuration (`localization-gen.yaml`)
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `input_dir` | `string` | `"assets/localizations"` | Directory containing module folders with JSON locale files |
+| `output_dir` | `string` | `"src/assets/localizations"` | Directory where generated files are written |
+| `framework` | `"react" \| "vue" \| "nest"` | `"react"` | Target framework for runtime file generation |
+| `base_locale` | `string` | `"en"` | Default locale used when the app starts |
+| `fallback_locale` | `string` | `"en"` | Locale used when a key is missing in the active locale |
+| `strict` | `boolean` | `true` | Fail the generate command when validation errors are present |
+| `namespace_prefix` | `"module" \| "none"` | `"module"` | Whether the module folder name is prepended to every generated key as a namespace prefix (see below) |
+
+### `namespace_prefix`
+
+Controls how generated keys are scoped:
+
+```yaml
+# "module" (default) — module name is prepended as a namespace prefix
+namespace_prefix: module
+# auth/en.json key "login.page_title" → generated as "auth.login.page_title"
+# accessed via: appLocalization.auth.login.page_title
+
+# "none" — key is emitted as-is without module prefix
+namespace_prefix: none
+# auth/en.json key "login.page_title" → generated as "login.page_title"
+# accessed via: appLocalization.login.page_title
+```
+
+> **Warning:** Use `namespace_prefix: none` only when all key paths are globally unique across every module. Collisions will silently overwrite each other at runtime.
+
+---
+
 ## Using with React
 
 Install the React adapter:
@@ -190,6 +222,37 @@ const { locale, setLocale, manifest, translate, format, plural, gender, context 
   <p>{{ context("auth.structured.channel_label", "email") }}</p>
 </template>
 ```
+
+---
+
+## Type-safe key access with `appLocalization`
+
+Every generated `app-localization.ts` exports an `appLocalization` constant and an `AppLocalization` type
+that mirror the full key tree. Use them instead of hardcoded strings to get compile-time safety and IDE autocomplete.
+
+```ts
+import { appLocalization } from "./assets/localizations/app-localization";
+import type { AppLocalization } from "./assets/localizations/app-localization";
+
+// Resolve key with full type safety
+translate(appLocalization.auth.login.page_title)
+// → translate("auth.login.page_title")
+
+// Use AppLocalization as a type annotation
+function pickKey(fn: (t: AppLocalization) => string): string {
+  return fn(appLocalization);
+}
+pickKey((t) => t.home.strings.home_title);
+
+// Fallback map with computed keys — no magic strings
+const fallback = {
+  [appLocalization.auth.strings.login_title]: "Login",
+  [appLocalization.home.strings.home_title]: "Home",
+};
+```
+
+The generated types file (`app-localization.types.ts`) also exports `AppLocalizationNode` — the recursive base
+type for the tree — which `appLocalization` is validated against via `satisfies` at compile time.
 
 ---
 

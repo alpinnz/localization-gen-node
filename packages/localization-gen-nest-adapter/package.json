@@ -1,6 +1,6 @@
 {
   "name": "localization-gen-nest-adapter",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "NestJS module, service and interceptor for runtime consumption of localization-gen-node generated output.",
   "license": "MIT",
   "repository": {
@@ -57,7 +57,7 @@
     "rxjs": "^7"
   },
   "dependencies": {
-    "localization-gen-core": "^0.0.4"
+    "localization-gen-core": "^0.0.6"
   }
 }
 
