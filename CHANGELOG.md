@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.0.7] - 2026-05-18
+
+### Changed
+
+- `translate(key, fallbackValue?)` in React, Vue, and Nest adapters now accepts `null` as `fallbackValue`
+- Passing `null` explicitly bypasses any hook/composable-level fallback and guarantees the missing key string is returned as-is
+- `fallbackValue` parameter type widened to `string | null | undefined` across all adapters; return type remains strictly `string` (non-nullable)
+- Adapter package versions bumped to `0.0.7` (React, Vue, Nest)
+
 ## [0.0.4] - 2026-04-20
 
 ### Changed

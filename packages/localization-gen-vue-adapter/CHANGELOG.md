@@ -2,6 +2,14 @@
 
 All notable changes to `localization-gen-vue-adapter` are documented in this file.
 
+## [0.0.7] - 2026-05-18
+
+### Changed
+
+- `translate(key, fallbackValue?)` now accepts `null` as `fallbackValue` — passing `null` explicitly bypasses composable-level fallback and always returns the key string itself when the key is missing
+- `fallbackValue` parameter type widened from `string | undefined` to `string | null | undefined` in `useLocalization`, `NamespacedLocalizer` interface, and `namespace()` helper
+- Return type of `translate` remains strictly `string` (non-nullable) in all call paths
+
 ## [0.0.6] - 2026-05-11
 
 ### Changed

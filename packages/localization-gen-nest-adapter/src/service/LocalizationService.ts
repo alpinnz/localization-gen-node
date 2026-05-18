@@ -16,7 +16,7 @@ export type GenderVariant = "male" | "female" | "other";
 
 export interface NamespacedLocalizer {
   /** Resolves plain string key in current namespace. */
-  translate(key: string, fallbackValue?: string): string;
+  translate(key: string, fallbackValue?: string | null): string;
   /** Resolves and interpolates placeholder key in current namespace. */
   format(key: string, params: InterpolationParams): string;
   /** Resolves structured plural key in current namespace. */
@@ -97,10 +97,10 @@ export class LocalizationService {
    * Resolves a translation key.
    *
    * @param key Fully qualified key (e.g. `"common.greeting"`).
-   * @param fallbackValue Value to return when the key is missing.
+   * @param fallbackValue Value to return when the key is missing. Pass `null` to explicitly return the key itself.
    * @param locale Override locale; defaults to `getCurrentLocale()`.
    */
-  translate(key: string, fallbackValue?: string, locale?: string): string {
+  translate(key: string, fallbackValue?: string | null, locale?: string): string {
     const loc = locale ?? this.getCurrentLocale();
     const value = lookupMessage(
       {
@@ -111,6 +111,7 @@ export class LocalizationService {
       key
     );
     if (!value || value === key) {
+      if (fallbackValue === null) return value;
       return fallbackValue ?? value;
     }
     return value;

@@ -1,6 +1,6 @@
 {
   "name": "localization-gen-react-adapter",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React provider and hooks for runtime consumption of localization-gen-node generated output.",
   "license": "MIT",
   "repository": {

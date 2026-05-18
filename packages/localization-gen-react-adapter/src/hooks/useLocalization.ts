@@ -12,7 +12,7 @@ export type InterpolationParams = Record<string, string | number>;
 export type GenderVariant = "male" | "female" | "other";
 
 export interface NamespacedLocalizer {
-  translate(key: string, fallbackValue?: string): string;
+  translate(key: string, fallbackValue?: string | null): string;
   format(key: string, params: InterpolationParams): string;
   plural(key: string, count: number): string;
   gender(key: string, gender: GenderVariant, params: InterpolationParams): string;
@@ -72,9 +72,10 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
   );
 
   const translate = useCallback(
-    (key: string, fallbackValue?: string) => {
+    (key: string, fallbackValue?: string | null): string => {
       const translatedValue = readTranslation(key);
       if (!translatedValue || translatedValue === key) {
+        if (fallbackValue === null) return translatedValue;
         return fallbackValue ?? pickFallbackText(fallback, key) ?? translatedValue;
       }
       return translatedValue;
@@ -115,7 +116,7 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
 
   const namespace = useCallback(
     (scope: string): NamespacedLocalizer => ({
-      translate: (key: string, fallbackValue?: string) =>
+      translate: (key: string, fallbackValue?: string | null) =>
         translate(`${scope}.${key}`, fallbackValue),
       format: (key: string, params: InterpolationParams) => format(`${scope}.${key}`, params),
       plural: (key: string, count: number) => plural(`${scope}.${key}`, count),
