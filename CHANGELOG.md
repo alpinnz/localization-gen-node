@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.0.8] - 2026-05-23
+
+### Fixed
+
+- `localization-gen-core`: `generate` CLI command now prints detailed diagnostic messages to stderr before throwing, so placeholder/key errors are visible immediately in the terminal
+
 ## [0.0.7] - 2026-05-18
 
 ### Changed

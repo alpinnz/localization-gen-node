@@ -2,6 +2,12 @@
 
 All notable changes to `localization-gen-core` are documented in this file.
 
+## [0.0.7] - 2026-05-23
+
+### Fixed
+
+- **`generate` CLI command** now prints detailed diagnostic messages to stderr via `renderTerminalReport` before throwing, making it easy to identify which localization keys/placeholders caused the failure without additional debugging
+
 ## [0.0.6] - 2026-05-11
 
 ### Added
