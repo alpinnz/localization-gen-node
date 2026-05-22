@@ -40,7 +40,18 @@
         }
       },
       "email_not_found": {
-        "error": "Akun tidak ditemukan, yuk periksa kembali Email atau No kamu."
+        "error": "Akun tidak ditemukan, yuk periksa kembali Email atau No kamu.",
+        "password_security": {
+          "level_label": "Tingkat Keamanan:",
+          "requirement_list_aria_label": "Syarat Kata Sandi",
+          "requirement": {
+            "minimum_length": "Minimal 8 Karakter",
+            "uppercase": "Ada Huruf Besar (A-Z)",
+            "lowercase": "Ada Huruf Kecil (a-z)",
+            "number": "Ada Angka (0-9)",
+            "symbol": "Ada Simbol (!, @, #, $, %, &, *, ?, dsb.)"
+          }
+        }
       },
       "password_incorrect": {
         "error": "Kata sandimu belum cocok, masih ada {attempts} kesempatan dalam 15 menit."
@@ -51,30 +62,6 @@
       "submit": {
         "button": "Masuk",
         "disabled": "Lengkapi dulu semua data yang diperlukan ya."
-      }
-    },
-    "session": {
-      "dialog": {
-        "title": "Sesi Berakhir",
-        "button": "OK",
-        "manual_logout": {
-          "description": "Sesi kamu sudah berakhir. Sampai jumpa lagi!"
-        },
-        "session_expired": {
-          "title": "Sesi Diakhiri",
-          "message_72h": "Demi keamanan, sesi kamu otomatis berakhir setelah 72 jam. Yuk, login lagi untuk melanjutkan.",
-          "message_30d": "Demi keamanan, sesi kamu otomatis berakhir setelah 30 hari. Yuk, login lagi untuk melanjutkan."
-        }
-      },
-      "toast": {
-        "title": "Informasi!",
-        "resumed": "Kamu masih login di perangkat ini, yuk lanjutkan aktivitasmu."
-      },
-      "active_notice": {
-        "banner": "Kamu masih login di perangkat ini, yuk lanjutkan aktivitasmu."
-      },
-      "expired_notice": {
-        "banner": "Sesi kamu sudah berakhir. Yuk login lagi supaya data tetap aman."
       }
     },
     "banner": {
@@ -94,6 +81,27 @@
           "title": "Gagal!",
           "submit": "Percobaan login kamu tidak berhasil"
         }
+      }
+    },
+    "button": {
+      "forgot": "Lupa Password",
+      "session_expired_idle": "Oke"
+    },
+    "bannertitle": {
+      "session_expired_idle": "Sesi Berakhir"
+    },
+    "bannermessage": {
+      "session_expired_idle": "Demi keamanan, sesi kamu otomatis berakhir setelah 30 menit tanpa aktivitas. Yuk, login lagi untuk melanjutkan."
+    },
+    "success": {
+      "redirect": {
+        "message": "Login berhasil. Mengarahkan Anda ke Beranda."
+      },
+      "home": {
+        "label": "Beranda"
+      },
+      "return": {
+        "label": "Kembali ke halaman asal"
       }
     }
   },
@@ -127,6 +135,17 @@
       },
       "submit": {
         "button": "Daftar Sekarang"
+      }
+    },
+    "password_security": {
+      "level_label": "Tingkat Keamanan:",
+      "requirement_list_aria_label": "Syarat Kata Sandi",
+      "requirement": {
+        "minimum_length": "Minimal 8 Karakter",
+        "uppercase": "Ada Huruf Besar (A-Z)",
+        "lowercase": "Ada Huruf Kecil (a-z)",
+        "number": "Ada Angka (0-9)",
+        "symbol": "Ada Simbol (!, @, #, $, %, &, *, ?, dsb.)"
       }
     },
     "error": {
@@ -299,48 +318,6 @@
       }
     }
   },
-  "banner": {
-    "common": {
-      "title": "Verifikasi Lanjutan",
-      "cta": "Verifikasi Sekarang"
-    },
-    "wa_first": {
-      "message": "Untuk keamanan akun dan akses tanpa gangguan, kamu akan diminta verifikasi WhatsApp dalam {d} hari. Kamu juga bisa menyelesaikannya dari sekarang."
-    },
-    "email_first": {
-      "message": "Untuk keamanan akun dan akses tanpa gangguan, kamu akan diminta verifikasi Email dalam {d} hari. Kamu juga bisa menyelesaikannya dari sekarang."
-    }
-  },
-  "hardblock": {
-    "modal": {
-      "title": "Perlu Verifikasi Tambahan",
-      "description": "Untuk menjaga keamanan akunmu, kami perlu memastikan identitas keduamu sudah terverifikasi sebelum kamu melanjutkan.",
-      "cta": {
-        "confirm": "Mengerti"
-      }
-    }
-  },
-  "session_refresh": {
-    "page_title": "Yuk Perbarui Sesi Kamu",
-    "info": {
-      "title": "Verifikasi Ulang Diperlukan",
-      "verif_2nd_identity": "Setelah ini, kita akan memverifikasi identitas keduamu agar akunmu tetap aman dan akses berjalan tanpa gangguan, ya.",
-      "description30d": "Sesi login kamu telah aktif selama 30 hari dan perlu diverifikasi ulang.",
-      "description72h": "Sesi login kamu telah aktif selama 72 jam dan perlu diverifikasi ulang."
-    },
-    "body": {
-      "description": "Verifikasi ini dilakukan untuk menjaga keamanan akunmu dan memastikan hanya kamu yang dapat mengaksesnya. Masukkan kata sandi untuk melanjutkan."
-    },
-    "form": {
-      "password": {
-        "label": "Kata Sandi"
-      }
-    },
-    "cta": {
-      "submit": "Lanjutkan",
-      "google": "Lanjutkan dengan Google"
-    }
-  },
   "verifikasi_wa": {
     "resend": {
       "button": {
@@ -394,6 +371,7 @@
         "enabled": "Kirim Ulang Link"
       },
       "success": {
+        "toast_title": "Sukses!",
         "toast_message": "Link verifikasi baru telah dikirim."
       },
       "limit": {
@@ -612,14 +590,7 @@
       "language_switcher_aria_label": "Pilih bahasa aplikasi",
       "language_id_label": "Indonesia",
       "language_en_label": "English",
-      "profile_menu_aria_label": "Menu profil pengguna",
-      "logout_action": "Keluar",
-      "logout_loading_label": "Memproses logout",
-      "logout_processing": "Memproses...",
-      "logout_dialog_title": "Konfirmasi Logout",
-      "logout_dialog_description": "Apakah Anda yakin ingin keluar dari akun ini?",
-      "logout_dialog_cancel": "Batal",
-      "logout_dialog_confirm": "Ya, Logout"
+      "profile_menu_aria_label": "Menu profil pengguna"
     },
     "dashboard": {
       "welcome": "Selamat Datang, Salsa Maulana",
@@ -646,86 +617,118 @@
     "user_not_found": "Pengguna tidak ditemukan"
   },
   "logout": {
-    "login_manual": {
-      "session_pre_warning_72h": {
-        "modal": {
-          "title": "Yuk Perbarui Sesi Kamu",
-          "description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar biar tetap aman. Masukkan kata sandimu untuk lanjut ya."
-        },
-        "form": {
-          "password": {
-            "label": "Kata Sandi",
-            "placeholder": "••••••••"
-          }
-        },
-        "cta": {
-          "submit": "Lanjutkan"
-        },
-        "info_hint": {
-          "title": "Tip!",
-          "message": "Aktifkan \"ingat saya\" saat login supaya kamu tidak perlu memperbarui sesi terlalu sering."
-        }
-      },
-      "session_pre_warning_30d": {
-        "modal": {
-          "title": "Yuk Perbarui Sesi Kamu",
-          "description": "Sesi kamu sudah mencapai 30 hari. Yuk verifikasi sebentar biar tetap aman. Masukkan kata sandimu untuk lanjut ya."
-        },
-        "form": {
-          "password": {
-            "label": "Kata Sandi",
-            "placeholder": "••••••••"
-          }
-        },
-        "cta": {
-          "submit": "Lanjutkan"
-        },
-        "info_hint": {
-          "title": "Tip!",
-          "message": "Untuk memastikan keamanan akunmu, kami perlu melakukan verifikasi ulang secara berkala."
-        }
-      },
-      "session_pre_warning": {
-        "form": {
-          "password": {
-            "error": {
-              "empty": "Kata sandi belum diisi. Yuk lengkapi dulu supaya kamu bisa lanjut.",
-              "wrong_attempt1": "Kata sandinya belum pas. Coba lagi ya. Kamu masih punya 2 kesempatan.",
-              "wrong_attempt2": "Masih belum pas. Yuk cek sekali lagi ya. Kamu masih punya 1 kesempatan."
-            }
-          }
-        },
-        "toast": {
-          "error_wrong_password_attempt3": {
-            "title": "Gagal!",
-            "message": "Demi keamanan, kamu akan diminta untuk login kembali"
-          },
-          "success_session_renewed": {
-            "title": "Sukses!",
-            "message": "Sesi kamu berhasil diperbarui. Selamat melanjutkan aktivitas."
-          }
-        }
+    "menu": {
+      "label": "Keluar"
+    },
+    "confirmation": {
+      "title": "Konfirmasi Keluar",
+      "button": {
+        "confirm": "Ya, Keluar"
       }
     },
-    "login_google": {
-      "session_pre_warning": {
-        "modal": {
-          "title": "Yuk Perbarui Sesi Kamu",
-          "description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar lewat Google biar tetap aman tanpa perlu ketik kata sandi."
-        },
-        "cta": {
-          "google": "Lanjutkan dengan Google"
-        },
-        "toast": {
-          "cancelled": {
-            "title": "Verifikasi Dibatalkan",
-            "message": "Kamu bisa coba lagi kapan pun."
-          },
-          "success_session_renewed": {
-            "title": "Sukses!",
-            "message": "Sesi kamu berhasil diperbarui. Selamat melanjutkan aktivitas."
-          }
+    "popup": {
+      "title": "Konfirmasi Keluar",
+      "message": "Anda yakin ingin keluar? Tenang, data Anda tetap aman.",
+      "button": {
+        "confirm": "Ya, Keluar",
+        "cancel": "Batal"
+      },
+      "error": {
+        "network_failure": "Jaringan bermasalah, coba lagi."
+      }
+    },
+    "confirm": {
+      "title": "Konfirmasi Logout",
+      "message": "Anda yakin ingin keluar?",
+      "button_yes": "Ya, Keluar",
+      "button_no": "Batal"
+    },
+    "success": {
+      "toast": "Anda sudah berhasil keluar. Sampai jumpa lagi."
+    },
+    "error": {
+      "network": "Jaringan bermasalah, coba lagi."
+    }
+  },
+  "session_pre_warning_google": {
+    "modal": {
+      "title": "Yuk Perbarui Sesi Kamu",
+      "description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar lewat Google biar tetap aman tanpa perlu ketik kata sandi."
+    },
+    "cta": {
+      "google": "Lanjutkan dengan Google"
+    }
+  },
+  "session_pre_warning_72h": {
+    "modal": {
+      "title": "Yuk Perbarui Sesi Kamu",
+      "description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar biar tetap aman. Masukkan kata sandimu untuk lanjut ya."
+    }
+  },
+  "screen_privacy_mode": {
+    "title": "Tampilan Disamarkan"
+  },
+  "idle": {
+    "popup": {
+      "title": "Sesi hampir berakhir",
+      "toast": {
+        "keepalive": {
+          "title": "Sukses!",
+          "message": "Sesi kamu diperpanjang."
         }
+      }
+    }
+  },
+  "popup": {
+    "title": "Sesi Anda hampir berakhir",
+    "message": "Sesi akan berakhir dalam {{time}} detik.",
+    "button": {
+      "extend": "Tetap Login",
+      "close": "Tutup",
+      "logout": "Keluar Sekarang"
+    }
+  },
+  "popup_permission": {
+    "blocked": {
+      "title": "Izin Popup Diblokir"
+    }
+  },
+  "session": {
+    "expired": {
+      "modal": {
+        "message": "Sesi Anda telah berakhir. Demi keamanan, silakan login ulang untuk melanjutkan aktivitas Anda.",
+        "button": "Login Ulang"
+      }
+    }
+  },
+  "login_invite": {
+    "banner": {
+      "title": "Undangan Bergabung"
+    }
+  },
+  "register_invite": {
+    "banner": {
+      "title": "Undangan Bergabung"
+    }
+  },
+  "channel_verifiy": {
+    "page": {
+      "title": "Pilih Metode Verifikasi",
+      "info": "Untuk menjaga keamanan akun Anda, pilih salah satu metode untuk menerima kode verifikasi reset password."
+    }
+  },
+  "cekemail": {
+    "page_title": "Cek Email Anda",
+    "description": "Kami telah mengirim tautan verifikasi ke alamat email yang Anda daftarkan.",
+    "help": {
+      "didnt_get_email": "Belum menerima email? Terkadang butuh beberapa menit hingga email masuk ke kotak masuk Anda.",
+      "check_spam": "Pastikan juga untuk memeriksa folder spam atau promosi."
+    }
+  },
+  "login_page": {
+    "form": {
+      "button": {
+        "forgot_pass": "Lupa Password"
       }
     }
   }

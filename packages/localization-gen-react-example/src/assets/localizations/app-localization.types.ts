@@ -28,3 +28,12 @@ export interface AppLocalizationManifest {
   /** Per-locale flat key/value message map. */
   messages: Record<string, Record<string, string>>;
 }
+
+/**
+ * Base shape for the generated appLocalization accessor tree.
+ * Every leaf is a fully-qualified message key string;
+ * every branch is a nested AppLocalizationNode.
+ */
+export type AppLocalizationNode = {
+  readonly [key: string]: string | AppLocalizationNode;
+};

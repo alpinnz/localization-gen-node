@@ -40,7 +40,18 @@
         }
       },
       "email_not_found": {
-        "error": "Account not found, please check your email or number again."
+        "error": "Account not found, please check your email or number again.",
+        "password_security": {
+          "level_label": "Security Level:",
+          "requirement_list_aria_label": "Password Requirements",
+          "requirement": {
+            "minimum_length": "Minimum 8 Characters",
+            "uppercase": "Contains Uppercase Letter (A-Z)",
+            "lowercase": "Contains Lowercase Letter (a-z)",
+            "number": "Contains Number (0-9)",
+            "symbol": "Contains Symbol (!, @, #, $, %, &, *, ?, etc.)"
+          }
+        }
       },
       "password_incorrect": {
         "error": "Your password doesn’t match yet. You still have {attempts} more tries within 15 minutes."
@@ -51,30 +62,6 @@
       "submit": {
         "button": "Log In",
         "disabled": "Please complete all required fields first."
-      }
-    },
-    "session": {
-      "dialog": {
-        "title": "Session Ended",
-        "button": "OK",
-        "manual_logout": {
-          "description": "Your session has ended. See you later!"
-        },
-        "session_expired": {
-          "title": "Session Ended",
-          "message_72h": "For your security, your session automatically ended after 72 hours. Please sign in again to continue.",
-          "message_30d": "For your security, your session automatically ended after 30 days. Please sign in again to continue."
-        }
-      },
-      "toast": {
-        "title": "Information!",
-        "resumed": "You're still logged in on this device, feel free to continue where you left off."
-      },
-      "active_notice": {
-        "banner": "You’re still logged in on this device, feel free to continue where you left off."
-      },
-      "expired_notice": {
-        "banner": "Your session has ended. Please log in again to keep your data secure."
       }
     },
     "banner": {
@@ -94,6 +81,27 @@
           "title": "Failed!",
           "submit": "Your login attempt was unsuccessful"
         }
+      }
+    },
+    "button": {
+      "forgot": "Forgot Password",
+      "session_expired_idle": "Okay"
+    },
+    "bannertitle": {
+      "session_expired_idle": "Session Ended"
+    },
+    "bannermessage": {
+      "session_expired_idle": "For your security, your session automatically ended after inactivity for 30 minutes. Please log in again to continue your work."
+    },
+    "success": {
+      "redirect": {
+        "message": "Login successful. Redirecting you to Home."
+      },
+      "home": {
+        "label": "Home"
+      },
+      "return": {
+        "label": "Return to previous page"
       }
     }
   },
@@ -127,6 +135,17 @@
       },
       "submit": {
         "button": "Sign Up"
+      }
+    },
+    "password_security": {
+      "level_label": "Security Level:",
+      "requirement_list_aria_label": "Password Requirements",
+      "requirement": {
+        "minimum_length": "Minimum 8 Characters",
+        "uppercase": "Contains Uppercase Letter (A-Z)",
+        "lowercase": "Contains Lowercase Letter (a-z)",
+        "number": "Contains Number (0-9)",
+        "symbol": "Contains Symbol (!, @, #, $, %, &, *, ?, etc.)"
       }
     },
     "error": {
@@ -299,48 +318,6 @@
       }
     }
   },
-  "banner": {
-    "common": {
-      "title": "Additional Verification",
-      "cta": "Verify now"
-    },
-    "wa_first": {
-      "message": "To keep your account secure and ensure uninterrupted access, you’ll be asked to verify your WhatsApp in {d} days. You can also complete it now."
-    },
-    "email_first": {
-      "message": "To keep your account secure and ensure uninterrupted access, you’ll be asked to verify your Email in {d} days. You can also complete it now."
-    }
-  },
-  "hardblock": {
-    "modal": {
-      "title": "Additional Verification Required",
-      "description": "To help keep your account secure, we need to verify your second identity before you continue.",
-      "cta": {
-        "confirm": "Got it"
-      }
-    }
-  },
-  "session_refresh": {
-    "page_title": "Let’s Refresh Your Session",
-    "info": {
-      "title": "Re-verification Required",
-      "verif_2nd_identity": "After this, we will verify your 2nd identity to ensure your account remains secure and access runs smoothly.",
-      "description30d": "Your login session has been active for 30 days and needs to be re-verified.",
-      "description72h": "Your login session has been active for 72 hours and needs to be re-verified."
-    },
-    "body": {
-      "description": "This verification helps keep your account secure and ensures that only you can access it. Please enter your password to continue."
-    },
-    "form": {
-      "password": {
-        "label": "Password"
-      }
-    },
-    "cta": {
-      "submit": "Continue",
-      "google": "Continue with Google"
-    }
-  },
   "verifikasi_wa": {
     "resend": {
       "button": {
@@ -394,6 +371,7 @@
         "enabled": "Resend Link"
       },
       "success": {
+        "toast_title": "Success!",
         "toast_message": "A new verification link has been sent."
       },
       "limit": {
@@ -612,14 +590,7 @@
       "language_switcher_aria_label": "Choose app language",
       "language_id_label": "Indonesia",
       "language_en_label": "English",
-      "profile_menu_aria_label": "User profile menu",
-      "logout_action": "Logout",
-      "logout_loading_label": "Processing logout",
-      "logout_processing": "Processing...",
-      "logout_dialog_title": "Logout Confirmation",
-      "logout_dialog_description": "Are you sure you want to log out from this account?",
-      "logout_dialog_cancel": "Cancel",
-      "logout_dialog_confirm": "Yes, Logout"
+      "profile_menu_aria_label": "User profile menu"
     },
     "dashboard": {
       "welcome": "Welcome, Salsa Maulana",
@@ -646,86 +617,118 @@
     "user_not_found": "User not found"
   },
   "logout": {
-    "login_manual": {
-      "session_pre_warning_72h": {
-        "modal": {
-          "title": "Refresh Your Session",
-          "description": "Your session has reached the 72-hour limit. Let's do a quick verification to keep things secure. Please enter your password to continue."
-        },
-        "form": {
-          "password": {
-            "label": "Password",
-            "placeholder": "••••••••"
-          }
-        },
-        "cta": {
-          "submit": "Continue"
-        },
-        "info_hint": {
-          "title": "Tips!",
-          "message": "Enable \"remember me\" when signing in so you don't need to refresh your session too often."
-        }
-      },
-      "session_pre_warning_30d": {
-        "modal": {
-          "title": "Refresh Your Session",
-          "description": "Your session has reached 30 days. Let's do a quick verification to keep things secure. Please enter your password to continue."
-        },
-        "form": {
-          "password": {
-            "label": "Password",
-            "placeholder": "••••••••"
-          }
-        },
-        "cta": {
-          "submit": "Continue"
-        },
-        "info_hint": {
-          "title": "Tips!",
-          "message": "To keep your account secure, we periodically need to reverify your identity."
-        }
-      },
-      "session_pre_warning": {
-        "form": {
-          "password": {
-            "error": {
-              "empty": "Password is required. Please fill it in so you can continue.",
-              "wrong_attempt1": "The password doesn't match yet. Try again — you still have 2 tries.",
-              "wrong_attempt2": "Still not a match. Please check once more — you have 1 try left."
-            }
-          }
-        },
-        "toast": {
-          "error_wrong_password_attempt3": {
-            "title": "Failed!",
-            "message": "For your security, your session has ended and you need to sign in again."
-          },
-          "success_session_renewed": {
-            "title": "Success!",
-            "message": "Your session has been refreshed. You're good to go."
-          }
-        }
+    "menu": {
+      "label": "Logout"
+    },
+    "confirmation": {
+      "title": "Logout Confirmation",
+      "button": {
+        "confirm": "Yes, Log Out"
       }
     },
-    "login_google": {
-      "session_pre_warning": {
-        "modal": {
-          "title": "Refresh Your Session",
-          "description": "Your session has reached the 72-hour limit. Let's do a quick check with Google so everything stays secure without typing your password."
-        },
-        "cta": {
-          "google": "Continue with Google"
-        },
-        "toast": {
-          "cancelled": {
-            "title": "Verification Cancelled",
-            "message": "You can try again anytime."
-          },
-          "success_session_renewed": {
-            "title": "Success!",
-            "message": "Your session has been refreshed. You're good to go."
-          }
+    "popup": {
+      "title": "Logout Confirmation",
+      "message": "Are you sure you want to log out? Don't worry, your data remains safe.",
+      "button": {
+        "confirm": "Yes, Log Out",
+        "cancel": "Cancel"
+      },
+      "error": {
+        "network_failure": "Network issue, please try again."
+      }
+    },
+    "confirm": {
+      "title": "Logout Confirmation",
+      "message": "Are you sure you want to log out?",
+      "button_yes": "Yes, Log Out",
+      "button_no": "Cancel"
+    },
+    "success": {
+      "toast": "You have successfully logged out. See you soon."
+    },
+    "error": {
+      "network": "Network issue, please try again."
+    }
+  },
+  "session_pre_warning_google": {
+    "modal": {
+      "title": "Refresh Your Session",
+      "description": "Your session has reached the 72-hour limit. Let's do a quick check with Google so everything stays secure without typing your password."
+    },
+    "cta": {
+      "google": "Continue with Google"
+    }
+  },
+  "session_pre_warning_72h": {
+    "modal": {
+      "title": "Refresh Your Session",
+      "description": "Your session has reached the 72-hour limit. Let's do a quick verification to keep things secure. Please enter your password to continue."
+    }
+  },
+  "screen_privacy_mode": {
+    "title": "Screen Blurred"
+  },
+  "idle": {
+    "popup": {
+      "title": "Session about to end",
+      "toast": {
+        "keepalive": {
+          "title": "Success!",
+          "message": "Your session has been extended."
         }
+      }
+    }
+  },
+  "popup": {
+    "title": "Your session is about to end",
+    "message": "Your session will end in {{time}} seconds.",
+    "button": {
+      "extend": "Stay Logged In",
+      "close": "Close",
+      "logout": "Logout Now"
+    }
+  },
+  "popup_permission": {
+    "blocked": {
+      "title": "Popup Permission Blocked"
+    }
+  },
+  "session": {
+    "expired": {
+      "modal": {
+        "message": "Your session has ended. For your security, please sign in again to continue.",
+        "button": "Sign In Again"
+      }
+    }
+  },
+  "login_invite": {
+    "banner": {
+      "title": "Company Invitation"
+    }
+  },
+  "register_invite": {
+    "banner": {
+      "title": "Company Invitation"
+    }
+  },
+  "channel_verifiy": {
+    "page": {
+      "title": "Select Verification Method",
+      "info": "To keep your account secure, select one of the methods to receive a password reset verification code."
+    }
+  },
+  "cekemail": {
+    "page_title": "Check Your Email",
+    "description": "We've sent a verification link to the email address you registered.",
+    "help": {
+      "didnt_get_email": "Haven't received the email? It may take a few minutes for the email to arrive in your inbox.",
+      "check_spam": "Be sure to also check your spam or promotions folder."
+    }
+  },
+  "login_page": {
+    "form": {
+      "button": {
+        "forgot_pass": "Forgot Password"
       }
     }
   }

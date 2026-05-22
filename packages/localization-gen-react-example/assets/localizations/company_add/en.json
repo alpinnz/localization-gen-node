@@ -19,8 +19,8 @@
       "button": "Cancel"
     },
     "toast": {
-      "title": "Changes Canceled",
-      "message": "Changes were canceled"
+      "title": "Changes Discarded",
+      "message": "Unsaved changes have been discarded."
     }
   },
   "toasttitle": {

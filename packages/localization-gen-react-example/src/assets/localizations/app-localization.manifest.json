@@ -15,27 +15,23 @@
       "placeholders": []
     },
     {
-      "key": "auth.banner.common.cta",
-      "placeholders": []
-    },
-    {
-      "key": "auth.banner.common.title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.banner.email_first.message",
-      "placeholders": [
-        "d"
-      ]
-    },
-    {
-      "key": "auth.banner.wa_first.message",
-      "placeholders": [
-        "d"
-      ]
-    },
-    {
       "key": "auth.btn_verifikasi_email",
+      "placeholders": []
+    },
+    {
+      "key": "auth.cekemail.description",
+      "placeholders": []
+    },
+    {
+      "key": "auth.cekemail.help.check_spam",
+      "placeholders": []
+    },
+    {
+      "key": "auth.cekemail.help.didnt_get_email",
+      "placeholders": []
+    },
+    {
+      "key": "auth.cekemail.page_title",
       "placeholders": []
     },
     {
@@ -120,6 +116,14 @@
     },
     {
       "key": "auth.change_wa.toast.success.message",
+      "placeholders": []
+    },
+    {
+      "key": "auth.channel_verifiy.page.info",
+      "placeholders": []
+    },
+    {
+      "key": "auth.channel_verifiy.page.title",
       "placeholders": []
     },
     {
@@ -299,15 +303,15 @@
       "placeholders": []
     },
     {
-      "key": "auth.hardblock.modal.cta.confirm",
+      "key": "auth.idle.popup.title",
       "placeholders": []
     },
     {
-      "key": "auth.hardblock.modal.description",
+      "key": "auth.idle.popup.toast.keepalive.message",
       "placeholders": []
     },
     {
-      "key": "auth.hardblock.modal.title",
+      "key": "auth.idle.popup.toast.keepalive.title",
       "placeholders": []
     },
     {
@@ -437,6 +441,14 @@
       "placeholders": []
     },
     {
+      "key": "auth.login_invite.banner.title",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login_page.form.button.forgot_pass",
+      "placeholders": []
+    },
+    {
       "key": "auth.login.banner.error.lockout",
       "placeholders": []
     },
@@ -447,7 +459,51 @@
       ]
     },
     {
+      "key": "auth.login.bannermessage.session_expired_idle",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.bannertitle.session_expired_idle",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.button.forgot",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.button.session_expired_idle",
+      "placeholders": []
+    },
+    {
       "key": "auth.login.form.email_not_found.error",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.form.email_not_found.password_security.level_label",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.form.email_not_found.password_security.requirement_list_aria_label",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.form.email_not_found.password_security.requirement.lowercase",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.form.email_not_found.password_security.requirement.minimum_length",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.form.email_not_found.password_security.requirement.number",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.form.email_not_found.password_security.requirement.symbol",
+      "placeholders": []
+    },
+    {
+      "key": "auth.login.form.email_not_found.password_security.requirement.uppercase",
       "placeholders": []
     },
     {
@@ -537,43 +593,15 @@
       "placeholders": []
     },
     {
-      "key": "auth.login.session.active_notice.banner",
+      "key": "auth.login.success.home.label",
       "placeholders": []
     },
     {
-      "key": "auth.login.session.dialog.button",
+      "key": "auth.login.success.redirect.message",
       "placeholders": []
     },
     {
-      "key": "auth.login.session.dialog.manual_logout.description",
-      "placeholders": []
-    },
-    {
-      "key": "auth.login.session.dialog.session_expired.message_30d",
-      "placeholders": []
-    },
-    {
-      "key": "auth.login.session.dialog.session_expired.message_72h",
-      "placeholders": []
-    },
-    {
-      "key": "auth.login.session.dialog.session_expired.title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.login.session.dialog.title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.login.session.expired_notice.banner",
-      "placeholders": []
-    },
-    {
-      "key": "auth.login.session.toast.resumed",
-      "placeholders": []
-    },
-    {
-      "key": "auth.login.session.toast.title",
+      "key": "auth.login.success.return.label",
       "placeholders": []
     },
     {
@@ -601,115 +629,59 @@
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_google.session_pre_warning.cta.google",
+      "key": "auth.logout.confirm.button_no",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_google.session_pre_warning.modal.description",
+      "key": "auth.logout.confirm.button_yes",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_google.session_pre_warning.modal.title",
+      "key": "auth.logout.confirm.message",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_google.session_pre_warning.toast.cancelled.message",
+      "key": "auth.logout.confirm.title",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_google.session_pre_warning.toast.cancelled.title",
+      "key": "auth.logout.confirmation.button.confirm",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_google.session_pre_warning.toast.success_session_renewed.message",
+      "key": "auth.logout.confirmation.title",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_google.session_pre_warning.toast.success_session_renewed.title",
+      "key": "auth.logout.error.network",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_manual.session_pre_warning_30d.cta.submit",
+      "key": "auth.logout.menu.label",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_manual.session_pre_warning_30d.form.password.label",
+      "key": "auth.logout.popup.button.cancel",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_manual.session_pre_warning_30d.form.password.placeholder",
+      "key": "auth.logout.popup.button.confirm",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_manual.session_pre_warning_30d.info_hint.message",
+      "key": "auth.logout.popup.error.network_failure",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_manual.session_pre_warning_30d.info_hint.title",
+      "key": "auth.logout.popup.message",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_manual.session_pre_warning_30d.modal.description",
+      "key": "auth.logout.popup.title",
       "placeholders": []
     },
     {
-      "key": "auth.logout.login_manual.session_pre_warning_30d.modal.title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning_72h.cta.submit",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning_72h.form.password.label",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning_72h.form.password.placeholder",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning_72h.info_hint.message",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning_72h.info_hint.title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning_72h.modal.description",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning_72h.modal.title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning.form.password.error.empty",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning.form.password.error.wrong_attempt1",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning.form.password.error.wrong_attempt2",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning.toast.error_wrong_password_attempt3.message",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning.toast.error_wrong_password_attempt3.title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning.toast.success_session_renewed.message",
-      "placeholders": []
-    },
-    {
-      "key": "auth.logout.login_manual.session_pre_warning.toast.success_session_renewed.title",
+      "key": "auth.logout.success.toast",
       "placeholders": []
     },
     {
@@ -784,6 +756,36 @@
     },
     {
       "key": "auth.otp.success.toast.message",
+      "placeholders": []
+    },
+    {
+      "key": "auth.popup_permission.blocked.title",
+      "placeholders": []
+    },
+    {
+      "key": "auth.popup.button.close",
+      "placeholders": []
+    },
+    {
+      "key": "auth.popup.button.extend",
+      "placeholders": []
+    },
+    {
+      "key": "auth.popup.button.logout",
+      "placeholders": []
+    },
+    {
+      "key": "auth.popup.message",
+      "placeholders": [
+        "time"
+      ]
+    },
+    {
+      "key": "auth.popup.title",
+      "placeholders": []
+    },
+    {
+      "key": "auth.register_invite.banner.title",
       "placeholders": []
     },
     {
@@ -927,6 +929,34 @@
       "placeholders": []
     },
     {
+      "key": "auth.register.password_security.level_label",
+      "placeholders": []
+    },
+    {
+      "key": "auth.register.password_security.requirement_list_aria_label",
+      "placeholders": []
+    },
+    {
+      "key": "auth.register.password_security.requirement.lowercase",
+      "placeholders": []
+    },
+    {
+      "key": "auth.register.password_security.requirement.minimum_length",
+      "placeholders": []
+    },
+    {
+      "key": "auth.register.password_security.requirement.number",
+      "placeholders": []
+    },
+    {
+      "key": "auth.register.password_security.requirement.symbol",
+      "placeholders": []
+    },
+    {
+      "key": "auth.register.password_security.requirement.uppercase",
+      "placeholders": []
+    },
+    {
       "key": "auth.resend_email.change_email.cta",
       "placeholders": []
     },
@@ -953,39 +983,39 @@
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.body.description",
+      "key": "auth.resend_email.resend.success.toast_title",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.cta.google",
+      "key": "auth.screen_privacy_mode.title",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.cta.submit",
+      "key": "auth.session_pre_warning_72h.modal.description",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.form.password.label",
+      "key": "auth.session_pre_warning_72h.modal.title",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.info.description30d",
+      "key": "auth.session_pre_warning_google.cta.google",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.info.description72h",
+      "key": "auth.session_pre_warning_google.modal.description",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.info.title",
+      "key": "auth.session_pre_warning_google.modal.title",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.info.verif_2nd_identity",
+      "key": "auth.session.expired.modal.button",
       "placeholders": []
     },
     {
-      "key": "auth.session_refresh.page_title",
+      "key": "auth.session.expired.modal.message",
       "placeholders": []
     },
     {
@@ -1106,34 +1136,6 @@
     },
     {
       "key": "auth.ui.main_layout.language_switcher_aria_label",
-      "placeholders": []
-    },
-    {
-      "key": "auth.ui.main_layout.logout_action",
-      "placeholders": []
-    },
-    {
-      "key": "auth.ui.main_layout.logout_dialog_cancel",
-      "placeholders": []
-    },
-    {
-      "key": "auth.ui.main_layout.logout_dialog_confirm",
-      "placeholders": []
-    },
-    {
-      "key": "auth.ui.main_layout.logout_dialog_description",
-      "placeholders": []
-    },
-    {
-      "key": "auth.ui.main_layout.logout_dialog_title",
-      "placeholders": []
-    },
-    {
-      "key": "auth.ui.main_layout.logout_loading_label",
-      "placeholders": []
-    },
-    {
-      "key": "auth.ui.main_layout.logout_processing",
       "placeholders": []
     },
     {
@@ -1769,11 +1771,23 @@
       "placeholders": []
     },
     {
+      "key": "business_unit.unit.detail.action.deactivate.label",
+      "placeholders": []
+    },
+    {
       "key": "business_unit.unit.detail.action.delete.label",
       "placeholders": []
     },
     {
       "key": "common.app_powered",
+      "placeholders": []
+    },
+    {
+      "key": "common.app_shell.menu.chart_of_account",
+      "placeholders": []
+    },
+    {
+      "key": "common.app_shell.menu.dashboard",
       "placeholders": []
     },
     {
@@ -2609,6 +2623,34 @@
       "placeholders": []
     },
     {
+      "key": "company.create.option.business_type.jasa",
+      "placeholders": []
+    },
+    {
+      "key": "company.create.option.business_type.manufaktur",
+      "placeholders": []
+    },
+    {
+      "key": "company.create.option.business_type.retail",
+      "placeholders": []
+    },
+    {
+      "key": "company.create.option.country.indonesia",
+      "placeholders": []
+    },
+    {
+      "key": "company.create.option.currency.idr",
+      "placeholders": []
+    },
+    {
+      "key": "company.create.option.pkp_status.non_pkp",
+      "placeholders": []
+    },
+    {
+      "key": "company.create.option.pkp_status.pkp",
+      "placeholders": []
+    },
+    {
       "key": "company.create.section.address.label",
       "placeholders": []
     },
@@ -2738,6 +2780,126 @@
     },
     {
       "key": "company.email.label",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.account_not_linked",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.bad_gateway",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.bad_request",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.business_type.invalid",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.confirm_name.mismatch",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.conflict",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.country_code.invalid",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.email.invalid",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.expired_token",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.forbidden",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.gateway_timeout",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.has_active_units",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.has_transaction",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.internal_server_error",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.is_default",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.name.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.name.min",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.name.required",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.nib.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.not_found",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.npwp.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.npwp.invalid",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.phone.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.postal_code.invalid",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.service_unavailable",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.session_expired",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.unauthorized",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.unit_has_transaction",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.unknown_error",
+      "placeholders": []
+    },
+    {
+      "key": "company.error.validation_error",
       "placeholders": []
     },
     {
@@ -2984,6 +3146,18 @@
     },
     {
       "key": "company.profile.not_found.title",
+      "placeholders": []
+    },
+    {
+      "key": "company.profile.option.currency.idr",
+      "placeholders": []
+    },
+    {
+      "key": "company.profile.option.currency.sgd",
+      "placeholders": []
+    },
+    {
+      "key": "company.profile.option.currency.usd",
       "placeholders": []
     },
     {
@@ -3262,6 +3436,62 @@
     },
     {
       "key": "error.email.invalid",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.account_not_linked",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.bad_gateway",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.bad_request",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.conflict",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.expired_token",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.forbidden",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.gateway_timeout",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.internal_server_error",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.not_found",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.service_unavailable",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.session_expired",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.unauthorized",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.unknown_error",
+      "placeholders": []
+    },
+    {
+      "key": "error.error.validation_error",
       "placeholders": []
     },
     {
@@ -3861,6 +4091,370 @@
       "placeholders": []
     },
     {
+      "key": "onboarding.onboarding.business_unit.add.bu_name.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.add.bu_name.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.add.bu_type.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.add.bu_type.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.desc",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.name.error.format",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.name.error.min_length",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.name.info.max_length",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.business_unit.title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.business_type.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.business_type.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.company_name.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.company_name.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.country.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.country.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.currency.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.add.currency.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.business_type.error.required",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.country.error.required",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.currency.error.required",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.desc",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.name.error.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.name.error.format",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.name.error.min_length",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.name.error.required",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.name.info.max_length",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.company.title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.error.system.page_content",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.error.system.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.navigation.back.button",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.navigation.next.button",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.data.business_type.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.data.business_unit_name.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.data.business_unit_type.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.data.company_name.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.data.country_currency.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.data.workspace_name.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.info.note",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.page_content.intro",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.preview.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.start.cta.button",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.start.page_content",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.start.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.step.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.structure.page_content",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.structure.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.success.cta.button",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.success.page_content",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.success.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.welcome.page_content",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.welcome.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.add.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.add.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.desc",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.label",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.name.error.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.name.error.format",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.name.error.min_length",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.name.error.required",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.name.info.max_length",
+      "placeholders": []
+    },
+    {
+      "key": "onboarding.onboarding.workspace.title",
+      "placeholders": []
+    },
+    {
+      "key": "profile.change_password.page.title",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile_edit_personal.field.name",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile_edit_personal.page.title",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.action.change_password",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.action.create_password",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.action.delete_account",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.address",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.date_of_birth",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.email",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.gender",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.name",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.nickname",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.profile_photo",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.label.whatsapp_number",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.logout.button",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.page.title",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.section.data_account",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.section.data_privacy",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.section.personal_information",
+      "placeholders": []
+    },
+    {
+      "key": "profile.profile.section.security",
+      "placeholders": []
+    },
+    {
+      "key": "role.role_detail.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "role.rolelist.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "role.rolelist.section.description",
+      "placeholders": []
+    },
+    {
+      "key": "role.rolelist.table.description.header",
+      "placeholders": []
+    },
+    {
+      "key": "role.rolelist.table.role_name.header",
+      "placeholders": []
+    },
+    {
+      "key": "role.rolelist.table.user_count.header",
+      "placeholders": []
+    },
+    {
+      "key": "role.rolelist.table.user_count.tooltip",
+      "placeholders": []
+    },
+    {
+      "key": "settings.company_setting.page_title",
+      "placeholders": []
+    },
+    {
       "key": "settings.preferences.language",
       "placeholders": []
     },
@@ -3913,6 +4507,160 @@
       "placeholders": []
     },
     {
+      "key": "user.email_aktifkan_pengguna.subject",
+      "placeholders": []
+    },
+    {
+      "key": "user.invite_email.subject",
+      "placeholders": [
+        "company_name"
+      ]
+    },
+    {
+      "key": "user.ubah_akses_pengguna.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.ubah_akses_pengguna.toast_title.success",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_activate.toast_message.success",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_activate.toast_title.success",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_deactivate.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_deactivate.toast_title.success",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_deactivated.page.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.button.change_role",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.button.change_status",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.header.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.access_scope",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.email",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.invited_by",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.join_date",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.name",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.role",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.status",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_detail.section.wa_number",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_list.header.add_user.button",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_list.modal.info.company",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_list.modal.label.email",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_list.modal.label.role",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_list.modal.placeholder.email",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_list.modal.placeholder.role",
+      "placeholders": []
+    },
+    {
+      "key": "user.user_list.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.useradd.owner_role.banner.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.action.view_detail",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.filter.role.label",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.pagination.rows_per_page",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.resend_invite.toast.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.search.empty.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.search.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.table.title",
+      "placeholders": []
+    },
+    {
+      "key": "user.userlist.title",
+      "placeholders": []
+    },
+    {
       "key": "workspace_detail.company_list.empty.cta_button",
       "placeholders": []
     },
@@ -3923,15 +4671,295 @@
     {
       "key": "workspace_detail.company_list.empty.title",
       "placeholders": []
+    },
+    {
+      "key": "workspace_detail.detailrk.company_list",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.detailrk.data_info",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.detailrk.name_ws",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.detailrk.owned_by",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.detailrk.sumbusiness_unit",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.detailrk.sumcompany",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.workspace_detail.action.add_company.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.workspace_detail.company_add.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace_detail.workspace_detail.page_title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.delete_info.button.cancel",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.delete_info.button.company_list",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.delete_info.modal.body",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.delete_info.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.detail_workspace.edit.label",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.detail_workspace.edit.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.list_workspace.modal.label",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.list_workspace.modal.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.list_workspace.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.listcompany.header.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.listrk.header.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.action.cancel.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.action.submit.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.form.name.error.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.form.name.error.invalid_format",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.form.name.error.max_length",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.form.name.error.min_length",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.form.name.error.required",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.form.name.label",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.form.name.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.name.info.max_length",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.toast.success.message",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.create.toast.success.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.action.cancel.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.action.confirm.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.checkbox.confirmation",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.form.confirmation.label",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.form.confirmation.placeholder",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.modal.banner_title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.modal.description",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.modal.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.toast.success.message",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.delete.toast.success.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.action.cancel.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.action.submit.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.form.name.error.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.form.name.error.invalid_format",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.form.name.error.max_length",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.form.name.error.min_length",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.form.name.error.required",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.form.name.max_length",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.toast.cancle.message",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.toast.cancle.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.toast.success.message",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.edit.toast.success.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.error.confirm_name.mismatch",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.error.has_companies",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.error.last_remaining",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.error.name.duplicate",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.error.name.required",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.action.create.button",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.empty.description",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.empty.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.error.description",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.error.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.header.managed_by.label",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.not_found.description",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.not_found.title",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.summary.business_unit_total.label",
+      "placeholders": []
+    },
+    {
+      "key": "workspace.workspace.list.summary.company_total.label",
+      "placeholders": []
     }
   ],
   "messages": {
     "en": {
-      "auth.banner.common.cta": "Verify now",
-      "auth.banner.common.title": "Additional Verification",
-      "auth.banner.email_first.message": "To keep your account secure and ensure uninterrupted access, you’ll be asked to verify your Email in {d} days. You can also complete it now.",
-      "auth.banner.wa_first.message": "To keep your account secure and ensure uninterrupted access, you’ll be asked to verify your WhatsApp in {d} days. You can also complete it now.",
       "auth.btn_verifikasi_email": "Verify via Email",
+      "auth.cekemail.description": "We've sent a verification link to the email address you registered.",
+      "auth.cekemail.help.check_spam": "Be sure to also check your spam or promotions folder.",
+      "auth.cekemail.help.didnt_get_email": "Haven't received the email? It may take a few minutes for the email to arrive in your inbox.",
+      "auth.cekemail.page_title": "Check Your Email",
       "auth.change_email.cta.cancel": "Cancel",
       "auth.change_email.cta.submit": "Send Verification Link",
       "auth.change_email.error.email_already_used": "This email is already in use. Try another one active email.",
@@ -3953,6 +4981,8 @@
       "auth.change_wa.modal.subtitle": "Please enter a new WhatsApp number that has never been used to make the next process smoother.",
       "auth.change_wa.modal.title": "Change WhatsApp Number",
       "auth.change_wa.toast.success.message": "We've sent an OTP to your new number.",
+      "auth.channel_verifiy.page.info": "To keep your account secure, select one of the methods to receive a password reset verification code.",
+      "auth.channel_verifiy.page.title": "Select Verification Method",
       "auth.check_email.description": "We’ve sent a verification link to the email address you registered.",
       "auth.check_email.description_1": "We’ve ",
       "auth.check_email.description_2": "sent a verification link to the email address ",
@@ -3997,9 +5027,9 @@
       "auth.google_account_preview.privacy_link": "Privacy Policy",
       "auth.google_account_preview.terms_link": "Terms & Conditions",
       "auth.google_login.success.cta": "Continue",
-      "auth.hardblock.modal.cta.confirm": "Got it",
-      "auth.hardblock.modal.description": "To help keep your account secure, we need to verify your second identity before you continue.",
-      "auth.hardblock.modal.title": "Additional Verification Required",
+      "auth.idle.popup.title": "Session about to end",
+      "auth.idle.popup.toast.keepalive.message": "Your session has been extended.",
+      "auth.idle.popup.toast.keepalive.title": "Success!",
       "auth.login_by_google_account.error.email.autofill_failed": "We couldn’t load your email. Please refresh the page.",
       "auth.login_by_google_account.error.nama.invalid_char": "Character {x} is not allowed. Use letters, spaces, dots (.) or commas (,).",
       "auth.login_by_google_account.error.nama.max": "Name can be up to 50 characters.",
@@ -4031,9 +5061,22 @@
       "auth.login_google.idconfirm.title": "Identity Confirmation",
       "auth.login_google.register_from_google.toast.success.message": "Your account has been created",
       "auth.login_google.register_from_google.toast.success.title": "Success!",
+      "auth.login_invite.banner.title": "Company Invitation",
+      "auth.login_page.form.button.forgot_pass": "Forgot Password",
       "auth.login.banner.error.lockout": "Your account is temporarily locked for 15 minutes for security reasons.\nYou can try again in {mm:ss}.",
       "auth.login.banner.error.mismatch": "You still have {attempts} chances in the next 15 minutes.",
+      "auth.login.bannermessage.session_expired_idle": "For your security, your session automatically ended after inactivity for 30 minutes. Please log in again to continue your work.",
+      "auth.login.bannertitle.session_expired_idle": "Session Ended",
+      "auth.login.button.forgot": "Forgot Password",
+      "auth.login.button.session_expired_idle": "Okay",
       "auth.login.form.email_not_found.error": "Account not found, please check your email or number again.",
+      "auth.login.form.email_not_found.password_security.level_label": "Security Level:",
+      "auth.login.form.email_not_found.password_security.requirement_list_aria_label": "Password Requirements",
+      "auth.login.form.email_not_found.password_security.requirement.lowercase": "Contains Lowercase Letter (a-z)",
+      "auth.login.form.email_not_found.password_security.requirement.minimum_length": "Minimum 8 Characters",
+      "auth.login.form.email_not_found.password_security.requirement.number": "Contains Number (0-9)",
+      "auth.login.form.email_not_found.password_security.requirement.symbol": "Contains Symbol (!, @, #, $, %, &, *, ?, etc.)",
+      "auth.login.form.email_not_found.password_security.requirement.uppercase": "Contains Uppercase Letter (A-Z)",
       "auth.login.form.email_wa.errors.empty": "You haven’t entered your email or WhatsApp number yet. Please complete it to continue logging in.",
       "auth.login.form.email_wa.errors.format": "The format doesn’t look right yet. Try using a valid email or WhatsApp number that starts with 08 or a country code (+).",
       "auth.login.form.email_wa.errors.not_found": "We haven't found an account with that information. Please check your email or WhatsApp number again, or register a new account if you don't have one.",
@@ -4055,50 +5098,29 @@
       "auth.login.page_title": "Log In to Application",
       "auth.login.register_prompt.link": "Sign up now",
       "auth.login.register_prompt.text": "Don't have an account?",
-      "auth.login.session.active_notice.banner": "You’re still logged in on this device, feel free to continue where you left off.",
-      "auth.login.session.dialog.button": "OK",
-      "auth.login.session.dialog.manual_logout.description": "Your session has ended. See you later!",
-      "auth.login.session.dialog.session_expired.message_30d": "For your security, your session automatically ended after 30 days. Please sign in again to continue.",
-      "auth.login.session.dialog.session_expired.message_72h": "For your security, your session automatically ended after 72 hours. Please sign in again to continue.",
-      "auth.login.session.dialog.session_expired.title": "Session Ended",
-      "auth.login.session.dialog.title": "Session Ended",
-      "auth.login.session.expired_notice.banner": "Your session has ended. Please log in again to keep your data secure.",
-      "auth.login.session.toast.resumed": "You're still logged in on this device, feel free to continue where you left off.",
-      "auth.login.session.toast.title": "Information!",
+      "auth.login.success.home.label": "Home",
+      "auth.login.success.redirect.message": "Login successful. Redirecting you to Home.",
+      "auth.login.success.return.label": "Return to previous page",
       "auth.login.toast.error.global.submit": "Your login attempt was unsuccessful",
       "auth.login.toast.error.global.title": "Failed!",
       "auth.login.toast.success.google_message": "Successfully logged in with Google. Welcome to Groapp.",
       "auth.login.toast.success.message": "Successfully logged in. Welcome to Groapp.",
       "auth.login.toast.success.title": "Login Successful",
       "auth.login.welcome": "<p>Come on, log in to your <bold>GroApp</bold> account</p>",
-      "auth.logout.login_google.session_pre_warning.cta.google": "Continue with Google",
-      "auth.logout.login_google.session_pre_warning.modal.description": "Your session has reached the 72-hour limit. Let's do a quick check with Google so everything stays secure without typing your password.",
-      "auth.logout.login_google.session_pre_warning.modal.title": "Refresh Your Session",
-      "auth.logout.login_google.session_pre_warning.toast.cancelled.message": "You can try again anytime.",
-      "auth.logout.login_google.session_pre_warning.toast.cancelled.title": "Verification Cancelled",
-      "auth.logout.login_google.session_pre_warning.toast.success_session_renewed.message": "Your session has been refreshed. You're good to go.",
-      "auth.logout.login_google.session_pre_warning.toast.success_session_renewed.title": "Success!",
-      "auth.logout.login_manual.session_pre_warning_30d.cta.submit": "Continue",
-      "auth.logout.login_manual.session_pre_warning_30d.form.password.label": "Password",
-      "auth.logout.login_manual.session_pre_warning_30d.form.password.placeholder": "••••••••",
-      "auth.logout.login_manual.session_pre_warning_30d.info_hint.message": "To keep your account secure, we periodically need to reverify your identity.",
-      "auth.logout.login_manual.session_pre_warning_30d.info_hint.title": "Tips!",
-      "auth.logout.login_manual.session_pre_warning_30d.modal.description": "Your session has reached 30 days. Let's do a quick verification to keep things secure. Please enter your password to continue.",
-      "auth.logout.login_manual.session_pre_warning_30d.modal.title": "Refresh Your Session",
-      "auth.logout.login_manual.session_pre_warning_72h.cta.submit": "Continue",
-      "auth.logout.login_manual.session_pre_warning_72h.form.password.label": "Password",
-      "auth.logout.login_manual.session_pre_warning_72h.form.password.placeholder": "••••••••",
-      "auth.logout.login_manual.session_pre_warning_72h.info_hint.message": "Enable \"remember me\" when signing in so you don't need to refresh your session too often.",
-      "auth.logout.login_manual.session_pre_warning_72h.info_hint.title": "Tips!",
-      "auth.logout.login_manual.session_pre_warning_72h.modal.description": "Your session has reached the 72-hour limit. Let's do a quick verification to keep things secure. Please enter your password to continue.",
-      "auth.logout.login_manual.session_pre_warning_72h.modal.title": "Refresh Your Session",
-      "auth.logout.login_manual.session_pre_warning.form.password.error.empty": "Password is required. Please fill it in so you can continue.",
-      "auth.logout.login_manual.session_pre_warning.form.password.error.wrong_attempt1": "The password doesn't match yet. Try again — you still have 2 tries.",
-      "auth.logout.login_manual.session_pre_warning.form.password.error.wrong_attempt2": "Still not a match. Please check once more — you have 1 try left.",
-      "auth.logout.login_manual.session_pre_warning.toast.error_wrong_password_attempt3.message": "For your security, your session has ended and you need to sign in again.",
-      "auth.logout.login_manual.session_pre_warning.toast.error_wrong_password_attempt3.title": "Failed!",
-      "auth.logout.login_manual.session_pre_warning.toast.success_session_renewed.message": "Your session has been refreshed. You're good to go.",
-      "auth.logout.login_manual.session_pre_warning.toast.success_session_renewed.title": "Success!",
+      "auth.logout.confirm.button_no": "Cancel",
+      "auth.logout.confirm.button_yes": "Yes, Log Out",
+      "auth.logout.confirm.message": "Are you sure you want to log out?",
+      "auth.logout.confirm.title": "Logout Confirmation",
+      "auth.logout.confirmation.button.confirm": "Yes, Log Out",
+      "auth.logout.confirmation.title": "Logout Confirmation",
+      "auth.logout.error.network": "Network issue, please try again.",
+      "auth.logout.menu.label": "Logout",
+      "auth.logout.popup.button.cancel": "Cancel",
+      "auth.logout.popup.button.confirm": "Yes, Log Out",
+      "auth.logout.popup.error.network_failure": "Network issue, please try again.",
+      "auth.logout.popup.message": "Are you sure you want to log out? Don't worry, your data remains safe.",
+      "auth.logout.popup.title": "Logout Confirmation",
+      "auth.logout.success.toast": "You have successfully logged out. See you soon.",
       "auth.otp_whatsapp.message": "{otp_code} is your GroApp account verification code. This code is valid for 5 minutes. Please don’t share it with anyone. If you didn’t request this code, please ignore this message or contact the GroApp support team.",
       "auth.otp.error_locked.banner.message": "Try again after 15 minutes or change your WhatsApp number.",
       "auth.otp.error_locked.banner.title": "For security reasons, verification is temporarily locked",
@@ -4117,6 +5139,13 @@
       "auth.otp.loading.overlay.label": "Verifying OTP…",
       "auth.otp.page_title": "OTP Verification",
       "auth.otp.success.toast.message": "Verification successful. You may continue your activity.",
+      "auth.popup_permission.blocked.title": "Popup Permission Blocked",
+      "auth.popup.button.close": "Close",
+      "auth.popup.button.extend": "Stay Logged In",
+      "auth.popup.button.logout": "Logout Now",
+      "auth.popup.message": "Your session will end in {{time}} seconds.",
+      "auth.popup.title": "Your session is about to end",
+      "auth.register_invite.banner.title": "Company Invitation",
       "auth.register.error.email.duplicate": "This email is already used. Try another one or log in.",
       "auth.register.error.email.format": "Please enter a valid email (example: name@domain.com).",
       "auth.register.error.email.required": "Email is required, please fill it in.",
@@ -4152,21 +5181,28 @@
       "auth.register.form.wa.label": "WhatsApp Number",
       "auth.register.form.wa.placeholder": "81234567890",
       "auth.register.page_title": "Account Registration",
+      "auth.register.password_security.level_label": "Security Level:",
+      "auth.register.password_security.requirement_list_aria_label": "Password Requirements",
+      "auth.register.password_security.requirement.lowercase": "Contains Lowercase Letter (a-z)",
+      "auth.register.password_security.requirement.minimum_length": "Minimum 8 Characters",
+      "auth.register.password_security.requirement.number": "Contains Number (0-9)",
+      "auth.register.password_security.requirement.symbol": "Contains Symbol (!, @, #, $, %, &, *, ?, etc.)",
+      "auth.register.password_security.requirement.uppercase": "Contains Uppercase Letter (A-Z)",
       "auth.resend_email.change_email.cta": "Change Email",
       "auth.resend_email.resend.button.disabled": "Resend Link ({seconds} seconds)",
       "auth.resend_email.resend.button.enabled": "Resend Link",
       "auth.resend_email.resend.limit.message": "Please wait 15 minutes or update your email address.",
       "auth.resend_email.resend.limit.title": "Resend limit reached.",
       "auth.resend_email.resend.success.toast_message": "A new verification link has been sent.",
-      "auth.session_refresh.body.description": "This verification helps keep your account secure and ensures that only you can access it. Please enter your password to continue.",
-      "auth.session_refresh.cta.google": "Continue with Google",
-      "auth.session_refresh.cta.submit": "Continue",
-      "auth.session_refresh.form.password.label": "Password",
-      "auth.session_refresh.info.description30d": "Your login session has been active for 30 days and needs to be re-verified.",
-      "auth.session_refresh.info.description72h": "Your login session has been active for 72 hours and needs to be re-verified.",
-      "auth.session_refresh.info.title": "Re-verification Required",
-      "auth.session_refresh.info.verif_2nd_identity": "After this, we will verify your 2nd identity to ensure your account remains secure and access runs smoothly.",
-      "auth.session_refresh.page_title": "Let’s Refresh Your Session",
+      "auth.resend_email.resend.success.toast_title": "Success!",
+      "auth.screen_privacy_mode.title": "Screen Blurred",
+      "auth.session_pre_warning_72h.modal.description": "Your session has reached the 72-hour limit. Let's do a quick verification to keep things secure. Please enter your password to continue.",
+      "auth.session_pre_warning_72h.modal.title": "Refresh Your Session",
+      "auth.session_pre_warning_google.cta.google": "Continue with Google",
+      "auth.session_pre_warning_google.modal.description": "Your session has reached the 72-hour limit. Let's do a quick check with Google so everything stays secure without typing your password.",
+      "auth.session_pre_warning_google.modal.title": "Refresh Your Session",
+      "auth.session.expired.modal.button": "Sign In Again",
+      "auth.session.expired.modal.message": "Your session has ended. For your security, please sign in again to continue.",
       "auth.two_factor_authentication.email.verify.invalid_old_email.message": "It looks like you opened a link from an old email address. Please check your latest email to continue verification.",
       "auth.two_factor_authentication.email.verify.invalid_old_email.title": "Link No Longer Active",
       "auth.two_factor_authentication.email.verify.invalid_old_link.message_1": "It looks like you opened an older link. Please use the ",
@@ -4197,13 +5233,6 @@
       "auth.ui.main_layout.language_en_label": "English",
       "auth.ui.main_layout.language_id_label": "Indonesia",
       "auth.ui.main_layout.language_switcher_aria_label": "Choose app language",
-      "auth.ui.main_layout.logout_action": "Logout",
-      "auth.ui.main_layout.logout_dialog_cancel": "Cancel",
-      "auth.ui.main_layout.logout_dialog_confirm": "Yes, Logout",
-      "auth.ui.main_layout.logout_dialog_description": "Are you sure you want to log out from this account?",
-      "auth.ui.main_layout.logout_dialog_title": "Logout Confirmation",
-      "auth.ui.main_layout.logout_loading_label": "Processing logout",
-      "auth.ui.main_layout.logout_processing": "Processing...",
       "auth.ui.main_layout.profile_menu_aria_label": "User profile menu",
       "auth.unregistered_google_account_cancel_button": "Cancel",
       "auth.unregistered_google_account_create_account_button": "Create Account",
@@ -4363,8 +5392,11 @@
       "business_unit.unit.delete.impact.title": "Delete Business Unit",
       "business_unit.unit.delete.impact.transaction_block": "This business unit has transaction history, so deletion cannot be performed.",
       "business_unit.unit.delete.success.toast": "Business unit has been successfully deleted.",
+      "business_unit.unit.detail.action.deactivate.label": "Deactivate Business Unit",
       "business_unit.unit.detail.action.delete.label": "Delete Business Unit",
       "common.app_powered": "Powered by Ada Ide Langsung Jalan",
+      "common.app_shell.menu.chart_of_account": "Chart of Accounts (CoA)",
+      "common.app_shell.menu.dashboard": "Dashboard",
       "common.app_title": "GroApp",
       "company.accounting_start_date.label": "Accounting Start Date",
       "company.address.label": "Full Address",
@@ -4447,6 +5479,13 @@
       "company.create.form.workspace.dropdown": "Select Workspace",
       "company.create.form.workspace.label": "Workspace",
       "company.create.modal.title": "Enter New Company Data",
+      "company.create.option.business_type.jasa": "Services",
+      "company.create.option.business_type.manufaktur": "Manufacturing",
+      "company.create.option.business_type.retail": "Retail",
+      "company.create.option.country.indonesia": "Indonesia",
+      "company.create.option.currency.idr": "IDR (Rupiah)",
+      "company.create.option.pkp_status.non_pkp": "NON PKP",
+      "company.create.option.pkp_status.pkp": "PKP",
       "company.create.section.address.label": "Address",
       "company.create.section.contact.label": "Contact",
       "company.create.section.identity.label": "Company Identity",
@@ -4480,6 +5519,36 @@
       "company.district.label": "District",
       "company.district.placeholder": "Select District",
       "company.email.label": "Email",
+      "company.error.account_not_linked": "This account is not linked yet. Please use another sign-in method.",
+      "company.error.bad_gateway": "The service could not be reached. Please try again later.",
+      "company.error.bad_request": "The request could not be processed. Please check your input and try again.",
+      "company.error.business_type.invalid": "Please select a business type.",
+      "company.error.confirm_name.mismatch": "Company name does not match.",
+      "company.error.conflict": "The data conflicts with existing records. Please review and try again.",
+      "company.error.country_code.invalid": "Country must be selected.",
+      "company.error.email.invalid": "Invalid email format. Please enter a valid email address.",
+      "company.error.expired_token": "Your session has expired. Please sign in again.",
+      "company.error.forbidden": "You do not have permission to perform this action.",
+      "company.error.gateway_timeout": "The request timed out. Please try again later.",
+      "company.error.has_active_units": "Company cannot be deleted because it still has active business units.",
+      "company.error.has_transaction": "Company cannot be deleted because it has transactions.",
+      "company.error.internal_server_error": "A server error occurred. Please try again later.",
+      "company.error.is_default": "Default company cannot be deleted. Change default company first.",
+      "company.error.name.duplicate": "Company name already exists in this workspace. Please use another name.",
+      "company.error.name.min": "Company name must be at least 3 characters.",
+      "company.error.name.required": "Company name is required.",
+      "company.error.nib.duplicate": "NIB already exists for another company in this workspace.",
+      "company.error.not_found": "The requested data could not be found.",
+      "company.error.npwp.duplicate": "NPWP already exists for another company in this workspace.",
+      "company.error.npwp.invalid": "NPWP must contain 16 digits.",
+      "company.error.phone.duplicate": "Phone number is already used by another company.",
+      "company.error.postal_code.invalid": "Postal code must contain 5 digits.",
+      "company.error.service_unavailable": "The service is temporarily unavailable. Please try again later.",
+      "company.error.session_expired": "Your session has expired. Please sign in again.",
+      "company.error.unauthorized": "Your session has expired. Please sign in again.",
+      "company.error.unit_has_transaction": "Company cannot be deleted because its business units have transactions.",
+      "company.error.unknown_error": "Something went wrong. Please try again.",
+      "company.error.validation_error": "Validation failed. Please check your input and try again.",
       "company.established_date.label": "Company Establishment Date",
       "company.fiscal_year.label": "Fiscal Year",
       "company.list.action.add_company": "Add Company",
@@ -4540,6 +5609,9 @@
       "company.profile.not_found.cta_back": "Back to Company Detail",
       "company.profile.not_found.description": "Company data was not found. Please return to company detail page.",
       "company.profile.not_found.title": "Page Not Found",
+      "company.profile.option.currency.idr": "IDR (Rupiah)",
+      "company.profile.option.currency.sgd": "SGD (Singapore Dollar)",
+      "company.profile.option.currency.usd": "USD (US Dollar)",
       "company.profile.toast.save_failed_message": "Something went wrong while saving company data changes.",
       "company.profile.toast.save_failed_title": "Failed to Save",
       "company.profile.toast.save_success_title": "Changes Saved Successfully",
@@ -4560,8 +5632,8 @@
       "company_add.cancel_dialog.confirm_cancel.button": "Cancel",
       "company_add.cancel_dialog.description": "Are you sure you want to cancel this process?",
       "company_add.cancel_dialog.title": "Cancel Adding Company?",
-      "company_add.cancel_dialog.toast.message": "Changes were canceled",
-      "company_add.cancel_dialog.toast.title": "Changes Canceled",
+      "company_add.cancel_dialog.toast.message": "Unsaved changes have been discarded.",
+      "company_add.cancel_dialog.toast.title": "Changes Discarded",
       "company_add.form.cancel.button": "Cancel",
       "company_add.form.submit.button": "Create Company",
       "company_add.toast.success": "Company added successfully",
@@ -4734,6 +5806,20 @@
       "error.country.required": "Country must be selected.",
       "error.currency.required": "Primary currency must be selected.",
       "error.email.invalid": "Invalid email format. Please enter a valid email address.",
+      "error.error.account_not_linked": "This account is not linked yet. Please use another sign-in method.",
+      "error.error.bad_gateway": "The service could not be reached. Please try again later.",
+      "error.error.bad_request": "The request could not be processed. Please check your input and try again.",
+      "error.error.conflict": "The data conflicts with existing records. Please review and try again.",
+      "error.error.expired_token": "Your session has expired. Please sign in again.",
+      "error.error.forbidden": "You do not have permission to perform this action.",
+      "error.error.gateway_timeout": "The request timed out. Please try again later.",
+      "error.error.internal_server_error": "A server error occurred. Please try again later.",
+      "error.error.not_found": "The requested data could not be found.",
+      "error.error.service_unavailable": "The service is temporarily unavailable. Please try again later.",
+      "error.error.session_expired": "Your session has expired. Please sign in again.",
+      "error.error.unauthorized": "Your session has expired. Please sign in again.",
+      "error.error.unknown_error": "Something went wrong. Please try again.",
+      "error.error.validation_error": "Validation failed. Please check your input and try again.",
       "error.logo.format": "File format is not supported. Use PNG, JPG, JPEG, or WEBP.",
       "error.logo.size": "File size is too large. Maximum 2 MB.",
       "error.nib.duplicate": "NIB already exists for another company in this workspace.",
@@ -4883,6 +5969,97 @@
       "http.http_503_title": "Service Unavailable",
       "http.http_504_message": "The server took too long to respond. Please try again.",
       "http.http_504_title": "Gateway Timeout",
+      "onboarding.onboarding.business_unit.add.bu_name.label": "Business Unit Name",
+      "onboarding.onboarding.business_unit.add.bu_name.placeholder": "Example: Nina Salon Cabang Bandung",
+      "onboarding.onboarding.business_unit.add.bu_type.label": "Business Unit Type",
+      "onboarding.onboarding.business_unit.add.bu_type.placeholder": "Select Business Unit Type",
+      "onboarding.onboarding.business_unit.desc": "Optional - If you don't have a Business Unit yet, you can skip this step and you can add a Business Unit later.",
+      "onboarding.onboarding.business_unit.label": "Business Unit Data",
+      "onboarding.onboarding.business_unit.name.error.format": "Business unit name can only contain letters, numbers, periods, and commas.",
+      "onboarding.onboarding.business_unit.name.error.min_length": "Business unit name must be at least 3 characters.",
+      "onboarding.onboarding.business_unit.name.info.max_length": "Business unit name must be no more than 60 characters.",
+      "onboarding.onboarding.business_unit.title": "Business Unit",
+      "onboarding.onboarding.company.add.business_type.label": "Business Type",
+      "onboarding.onboarding.company.add.business_type.placeholder": "Select Business Type",
+      "onboarding.onboarding.company.add.company_name.label": "Company Name",
+      "onboarding.onboarding.company.add.company_name.placeholder": "Example: PT Kreasi Anak Bangsa / Haji Udin Store",
+      "onboarding.onboarding.company.add.country.label": "Country",
+      "onboarding.onboarding.company.add.country.placeholder": "Select Country",
+      "onboarding.onboarding.company.add.currency.label": "Primary Currency",
+      "onboarding.onboarding.company.add.currency.placeholder": "Select Currency",
+      "onboarding.onboarding.company.business_type.error.required": "Please select a business type.",
+      "onboarding.onboarding.company.country.error.required": "Please select a country.",
+      "onboarding.onboarding.company.currency.error.required": "Please select a currency.",
+      "onboarding.onboarding.company.desc": "Complete company data as the foundation for GroApp integration.",
+      "onboarding.onboarding.company.label": "Company Data",
+      "onboarding.onboarding.company.name.error.duplicate": "This company name is already used in this workspace. Please use a different name to keep your data organized.",
+      "onboarding.onboarding.company.name.error.format": "Company name can only contain letters, numbers, periods, and commas.",
+      "onboarding.onboarding.company.name.error.min_length": "Company name must be at least 3 characters.",
+      "onboarding.onboarding.company.name.error.required": "Company name is required.",
+      "onboarding.onboarding.company.name.info.max_length": "Company name must be no more than 60 characters.",
+      "onboarding.onboarding.company.title": "Company",
+      "onboarding.onboarding.error.system.page_content": "The system is currently experiencing an issue. Please try again in a few moments.",
+      "onboarding.onboarding.error.system.page_title": "System Issue",
+      "onboarding.onboarding.navigation.back.button": "Back",
+      "onboarding.onboarding.navigation.next.button": "Next",
+      "onboarding.onboarding.preview.data.business_type.label": "Business Type",
+      "onboarding.onboarding.preview.data.business_unit_name.label": "Business Unit Name",
+      "onboarding.onboarding.preview.data.business_unit_type.label": "Business Unit Type",
+      "onboarding.onboarding.preview.data.company_name.label": "Company Name",
+      "onboarding.onboarding.preview.data.country_currency.label": "Country & Currency",
+      "onboarding.onboarding.preview.data.workspace_name.label": "Workspace Name",
+      "onboarding.onboarding.preview.info.note": "You can add more Companies and Business Units after completing the onboarding process",
+      "onboarding.onboarding.preview.page_content.intro": "Data Preview\nPlease review your data before saving.",
+      "onboarding.onboarding.preview.page_title": "Preview",
+      "onboarding.onboarding.start.cta.button": "Start Onboarding",
+      "onboarding.onboarding.start.page_content": "We'll guide you through setting up your first Workspace, Company, and Business Unit in just a few steps.",
+      "onboarding.onboarding.start.page_title": "Ready to Get Started?",
+      "onboarding.onboarding.step.label": "Langkah",
+      "onboarding.onboarding.structure.page_content": "Here's a quick overview of each level:\n\n* Workspace\n\nThe main container for organizing your business\n\n* Company\n\nThe business context that enables GroApp modules\n\n* Business Unit\n\nThe operational entity (branch, outlet, factory)",
+      "onboarding.onboarding.structure.page_title": "Get to Know Your Workspace Structure",
+      "onboarding.onboarding.success.cta.button": "Go to Company Details",
+      "onboarding.onboarding.success.page_content": "Your Workspace, Company, and Business Unit have been successfully created. You can now start using them.",
+      "onboarding.onboarding.success.page_title": "Success",
+      "onboarding.onboarding.welcome.page_content": "Here, you can manage your entire business identity in a more organized way-from Workspace, Company, to Business Unit.",
+      "onboarding.onboarding.welcome.page_title": "Welcome to GroApp Access",
+      "onboarding.onboarding.workspace.add.label": "Workspace Name",
+      "onboarding.onboarding.workspace.add.placeholder": "Example: Ruang Kerja Utama",
+      "onboarding.onboarding.workspace.desc": "Workspace is a space for grouping your company",
+      "onboarding.onboarding.workspace.label": "Add Workspace",
+      "onboarding.onboarding.workspace.name.error.duplicate": "This workspace name is already registered. Please use a different name.",
+      "onboarding.onboarding.workspace.name.error.format": "Workspace name can only contain letters, numbers, periods, and commas.",
+      "onboarding.onboarding.workspace.name.error.min_length": "Workspace name must be at least 3 characters.",
+      "onboarding.onboarding.workspace.name.error.required": "Workspace name is required.",
+      "onboarding.onboarding.workspace.name.info.max_length": "Workspace name must be no more than 60 characters.",
+      "onboarding.onboarding.workspace.title": "Workspace",
+      "profile.change_password.page.title": "Change Password",
+      "profile.profile_edit_personal.field.name": "Full Name",
+      "profile.profile_edit_personal.page.title": "Edit Personal Information",
+      "profile.profile.action.change_password": "Change Password",
+      "profile.profile.action.create_password": "Create Password",
+      "profile.profile.action.delete_account": "Delete Account",
+      "profile.profile.label.address": "Address",
+      "profile.profile.label.date_of_birth": "Date of Birth",
+      "profile.profile.label.email": "Email",
+      "profile.profile.label.gender": "Gender",
+      "profile.profile.label.name": "Name",
+      "profile.profile.label.nickname": "Nickname",
+      "profile.profile.label.profile_photo": "Profile Photo",
+      "profile.profile.label.whatsapp_number": "WhatsApp Number",
+      "profile.profile.logout.button": "Logout",
+      "profile.profile.page.title": "My Profile",
+      "profile.profile.section.data_account": "Account Data",
+      "profile.profile.section.data_privacy": "Data & Privacy",
+      "profile.profile.section.personal_information": "Personal Information",
+      "profile.profile.section.security": "Security",
+      "role.role_detail.page_title": "Role Detail",
+      "role.rolelist.page_title": "Role List",
+      "role.rolelist.section.description": "Roles in the system function to regulate user access rights so that each user can only view or perform actions in accordance with the access granted",
+      "role.rolelist.table.description.header": "Description",
+      "role.rolelist.table.role_name.header": "Role Name",
+      "role.rolelist.table.user_count.header": "User Count",
+      "role.rolelist.table.user_count.tooltip": "The number of active users assigned to this role.",
+      "settings.company_setting.page_title": "Company Settings",
       "settings.preferences.language": "Language",
       "settings.preferences.notifications": "Notifications",
       "settings.preferences.theme": "Theme",
@@ -4896,16 +6073,124 @@
       "settings.profile.logout.popup.title": "Logout Confirmation",
       "settings.profile.title": "Profile",
       "settings.title": "Settings",
+      "user.email_aktifkan_pengguna.subject": "GroApp: Your Access in {{Company Name}} Has Been Restored",
+      "user.invite_email.subject": "GroApp Invitation: Join {{company_name}}",
+      "user.ubah_akses_pengguna.modal.title": "Update User Access",
+      "user.ubah_akses_pengguna.toast_title.success": "Success!",
+      "user.user_activate.toast_message.success": "User has been reactivated successfully.",
+      "user.user_activate.toast_title.success": "Success!",
+      "user.user_deactivate.modal.title": "Deactivate User Access?",
+      "user.user_deactivate.toast_title.success": "Success!",
+      "user.user_deactivated.page.title": "Your Access Has Been Deactivated",
+      "user.user_detail.button.change_role": "Change Role",
+      "user.user_detail.button.change_status": "Change Status",
+      "user.user_detail.header.title": "User Detail",
+      "user.user_detail.page_title": "User Detail",
+      "user.user_detail.section.access_scope": "Access Scope",
+      "user.user_detail.section.email": "Email",
+      "user.user_detail.section.invited_by": "Invited By",
+      "user.user_detail.section.join_date": "Join Date",
+      "user.user_detail.section.name": "Name",
+      "user.user_detail.section.role": "Role",
+      "user.user_detail.section.status": "Status",
+      "user.user_detail.section.title": "User Information",
+      "user.user_detail.section.wa_number": "WhatsApp Number",
+      "user.user_list.header.add_user.button": "Add User",
+      "user.user_list.modal.info.company": "Company: PT Ruam Ruam",
+      "user.user_list.modal.label.email": "Email",
+      "user.user_list.modal.label.role": "User Role",
+      "user.user_list.modal.placeholder.email": "Example: budi@example.com",
+      "user.user_list.modal.placeholder.role": "Select User Role",
+      "user.user_list.modal.title": "Add New User",
+      "user.useradd.owner_role.banner.title": "Business Owner Role",
+      "user.userlist.action.view_detail": "View Details",
+      "user.userlist.filter.role.label": "Role",
+      "user.userlist.pagination.rows_per_page": "Rows per page",
+      "user.userlist.resend_invite.toast.title": "Success!",
+      "user.userlist.search.empty.title": "No results found",
+      "user.userlist.search.placeholder": "Search...",
+      "user.userlist.table.title": "User List",
+      "user.userlist.title": "User Management",
+      "workspace.delete_info.button.cancel": "Cancel",
+      "workspace.delete_info.button.company_list": "Company List",
+      "workspace.delete_info.modal.body": "This Workspace still has associated data. You need to delete all the data in it before you can delete the Workspace.",
+      "workspace.delete_info.modal.title": "Workspace Cannot Be Deleted",
+      "workspace.detail_workspace.edit.label": "Workspace Name",
+      "workspace.detail_workspace.edit.title": "Edit Workspace",
+      "workspace.list_workspace.modal.label": "Workspace Name",
+      "workspace.list_workspace.modal.placeholder": "Example: Main Workspace",
+      "workspace.list_workspace.modal.title": "Add Workspace",
+      "workspace.listcompany.header.title": "Company List",
+      "workspace.listrk.header.title": "Workspace List",
+      "workspace.workspace.create.action.cancel.button": "Cancel",
+      "workspace.workspace.create.action.submit.button": "Save",
+      "workspace.workspace.create.form.name.error.duplicate": "This workspace name is already in use. Please use a different name.",
+      "workspace.workspace.create.form.name.error.invalid_format": "Workspace name can only contain letters, numbers, dots, and commas.",
+      "workspace.workspace.create.form.name.error.max_length": "Workspace name must be no more than 60 characters.",
+      "workspace.workspace.create.form.name.error.min_length": "Workspace name must be at least 3 characters.",
+      "workspace.workspace.create.form.name.error.required": "Workspace name is required.",
+      "workspace.workspace.create.form.name.label": "Workspace Name",
+      "workspace.workspace.create.form.name.placeholder": "Example: Main Workspace",
+      "workspace.workspace.create.modal.title": "Add Workspace",
+      "workspace.workspace.create.name.info.max_length": "Workspace name must be no more than 60 characters.",
+      "workspace.workspace.create.toast.success.message": "Workspace was added successfully",
+      "workspace.workspace.create.toast.success.title": "Success!",
+      "workspace.workspace.delete.action.cancel.button": "Cancel",
+      "workspace.workspace.delete.action.confirm.button": "Confirm",
+      "workspace.workspace.delete.checkbox.confirmation": "I understand that this workspace will be permanently deleted and cannot be undone",
+      "workspace.workspace.delete.form.confirmation.label": "Type {workspace name} to confirm",
+      "workspace.workspace.delete.form.confirmation.placeholder": "Enter workspace name",
+      "workspace.workspace.delete.modal.banner_title": "Information!",
+      "workspace.workspace.delete.modal.description": "All data in this workspace will be permanently deleted and cannot be recovered.",
+      "workspace.workspace.delete.modal.title": "Delete Workspace Confirmation",
+      "workspace.workspace.delete.toast.success.message": "Workspace has been successfully deleted",
+      "workspace.workspace.delete.toast.success.title": "Success!",
+      "workspace.workspace.edit.action.cancel.button": "Cancel",
+      "workspace.workspace.edit.action.submit.button": "Save",
+      "workspace.workspace.edit.form.name.error.duplicate": "This workspace name is already in use. Please use a different name.",
+      "workspace.workspace.edit.form.name.error.invalid_format": "Workspace name can only contain letters, numbers, dots, and commas.",
+      "workspace.workspace.edit.form.name.error.max_length": "Workspace name must be no more than 60 characters.",
+      "workspace.workspace.edit.form.name.error.min_length": "Workspace name must be at least 3 characters.",
+      "workspace.workspace.edit.form.name.error.required": "Workspace name is required.",
+      "workspace.workspace.edit.form.name.max_length": "Workspace name must be no more than 60 characters.",
+      "workspace.workspace.edit.toast.cancle.message": "Workspace name update was cancelled",
+      "workspace.workspace.edit.toast.cancle.title": "Cancelled",
+      "workspace.workspace.edit.toast.success.message": "Workspace name has been successfully updated",
+      "workspace.workspace.edit.toast.success.title": "Success!",
+      "workspace.workspace.error.confirm_name.mismatch": "Confirmation name does not match. Make sure the workspace name is typed correctly.",
+      "workspace.workspace.error.has_companies": "This workspace cannot be deleted because it still has related companies or business units.",
+      "workspace.workspace.error.last_remaining": "This workspace cannot be deleted because it is your last workspace.",
+      "workspace.workspace.error.name.duplicate": "This workspace name is already in use. Please use a different name.",
+      "workspace.workspace.error.name.required": "Workspace name is required.",
+      "workspace.workspace.list.action.create.button": "Add Workspace",
+      "workspace.workspace.list.empty.description": "You don't have any workspaces yet. Create your first workspace to get started.",
+      "workspace.workspace.list.empty.title": "No Workspaces Yet",
+      "workspace.workspace.list.error.description": "Something went wrong while loading workspace data. Please try again.",
+      "workspace.workspace.list.error.title": "Failed to Load Workspaces",
+      "workspace.workspace.list.header.managed_by.label": "managed by {account name}",
+      "workspace.workspace.list.not_found.description": "No workspaces match your search criteria.",
+      "workspace.workspace.list.not_found.title": "Workspace Not Found",
+      "workspace.workspace.list.summary.business_unit_total.label": "Total Business Units",
+      "workspace.workspace.list.summary.company_total.label": "Total Companies",
       "workspace_detail.company_list.empty.cta_button": "Add Company",
       "workspace_detail.company_list.empty.description": "There are currently no companies you can access in this workspace.",
-      "workspace_detail.company_list.empty.title": "No Companies Yet"
+      "workspace_detail.company_list.empty.title": "No Companies Yet",
+      "workspace_detail.detailrk.company_list": "Company List",
+      "workspace_detail.detailrk.data_info": "Workspace Information",
+      "workspace_detail.detailrk.name_ws": "Workspace Name",
+      "workspace_detail.detailrk.owned_by": "Owned by",
+      "workspace_detail.detailrk.sumbusiness_unit": "Total Business Unit",
+      "workspace_detail.detailrk.sumcompany": "Total Companies",
+      "workspace_detail.workspace_detail.action.add_company.button": "Add Company",
+      "workspace_detail.workspace_detail.company_add.modal.title": "Add Company",
+      "workspace_detail.workspace_detail.page_title": "Workspace Detail"
     },
     "id": {
-      "auth.banner.common.cta": "Verifikasi Sekarang",
-      "auth.banner.common.title": "Verifikasi Lanjutan",
-      "auth.banner.email_first.message": "Untuk keamanan akun dan akses tanpa gangguan, kamu akan diminta verifikasi Email dalam {d} hari. Kamu juga bisa menyelesaikannya dari sekarang.",
-      "auth.banner.wa_first.message": "Untuk keamanan akun dan akses tanpa gangguan, kamu akan diminta verifikasi WhatsApp dalam {d} hari. Kamu juga bisa menyelesaikannya dari sekarang.",
       "auth.btn_verifikasi_email": "Verifikasi via Email",
+      "auth.cekemail.description": "Kami telah mengirim tautan verifikasi ke alamat email yang Anda daftarkan.",
+      "auth.cekemail.help.check_spam": "Pastikan juga untuk memeriksa folder spam atau promosi.",
+      "auth.cekemail.help.didnt_get_email": "Belum menerima email? Terkadang butuh beberapa menit hingga email masuk ke kotak masuk Anda.",
+      "auth.cekemail.page_title": "Cek Email Anda",
       "auth.change_email.cta.cancel": "Batal",
       "auth.change_email.cta.submit": "Kirim Link Verifikasi",
       "auth.change_email.error.email_already_used": "Email ini sudah digunakan. Coba pakai email lain yang aktif ya.",
@@ -4927,6 +6212,8 @@
       "auth.change_wa.modal.subtitle": "Silakan masukkan nomor WhatsApp baru yang belum pernah digunakan agar proses selanjutnya lebih lancar.",
       "auth.change_wa.modal.title": "Ubah Nomor WhatsApp",
       "auth.change_wa.toast.success.message": "Kami telah mengirimkan kode OTP ke nomor barumu.",
+      "auth.channel_verifiy.page.info": "Untuk menjaga keamanan akun Anda, pilih salah satu metode untuk menerima kode verifikasi reset password.",
+      "auth.channel_verifiy.page.title": "Pilih Metode Verifikasi",
       "auth.check_email.description": "Kami telah mengirim tautan verifikasi ke alamat email yang Anda daftarkan.",
       "auth.check_email.description_1": "Kami telah ",
       "auth.check_email.description_2": "mengirim tautan verifikasi ke alamat email ",
@@ -4971,9 +6258,9 @@
       "auth.google_account_preview.privacy_link": "Kebijakan Privasi",
       "auth.google_account_preview.terms_link": "Syarat & Ketentuan",
       "auth.google_login.success.cta": "Lanjutkan",
-      "auth.hardblock.modal.cta.confirm": "Mengerti",
-      "auth.hardblock.modal.description": "Untuk menjaga keamanan akunmu, kami perlu memastikan identitas keduamu sudah terverifikasi sebelum kamu melanjutkan.",
-      "auth.hardblock.modal.title": "Perlu Verifikasi Tambahan",
+      "auth.idle.popup.title": "Sesi hampir berakhir",
+      "auth.idle.popup.toast.keepalive.message": "Sesi kamu diperpanjang.",
+      "auth.idle.popup.toast.keepalive.title": "Sukses!",
       "auth.login_by_google_account.error.email.autofill_failed": "Kami belum bisa memuat email Anda. Coba muat ulang halaman, ya.",
       "auth.login_by_google_account.error.nama.invalid_char": "Karakter {x} tidak diperbolehkan. Gunakan huruf, spasi, titik (.) atau koma (,).",
       "auth.login_by_google_account.error.nama.max": "Nama maksimal 50 karakter, ya.",
@@ -5005,9 +6292,22 @@
       "auth.login_google.idconfirm.title": "Konfirmasi Identitas",
       "auth.login_google.register_from_google.toast.success.message": "Akunmu berhasil dibuat",
       "auth.login_google.register_from_google.toast.success.title": "Sukses!",
+      "auth.login_invite.banner.title": "Undangan Bergabung",
+      "auth.login_page.form.button.forgot_pass": "Lupa Password",
       "auth.login.banner.error.lockout": "Akunmu sementara dikunci selama 15 menit demi keamanan.\nKamu bisa mencoba lagi dalam {mm:ss}",
       "auth.login.banner.error.mismatch": "Kamu masih punya {attempts} kesempatan dalam 15 menit ke depan.",
+      "auth.login.bannermessage.session_expired_idle": "Demi keamanan, sesi kamu otomatis berakhir setelah 30 menit tanpa aktivitas. Yuk, login lagi untuk melanjutkan.",
+      "auth.login.bannertitle.session_expired_idle": "Sesi Berakhir",
+      "auth.login.button.forgot": "Lupa Password",
+      "auth.login.button.session_expired_idle": "Oke",
       "auth.login.form.email_not_found.error": "Akun tidak ditemukan, yuk periksa kembali Email atau No kamu.",
+      "auth.login.form.email_not_found.password_security.level_label": "Tingkat Keamanan:",
+      "auth.login.form.email_not_found.password_security.requirement_list_aria_label": "Syarat Kata Sandi",
+      "auth.login.form.email_not_found.password_security.requirement.lowercase": "Ada Huruf Kecil (a-z)",
+      "auth.login.form.email_not_found.password_security.requirement.minimum_length": "Minimal 8 Karakter",
+      "auth.login.form.email_not_found.password_security.requirement.number": "Ada Angka (0-9)",
+      "auth.login.form.email_not_found.password_security.requirement.symbol": "Ada Simbol (!, @, #, $, %, &, *, ?, dsb.)",
+      "auth.login.form.email_not_found.password_security.requirement.uppercase": "Ada Huruf Besar (A-Z)",
       "auth.login.form.email_wa.errors.empty": "Kamu belum mengisi email atau nomor WhatsApp. Yuk lengkapi dulu biar bisa lanjut login.",
       "auth.login.form.email_wa.errors.format": "Formatnya belum sesuai. Yuk isi dengan email yang valid, atau nomor WA yang diawali 08 atau +kode negara.",
       "auth.login.form.email_wa.errors.not_found": "Kita belum menemukan akun dengan data itu. Yuk periksa kembali Email atau No. WA kamu, atau daftar akun baru kalau belum punya.",
@@ -5029,50 +6329,29 @@
       "auth.login.page_title": "Masuk ke Aplikasi",
       "auth.login.register_prompt.link": "Daftar sekarang",
       "auth.login.register_prompt.text": "Tidak punya akun?",
-      "auth.login.session.active_notice.banner": "Kamu masih login di perangkat ini, yuk lanjutkan aktivitasmu.",
-      "auth.login.session.dialog.button": "OK",
-      "auth.login.session.dialog.manual_logout.description": "Sesi kamu sudah berakhir. Sampai jumpa lagi!",
-      "auth.login.session.dialog.session_expired.message_30d": "Demi keamanan, sesi kamu otomatis berakhir setelah 30 hari. Yuk, login lagi untuk melanjutkan.",
-      "auth.login.session.dialog.session_expired.message_72h": "Demi keamanan, sesi kamu otomatis berakhir setelah 72 jam. Yuk, login lagi untuk melanjutkan.",
-      "auth.login.session.dialog.session_expired.title": "Sesi Diakhiri",
-      "auth.login.session.dialog.title": "Sesi Berakhir",
-      "auth.login.session.expired_notice.banner": "Sesi kamu sudah berakhir. Yuk login lagi supaya data tetap aman.",
-      "auth.login.session.toast.resumed": "Kamu masih login di perangkat ini, yuk lanjutkan aktivitasmu.",
-      "auth.login.session.toast.title": "Informasi!",
+      "auth.login.success.home.label": "Beranda",
+      "auth.login.success.redirect.message": "Login berhasil. Mengarahkan Anda ke Beranda.",
+      "auth.login.success.return.label": "Kembali ke halaman asal",
       "auth.login.toast.error.global.submit": "Percobaan login kamu tidak berhasil",
       "auth.login.toast.error.global.title": "Gagal!",
       "auth.login.toast.success.google_message": "Berhasil masuk dengan Google. Selamat datang di Groapp.",
       "auth.login.toast.success.message": "Selamat datang di Groapp.",
       "auth.login.toast.success.title": "Login Berhasil",
       "auth.login.welcome": "<p>Yuk masuk ke akun <bold>GroApp</bold> anda</p>",
-      "auth.logout.login_google.session_pre_warning.cta.google": "Lanjutkan dengan Google",
-      "auth.logout.login_google.session_pre_warning.modal.description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar lewat Google biar tetap aman tanpa perlu ketik kata sandi.",
-      "auth.logout.login_google.session_pre_warning.modal.title": "Yuk Perbarui Sesi Kamu",
-      "auth.logout.login_google.session_pre_warning.toast.cancelled.message": "Kamu bisa coba lagi kapan pun.",
-      "auth.logout.login_google.session_pre_warning.toast.cancelled.title": "Verifikasi Dibatalkan",
-      "auth.logout.login_google.session_pre_warning.toast.success_session_renewed.message": "Sesi kamu berhasil diperbarui. Selamat melanjutkan aktivitas.",
-      "auth.logout.login_google.session_pre_warning.toast.success_session_renewed.title": "Sukses!",
-      "auth.logout.login_manual.session_pre_warning_30d.cta.submit": "Lanjutkan",
-      "auth.logout.login_manual.session_pre_warning_30d.form.password.label": "Kata Sandi",
-      "auth.logout.login_manual.session_pre_warning_30d.form.password.placeholder": "••••••••",
-      "auth.logout.login_manual.session_pre_warning_30d.info_hint.message": "Untuk memastikan keamanan akunmu, kami perlu melakukan verifikasi ulang secara berkala.",
-      "auth.logout.login_manual.session_pre_warning_30d.info_hint.title": "Tip!",
-      "auth.logout.login_manual.session_pre_warning_30d.modal.description": "Sesi kamu sudah mencapai 30 hari. Yuk verifikasi sebentar biar tetap aman. Masukkan kata sandimu untuk lanjut ya.",
-      "auth.logout.login_manual.session_pre_warning_30d.modal.title": "Yuk Perbarui Sesi Kamu",
-      "auth.logout.login_manual.session_pre_warning_72h.cta.submit": "Lanjutkan",
-      "auth.logout.login_manual.session_pre_warning_72h.form.password.label": "Kata Sandi",
-      "auth.logout.login_manual.session_pre_warning_72h.form.password.placeholder": "••••••••",
-      "auth.logout.login_manual.session_pre_warning_72h.info_hint.message": "Aktifkan \"ingat saya\" saat login supaya kamu tidak perlu memperbarui sesi terlalu sering.",
-      "auth.logout.login_manual.session_pre_warning_72h.info_hint.title": "Tip!",
-      "auth.logout.login_manual.session_pre_warning_72h.modal.description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar biar tetap aman. Masukkan kata sandimu untuk lanjut ya.",
-      "auth.logout.login_manual.session_pre_warning_72h.modal.title": "Yuk Perbarui Sesi Kamu",
-      "auth.logout.login_manual.session_pre_warning.form.password.error.empty": "Kata sandi belum diisi. Yuk lengkapi dulu supaya kamu bisa lanjut.",
-      "auth.logout.login_manual.session_pre_warning.form.password.error.wrong_attempt1": "Kata sandinya belum pas. Coba lagi ya. Kamu masih punya 2 kesempatan.",
-      "auth.logout.login_manual.session_pre_warning.form.password.error.wrong_attempt2": "Masih belum pas. Yuk cek sekali lagi ya. Kamu masih punya 1 kesempatan.",
-      "auth.logout.login_manual.session_pre_warning.toast.error_wrong_password_attempt3.message": "Demi keamanan, kamu akan diminta untuk login kembali",
-      "auth.logout.login_manual.session_pre_warning.toast.error_wrong_password_attempt3.title": "Gagal!",
-      "auth.logout.login_manual.session_pre_warning.toast.success_session_renewed.message": "Sesi kamu berhasil diperbarui. Selamat melanjutkan aktivitas.",
-      "auth.logout.login_manual.session_pre_warning.toast.success_session_renewed.title": "Sukses!",
+      "auth.logout.confirm.button_no": "Batal",
+      "auth.logout.confirm.button_yes": "Ya, Keluar",
+      "auth.logout.confirm.message": "Anda yakin ingin keluar?",
+      "auth.logout.confirm.title": "Konfirmasi Logout",
+      "auth.logout.confirmation.button.confirm": "Ya, Keluar",
+      "auth.logout.confirmation.title": "Konfirmasi Keluar",
+      "auth.logout.error.network": "Jaringan bermasalah, coba lagi.",
+      "auth.logout.menu.label": "Keluar",
+      "auth.logout.popup.button.cancel": "Batal",
+      "auth.logout.popup.button.confirm": "Ya, Keluar",
+      "auth.logout.popup.error.network_failure": "Jaringan bermasalah, coba lagi.",
+      "auth.logout.popup.message": "Anda yakin ingin keluar? Tenang, data Anda tetap aman.",
+      "auth.logout.popup.title": "Konfirmasi Keluar",
+      "auth.logout.success.toast": "Anda sudah berhasil keluar. Sampai jumpa lagi.",
       "auth.otp_whatsapp.message": "{otp_code} adalah kode verifikasi akunmu di GroApp. Kode ini berlaku selama 5 menit. Jangan bagikan kode ini kepada siapa pun ya. Jika kamu tidak meminta kode ini, abaikan pesan ini atau hubungi tim dukungan GroApp.",
       "auth.otp.error_locked.banner.message": "Coba lagi setelah 15 menit atau ganti nomor WhatsApp.",
       "auth.otp.error_locked.banner.title": "Demi keamanan, verifikasi terkunci",
@@ -5091,6 +6370,13 @@
       "auth.otp.loading.overlay.label": "Memverifikasi OTP…",
       "auth.otp.page_title": "Verifikasi OTP",
       "auth.otp.success.toast.message": "Verifikasi berhasil. Selamat melanjutkan aktivitas.",
+      "auth.popup_permission.blocked.title": "Izin Popup Diblokir",
+      "auth.popup.button.close": "Tutup",
+      "auth.popup.button.extend": "Tetap Login",
+      "auth.popup.button.logout": "Keluar Sekarang",
+      "auth.popup.message": "Sesi akan berakhir dalam {{time}} detik.",
+      "auth.popup.title": "Sesi Anda hampir berakhir",
+      "auth.register_invite.banner.title": "Undangan Bergabung",
       "auth.register.error.email.duplicate": "Email ini sudah dipakai. Coba variasi lain agar unik atau login.",
       "auth.register.error.email.format": "Mari lengkapi email dengan format yang benar (contoh: nama@domain.com).",
       "auth.register.error.email.required": "Email perlu dilengkapi, mari isi dulu ya.",
@@ -5126,21 +6412,28 @@
       "auth.register.form.wa.label": "Nomor WhatsApp",
       "auth.register.form.wa.placeholder": "81234567890",
       "auth.register.page_title": "Pendaftaran Akun",
+      "auth.register.password_security.level_label": "Tingkat Keamanan:",
+      "auth.register.password_security.requirement_list_aria_label": "Syarat Kata Sandi",
+      "auth.register.password_security.requirement.lowercase": "Ada Huruf Kecil (a-z)",
+      "auth.register.password_security.requirement.minimum_length": "Minimal 8 Karakter",
+      "auth.register.password_security.requirement.number": "Ada Angka (0-9)",
+      "auth.register.password_security.requirement.symbol": "Ada Simbol (!, @, #, $, %, &, *, ?, dsb.)",
+      "auth.register.password_security.requirement.uppercase": "Ada Huruf Besar (A-Z)",
       "auth.resend_email.change_email.cta": "Ganti Email",
       "auth.resend_email.resend.button.disabled": "Kirim Ulang Link ({seconds} detik)",
       "auth.resend_email.resend.button.enabled": "Kirim Ulang Link",
       "auth.resend_email.resend.limit.message": "Silakan tunggu 15 menit atau ganti email kamu.",
       "auth.resend_email.resend.limit.title": "Batas kirim ulang telah tercapai.",
       "auth.resend_email.resend.success.toast_message": "Link verifikasi baru telah dikirim.",
-      "auth.session_refresh.body.description": "Verifikasi ini dilakukan untuk menjaga keamanan akunmu dan memastikan hanya kamu yang dapat mengaksesnya. Masukkan kata sandi untuk melanjutkan.",
-      "auth.session_refresh.cta.google": "Lanjutkan dengan Google",
-      "auth.session_refresh.cta.submit": "Lanjutkan",
-      "auth.session_refresh.form.password.label": "Kata Sandi",
-      "auth.session_refresh.info.description30d": "Sesi login kamu telah aktif selama 30 hari dan perlu diverifikasi ulang.",
-      "auth.session_refresh.info.description72h": "Sesi login kamu telah aktif selama 72 jam dan perlu diverifikasi ulang.",
-      "auth.session_refresh.info.title": "Verifikasi Ulang Diperlukan",
-      "auth.session_refresh.info.verif_2nd_identity": "Setelah ini, kita akan memverifikasi identitas keduamu agar akunmu tetap aman dan akses berjalan tanpa gangguan, ya.",
-      "auth.session_refresh.page_title": "Yuk Perbarui Sesi Kamu",
+      "auth.resend_email.resend.success.toast_title": "Sukses!",
+      "auth.screen_privacy_mode.title": "Tampilan Disamarkan",
+      "auth.session_pre_warning_72h.modal.description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar biar tetap aman. Masukkan kata sandimu untuk lanjut ya.",
+      "auth.session_pre_warning_72h.modal.title": "Yuk Perbarui Sesi Kamu",
+      "auth.session_pre_warning_google.cta.google": "Lanjutkan dengan Google",
+      "auth.session_pre_warning_google.modal.description": "Sesi kamu sudah sampai batas 72 jam. Yuk verifikasi sebentar lewat Google biar tetap aman tanpa perlu ketik kata sandi.",
+      "auth.session_pre_warning_google.modal.title": "Yuk Perbarui Sesi Kamu",
+      "auth.session.expired.modal.button": "Login Ulang",
+      "auth.session.expired.modal.message": "Sesi Anda telah berakhir. Demi keamanan, silakan login ulang untuk melanjutkan aktivitas Anda.",
       "auth.two_factor_authentication.email.verify.invalid_old_email.message": "Sepertinya kamu membuka link dari email lama. Silakan cek email terbaru kamu untuk melanjutkan verifikasi.",
       "auth.two_factor_authentication.email.verify.invalid_old_email.title": "Link Sudah Tidak Aktif",
       "auth.two_factor_authentication.email.verify.invalid_old_link.message_1": "Sepertinya kamu membuka link yang lama. Silakan gunakan ",
@@ -5171,13 +6464,6 @@
       "auth.ui.main_layout.language_en_label": "English",
       "auth.ui.main_layout.language_id_label": "Indonesia",
       "auth.ui.main_layout.language_switcher_aria_label": "Pilih bahasa aplikasi",
-      "auth.ui.main_layout.logout_action": "Keluar",
-      "auth.ui.main_layout.logout_dialog_cancel": "Batal",
-      "auth.ui.main_layout.logout_dialog_confirm": "Ya, Logout",
-      "auth.ui.main_layout.logout_dialog_description": "Apakah Anda yakin ingin keluar dari akun ini?",
-      "auth.ui.main_layout.logout_dialog_title": "Konfirmasi Logout",
-      "auth.ui.main_layout.logout_loading_label": "Memproses logout",
-      "auth.ui.main_layout.logout_processing": "Memproses...",
       "auth.ui.main_layout.profile_menu_aria_label": "Menu profil pengguna",
       "auth.unregistered_google_account_cancel_button": "Batal",
       "auth.unregistered_google_account_create_account_button": "Buat Akun",
@@ -5337,8 +6623,11 @@
       "business_unit.unit.delete.impact.title": "Hapus Unit Usaha",
       "business_unit.unit.delete.impact.transaction_block": "Unit usaha ini memiliki riwayat transaksi sehingga penghapusan tidak dapat dilakukan.",
       "business_unit.unit.delete.success.toast": "Unit usaha berhasil dihapus.",
+      "business_unit.unit.detail.action.deactivate.label": "Nonaktifkan Unit Usaha",
       "business_unit.unit.detail.action.delete.label": "Hapus Unit Usaha",
       "common.app_powered": "Powered by Ada Ide Langsung Jalan",
+      "common.app_shell.menu.chart_of_account": "Chart Of Account (CoA)",
+      "common.app_shell.menu.dashboard": "Dashboard",
       "common.app_title": "GroApp",
       "company.accounting_start_date.label": "Tanggal Mulai Pembukuan",
       "company.address.label": "Alamat Lengkap",
@@ -5421,6 +6710,13 @@
       "company.create.form.workspace.dropdown": "Pilih Ruang Kerja",
       "company.create.form.workspace.label": "Ruang Kerja",
       "company.create.modal.title": "Masukan Data Perusahaan Baru",
+      "company.create.option.business_type.jasa": "Jasa",
+      "company.create.option.business_type.manufaktur": "Manufaktur",
+      "company.create.option.business_type.retail": "Retail",
+      "company.create.option.country.indonesia": "Indonesia",
+      "company.create.option.currency.idr": "IDR (Rupiah)",
+      "company.create.option.pkp_status.non_pkp": "NON PKP",
+      "company.create.option.pkp_status.pkp": "PKP",
       "company.create.section.address.label": "Alamat",
       "company.create.section.contact.label": "Kontak",
       "company.create.section.identity.label": "Identitas Perusahaan",
@@ -5454,6 +6750,36 @@
       "company.district.label": "Kecamatan",
       "company.district.placeholder": "Pilih Kecamatan",
       "company.email.label": "Email",
+      "company.error.account_not_linked": "Akun ini belum terhubung. Gunakan metode masuk lainnya.",
+      "company.error.bad_gateway": "Layanan tidak dapat dijangkau. Silakan coba lagi nanti.",
+      "company.error.bad_request": "Permintaan tidak dapat diproses. Periksa kembali input Anda lalu coba lagi.",
+      "company.error.business_type.invalid": "Pilih jenis usaha terlebih dahulu.",
+      "company.error.confirm_name.mismatch": "Nama perusahaan tidak sesuai.",
+      "company.error.conflict": "Data bertabrakan dengan data yang sudah ada. Periksa kembali lalu coba lagi.",
+      "company.error.country_code.invalid": "Negara wajib dipilih.",
+      "company.error.email.invalid": "Format email tidak valid. Masukkan alamat email yang benar.",
+      "company.error.expired_token": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+      "company.error.forbidden": "Anda tidak memiliki akses untuk menjalankan aksi ini.",
+      "company.error.gateway_timeout": "Permintaan melewati batas waktu. Silakan coba lagi nanti.",
+      "company.error.has_active_units": "Perusahaan tidak dapat dihapus karena masih memiliki unit usaha aktif.",
+      "company.error.has_transaction": "Perusahaan tidak dapat dihapus karena memiliki transaksi.",
+      "company.error.internal_server_error": "Terjadi gangguan pada server. Silakan coba lagi nanti.",
+      "company.error.is_default": "Perusahaan default tidak dapat dihapus. Ubah default company terlebih dahulu.",
+      "company.error.name.duplicate": "Nama perusahaan sudah digunakan di ruang kerja ini. Gunakan nama lain.",
+      "company.error.name.min": "Nama perusahaan minimal 3 karakter.",
+      "company.error.name.required": "Nama perusahaan wajib diisi.",
+      "company.error.nib.duplicate": "NIB sudah terdaftar pada perusahaan lain di ruang kerja ini.",
+      "company.error.not_found": "Data yang diminta tidak ditemukan.",
+      "company.error.npwp.duplicate": "NPWP sudah terdaftar pada perusahaan lain di ruang kerja ini.",
+      "company.error.npwp.invalid": "NPWP harus terdiri dari 16 digit angka.",
+      "company.error.phone.duplicate": "Nomor telepon sudah digunakan oleh perusahaan lain.",
+      "company.error.postal_code.invalid": "Kode pos harus terdiri dari 5 digit angka.",
+      "company.error.service_unavailable": "Layanan sedang tidak tersedia. Silakan coba lagi nanti.",
+      "company.error.session_expired": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+      "company.error.unauthorized": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+      "company.error.unit_has_transaction": "Perusahaan tidak dapat dihapus karena unit usaha memiliki transaksi.",
+      "company.error.unknown_error": "Terjadi kesalahan. Silakan coba lagi.",
+      "company.error.validation_error": "Validasi gagal. Periksa kembali input Anda lalu coba lagi.",
       "company.established_date.label": "Tanggal Pendirian Perusahaan",
       "company.fiscal_year.label": "Tahun Buku",
       "company.list.action.add_company": "Tambah Perusahaan",
@@ -5514,6 +6840,9 @@
       "company.profile.not_found.cta_back": "Kembali ke Detail Perusahaan",
       "company.profile.not_found.description": "Data perusahaan tidak ditemukan. Silakan kembali ke halaman detail perusahaan.",
       "company.profile.not_found.title": "Halaman Tidak Ditemukan",
+      "company.profile.option.currency.idr": "IDR (Rupiah)",
+      "company.profile.option.currency.sgd": "SGD (Singapore Dollar)",
+      "company.profile.option.currency.usd": "USD (US Dollar)",
       "company.profile.toast.save_failed_message": "Terjadi gangguan saat menyimpan perubahan data perusahaan.",
       "company.profile.toast.save_failed_title": "Gagal Menyimpan",
       "company.profile.toast.save_success_title": "Perubahan Berhasil Disimpan",
@@ -5708,6 +7037,20 @@
       "error.country.required": "Negara wajib dipilih.",
       "error.currency.required": "Mata uang utama wajib dipilih.",
       "error.email.invalid": "Format email tidak valid. Masukkan alamat email yang benar.",
+      "error.error.account_not_linked": "Akun ini belum terhubung. Gunakan metode masuk lainnya.",
+      "error.error.bad_gateway": "Layanan tidak dapat dijangkau. Silakan coba lagi nanti.",
+      "error.error.bad_request": "Permintaan tidak dapat diproses. Periksa kembali input Anda lalu coba lagi.",
+      "error.error.conflict": "Data bertabrakan dengan data yang sudah ada. Periksa kembali lalu coba lagi.",
+      "error.error.expired_token": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+      "error.error.forbidden": "Anda tidak memiliki akses untuk menjalankan aksi ini.",
+      "error.error.gateway_timeout": "Permintaan melewati batas waktu. Silakan coba lagi nanti.",
+      "error.error.internal_server_error": "Terjadi gangguan pada server. Silakan coba lagi nanti.",
+      "error.error.not_found": "Data yang diminta tidak ditemukan.",
+      "error.error.service_unavailable": "Layanan sedang tidak tersedia. Silakan coba lagi nanti.",
+      "error.error.session_expired": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+      "error.error.unauthorized": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+      "error.error.unknown_error": "Terjadi kesalahan. Silakan coba lagi.",
+      "error.error.validation_error": "Validasi gagal. Periksa kembali input Anda lalu coba lagi.",
       "error.logo.format": "Format file tidak didukung. Gunakan PNG, JPG, JPEG, atau WEBP.",
       "error.logo.size": "Ukuran file terlalu besar. Maksimal 2 MB.",
       "error.nib.duplicate": "NIB sudah terdaftar pada perusahaan lain di ruang kerja ini.",
@@ -5857,6 +7200,97 @@
       "http.http_503_title": "Layanan Tidak Tersedia",
       "http.http_504_message": "Server terlalu lama merespons. Silakan coba lagi.",
       "http.http_504_title": "Gateway Timeout",
+      "onboarding.onboarding.business_unit.add.bu_name.label": "Nama Unit Usaha",
+      "onboarding.onboarding.business_unit.add.bu_name.placeholder": "Contoh: Nina Salon Cabang Bandung",
+      "onboarding.onboarding.business_unit.add.bu_type.label": "Jenis Unit Usaha",
+      "onboarding.onboarding.business_unit.add.bu_type.placeholder": "Pilih Jenis Unit Usaha",
+      "onboarding.onboarding.business_unit.desc": "Opsional - Jika Anda belum memiliki Unit usaha, anda dapat melewati langkah ini dan anda dapat menambahkan unit usaha nanti.",
+      "onboarding.onboarding.business_unit.label": "Data Unit Usaha",
+      "onboarding.onboarding.business_unit.name.error.format": "Nama Unit Usaha hanya boleh berisi huruf, angka, titik, dan koma.",
+      "onboarding.onboarding.business_unit.name.error.min_length": "Nama Unit Usaha minimal 3 karakter.",
+      "onboarding.onboarding.business_unit.name.info.max_length": "Nama Unit Usaha maksimal 60 karakter.",
+      "onboarding.onboarding.business_unit.title": "Unit Usaha",
+      "onboarding.onboarding.company.add.business_type.label": "Jenis Usaha",
+      "onboarding.onboarding.company.add.business_type.placeholder": "Pilih Jenis Usaha",
+      "onboarding.onboarding.company.add.company_name.label": "Nama Perusahaan",
+      "onboarding.onboarding.company.add.company_name.placeholder": "Contoh: PT Kreasi Anak Bangsa / Toko Haji Udin",
+      "onboarding.onboarding.company.add.country.label": "Negara",
+      "onboarding.onboarding.company.add.country.placeholder": "Pilih Negara",
+      "onboarding.onboarding.company.add.currency.label": "Mata Uang Utama",
+      "onboarding.onboarding.company.add.currency.placeholder": "Pilih Mata Uang",
+      "onboarding.onboarding.company.business_type.error.required": "Pilih Jenis Usaha terlebih dahulu.",
+      "onboarding.onboarding.company.country.error.required": "Pilih Negara terlebih dahulu.",
+      "onboarding.onboarding.company.currency.error.required": "Pilih Mata Uang terlebih dahulu.",
+      "onboarding.onboarding.company.desc": "Lengkapi data perusahaan sebagai fondasi integrasi GroApp.",
+      "onboarding.onboarding.company.label": "Data Perusahaan",
+      "onboarding.onboarding.company.name.error.duplicate": "Nama Perusahaan sudah digunakan di Ruang Kerja ini. Gunakan nama lain agar data tetap rapi.",
+      "onboarding.onboarding.company.name.error.format": "Nama Perusahaan hanya boleh berisi huruf, angka, titik, dan koma.",
+      "onboarding.onboarding.company.name.error.min_length": "Nama Perusahaan minimal 3 karakter.",
+      "onboarding.onboarding.company.name.error.required": "Nama Perusahaan wajib diisi.",
+      "onboarding.onboarding.company.name.info.max_length": "Nama Perusahaan maksimal 60 karakter.",
+      "onboarding.onboarding.company.title": "Perusahaan",
+      "onboarding.onboarding.error.system.page_content": "Sistem sedang mengalami gangguan. coba lagi dalam beberapa saat",
+      "onboarding.onboarding.error.system.page_title": "Gangguan Sistem",
+      "onboarding.onboarding.navigation.back.button": "Kembali",
+      "onboarding.onboarding.navigation.next.button": "Lanjutkan",
+      "onboarding.onboarding.preview.data.business_type.label": "Jenis Usaha",
+      "onboarding.onboarding.preview.data.business_unit_name.label": "Nama Unit Usaha",
+      "onboarding.onboarding.preview.data.business_unit_type.label": "Jenis Usaha",
+      "onboarding.onboarding.preview.data.company_name.label": "Nama Perusahaan",
+      "onboarding.onboarding.preview.data.country_currency.label": "Negara & Mata Uang",
+      "onboarding.onboarding.preview.data.workspace_name.label": "Nama Ruang Kerja",
+      "onboarding.onboarding.preview.info.note": "Anda dapat menambahkan Perusahaan dan Unit Usaha lainnya setelah proses onboarding selesai",
+      "onboarding.onboarding.preview.page_content.intro": "Pratinjau Data\nPeriksa kembali data Anda sebelum menyimpan.",
+      "onboarding.onboarding.preview.page_title": "Pratinjau",
+      "onboarding.onboarding.start.cta.button": "Mulai Onboarding",
+      "onboarding.onboarding.start.page_content": "Kami akan memandu Anda menyiapkan Ruang Kerja, Perusahaan, dan Unit Usaha pertama Anda dalam beberapa langkah.",
+      "onboarding.onboarding.start.page_title": "Siap Untuk Memulai?",
+      "onboarding.onboarding.step.label": "Langkah",
+      "onboarding.onboarding.structure.page_content": "Deskripsi singkat per level:\n\n* Ruang Kerja\n\nMerupakan wadah pengelompokan utama bisnis Anda\n\n* Perusahaan\n\nMerupakan konteks bisnis yang mengaktifkan modul GroApp\n\n* Unit Usaha\n\nMerupakan representasi operasional (cabang, outlet, Pabrik)",
+      "onboarding.onboarding.structure.page_title": "Kenali Struktur Kerja Anda",
+      "onboarding.onboarding.success.cta.button": "Masuk ke detail Perusahaan",
+      "onboarding.onboarding.success.page_content": "Ruang Kerja, Perusahaan, dan Unit Usaha berhasil dibuat. Anda sudah dapat mulai menggunakannya.",
+      "onboarding.onboarding.success.page_title": "Sukses",
+      "onboarding.onboarding.welcome.page_content": "Di sini, Anda bisa mengelola seluruh identitas bisnis dengan lebih rapi. Mulai dari Ruang Kerja, Perusahaan, hingga Unit Usaha.",
+      "onboarding.onboarding.welcome.page_title": "Selamat Datang di GroApp Access",
+      "onboarding.onboarding.workspace.add.label": "Nama Ruang kerja",
+      "onboarding.onboarding.workspace.add.placeholder": "Contoh: Ruang Kerja Utama",
+      "onboarding.onboarding.workspace.desc": "Ruang Kerja adalah wadah untuk mengelompokkan perusahaan anda",
+      "onboarding.onboarding.workspace.label": "Buat Ruang Kerja",
+      "onboarding.onboarding.workspace.name.error.duplicate": "Nama Ruang Kerja telah terdaftar. Silakan gunakan nama yang berbeda.",
+      "onboarding.onboarding.workspace.name.error.format": "Nama Ruang Kerja hanya boleh berisi huruf, angka, titik, dan koma.",
+      "onboarding.onboarding.workspace.name.error.min_length": "Nama Ruang Kerja minimal 3 karakter.",
+      "onboarding.onboarding.workspace.name.error.required": "Nama Ruang Kerja wajib diisi.",
+      "onboarding.onboarding.workspace.name.info.max_length": "Nama Ruang Kerja maksimal 60 karakter.",
+      "onboarding.onboarding.workspace.title": "Ruang kerja",
+      "profile.change_password.page.title": "Ubah Kata Sandi",
+      "profile.profile_edit_personal.field.name": "Nama Lengkap",
+      "profile.profile_edit_personal.page.title": "Edit Data Pribadi",
+      "profile.profile.action.change_password": "Ubah Kata Sandi",
+      "profile.profile.action.create_password": "Buat Kata Sandi",
+      "profile.profile.action.delete_account": "Hapus Akun",
+      "profile.profile.label.address": "Alamat",
+      "profile.profile.label.date_of_birth": "Tanggal Lahir",
+      "profile.profile.label.email": "Email",
+      "profile.profile.label.gender": "Jenis Kelamin",
+      "profile.profile.label.name": "Nama",
+      "profile.profile.label.nickname": "Nama Panggilan",
+      "profile.profile.label.profile_photo": "Foto Profil",
+      "profile.profile.label.whatsapp_number": "Nomor WhatsApp",
+      "profile.profile.logout.button": "Logout",
+      "profile.profile.page.title": "Profil Saya",
+      "profile.profile.section.data_account": "Data Akun",
+      "profile.profile.section.data_privacy": "Data & Privasi",
+      "profile.profile.section.personal_information": "Data Pribadi",
+      "profile.profile.section.security": "Keamanan",
+      "role.role_detail.page_title": "Detail Peran",
+      "role.rolelist.page_title": "Daftar Peran",
+      "role.rolelist.section.description": "Peran dalam sistem berfungsi untuk mengatur hak akses pengguna sehingga setiap user hanya dapat melihat atau melakukan tindakan sesuai dengan akses yang diberikan",
+      "role.rolelist.table.description.header": "Deskripsi",
+      "role.rolelist.table.role_name.header": "Nama Peran",
+      "role.rolelist.table.user_count.header": "Jumlah User",
+      "role.rolelist.table.user_count.tooltip": "Jumlah pengguna aktif yang menggunakan peran ini.",
+      "settings.company_setting.page_title": "Pengaturan Perusahaan",
       "settings.preferences.language": "Bahasa",
       "settings.preferences.notifications": "Notifikasi",
       "settings.preferences.theme": "Tema",
@@ -5870,9 +7304,117 @@
       "settings.profile.logout.popup.title": "Konfirmasi Logout",
       "settings.profile.title": "Profil",
       "settings.title": "Pengaturan",
+      "user.email_aktifkan_pengguna.subject": "GroApp: Akses Anda di {{Nama Perusahaan}} Diaktifkan Kembali",
+      "user.invite_email.subject": "Undangan GroApp: Bergabung ke {{company_name}}",
+      "user.ubah_akses_pengguna.modal.title": "Ubah Akses Pengguna",
+      "user.ubah_akses_pengguna.toast_title.success": "Sukses!",
+      "user.user_activate.toast_message.success": "Pengguna berhasil diaktifkan kembali.",
+      "user.user_activate.toast_title.success": "Sukses!",
+      "user.user_deactivate.modal.title": "Nonaktifkan Akses Pengguna?",
+      "user.user_deactivate.toast_title.success": "Sukses!",
+      "user.user_deactivated.page.title": "Akses Anda Dinonaktifkan",
+      "user.user_detail.button.change_role": "Ubah Peran",
+      "user.user_detail.button.change_status": "Ubah Status",
+      "user.user_detail.header.title": "Detail Pengguna",
+      "user.user_detail.page_title": "Detail Pengguna",
+      "user.user_detail.section.access_scope": "Cakupan Akses",
+      "user.user_detail.section.email": "Email",
+      "user.user_detail.section.invited_by": "Diundang Oleh",
+      "user.user_detail.section.join_date": "Tanggal Bergabung",
+      "user.user_detail.section.name": "Nama",
+      "user.user_detail.section.role": "Peran",
+      "user.user_detail.section.status": "Status",
+      "user.user_detail.section.title": "Informasi Pengguna",
+      "user.user_detail.section.wa_number": "Nomor Whatsapp",
+      "user.user_list.header.add_user.button": "Tambah Pengguna",
+      "user.user_list.modal.info.company": "Perusahaan : PT Ruam Ruam",
+      "user.user_list.modal.label.email": "Email",
+      "user.user_list.modal.label.role": "Peran Pengguna",
+      "user.user_list.modal.placeholder.email": "contoh : budi@contoh.com",
+      "user.user_list.modal.placeholder.role": "Pilih Peran Pengguna",
+      "user.user_list.modal.title": "Tambah Pengguna Baru",
+      "user.useradd.owner_role.banner.title": "Peran Pemilik Usaha",
+      "user.userlist.action.view_detail": "Lihat Detail",
+      "user.userlist.filter.role.label": "Peran",
+      "user.userlist.pagination.rows_per_page": "Jumlah data per halaman",
+      "user.userlist.resend_invite.toast.title": "Sukses!",
+      "user.userlist.search.empty.title": "Data tidak ditemukan",
+      "user.userlist.search.placeholder": "Cari...",
+      "user.userlist.table.title": "Daftar Pengguna",
+      "user.userlist.title": "Manajemen Pengguna",
+      "workspace.delete_info.button.cancel": "Batal",
+      "workspace.delete_info.button.company_list": "Daftar Perusahaan",
+      "workspace.delete_info.modal.body": "Ruang Kerja ini masih memiliki data terkait. Anda perlu menghapus seluruh data di dalamnya sebelum dapat menghapus Ruang Kerja",
+      "workspace.delete_info.modal.title": "Ruang Kerja Tidak dapat Dihapus",
+      "workspace.detail_workspace.edit.label": "Nama Ruang kerja",
+      "workspace.detail_workspace.edit.title": "Ubah Ruang kerja",
+      "workspace.list_workspace.modal.label": "Nama Ruang kerja",
+      "workspace.list_workspace.modal.placeholder": "Contoh: Ruang Kerja Utama",
+      "workspace.list_workspace.modal.title": "Tambah Ruang kerja",
+      "workspace.listcompany.header.title": "Daftar Perusahaan",
+      "workspace.listrk.header.title": "Daftar Ruang Kerja",
+      "workspace.workspace.create.action.cancel.button": "Batal",
+      "workspace.workspace.create.action.submit.button": "Simpan",
+      "workspace.workspace.create.form.name.error.duplicate": "Nama Ruang Kerja sudah terdaftar. Silakan gunakan nama yang berbeda.",
+      "workspace.workspace.create.form.name.error.invalid_format": "Nama Ruang Kerja hanya boleh berisi huruf, angka, titik, dan koma.",
+      "workspace.workspace.create.form.name.error.max_length": "Nama Ruang Kerja maksimal 60 karakter.",
+      "workspace.workspace.create.form.name.error.min_length": "Nama Ruang Kerja minimal 3 karakter.",
+      "workspace.workspace.create.form.name.error.required": "Nama Ruang Kerja wajib diisi.",
+      "workspace.workspace.create.form.name.label": "Nama Ruang Kerja",
+      "workspace.workspace.create.form.name.placeholder": "Contoh: Ruang Kerja Utama",
+      "workspace.workspace.create.modal.title": "Tambah Ruang Kerja",
+      "workspace.workspace.create.name.info.max_length": "Nama Ruang Kerja maksimal 60 karakter.",
+      "workspace.workspace.create.toast.success.message": "Ruang Kerja berhasil ditambahkan",
+      "workspace.workspace.create.toast.success.title": "Sukses!",
+      "workspace.workspace.delete.action.cancel.button": "Batal",
+      "workspace.workspace.delete.action.confirm.button": "Konfirmasi",
+      "workspace.workspace.delete.checkbox.confirmation": "Saya menyetujui penghapusan ruang kerja ini dilakukan secara permanen dan tidak dapat dibatalkan",
+      "workspace.workspace.delete.form.confirmation.label": "Ketik {Nama ruang kerja} untuk mengkonfirmasi",
+      "workspace.workspace.delete.form.confirmation.placeholder": "Ketik nama ruang kerja",
+      "workspace.workspace.delete.modal.banner_title": "Informasi!",
+      "workspace.workspace.delete.modal.description": "Semua data di dalam ruang kerja ini akan terhapus secara permanen dan tidak bisa dipulihkan.",
+      "workspace.workspace.delete.modal.title": "Konfirmasi Hapus Ruang Kerja",
+      "workspace.workspace.delete.toast.success.message": "Data ruang kerja telah berhasil dihapus",
+      "workspace.workspace.delete.toast.success.title": "Sukses!",
+      "workspace.workspace.edit.action.cancel.button": "Batal",
+      "workspace.workspace.edit.action.submit.button": "Simpan",
+      "workspace.workspace.edit.form.name.error.duplicate": "Nama Ruang Kerja sudah terdaftar. Silakan gunakan nama yang berbeda.",
+      "workspace.workspace.edit.form.name.error.invalid_format": "Nama Ruang Kerja hanya boleh berisi huruf, angka, titik, dan koma.",
+      "workspace.workspace.edit.form.name.error.max_length": "Nama Ruang Kerja maksimal 60 karakter.",
+      "workspace.workspace.edit.form.name.error.min_length": "Nama Ruang Kerja minimal 3 karakter.",
+      "workspace.workspace.edit.form.name.error.required": "Nama Ruang Kerja wajib diisi.",
+      "workspace.workspace.edit.form.name.max_length": "Nama Ruang Kerja maksimal 60 karakter.",
+      "workspace.workspace.edit.toast.cancle.message": "Perubahan nama ruang kerja dibatalkan",
+      "workspace.workspace.edit.toast.cancle.title": "Dibatalkan",
+      "workspace.workspace.edit.toast.success.message": "Nama Ruang Kerja berhasil diperbaharui",
+      "workspace.workspace.edit.toast.success.title": "Sukses!",
+      "workspace.workspace.error.confirm_name.mismatch": "Nama konfirmasi tidak sesuai. Pastikan nama Ruang Kerja diketik dengan benar.",
+      "workspace.workspace.error.has_companies": "Ruang kerja ini tidak dapat dihapus karena masih memiliki perusahaan atau unit usaha terkait.",
+      "workspace.workspace.error.last_remaining": "Ruang kerja ini tidak dapat dihapus karena merupakan ruang kerja terakhir Anda.",
+      "workspace.workspace.error.name.duplicate": "Nama Ruang Kerja sudah terdaftar. Silakan gunakan nama yang berbeda.",
+      "workspace.workspace.error.name.required": "Nama Ruang Kerja wajib diisi.",
+      "workspace.workspace.list.action.create.button": "Tambah Ruang Kerja",
+      "workspace.workspace.list.empty.description": "Anda belum memiliki ruang kerja. Buat ruang kerja pertama Anda untuk memulai.",
+      "workspace.workspace.list.empty.title": "Belum Ada Ruang Kerja",
+      "workspace.workspace.list.error.description": "Terjadi gangguan saat memuat data ruang kerja. Silakan coba lagi.",
+      "workspace.workspace.list.error.title": "Gagal Memuat Ruang Kerja",
+      "workspace.workspace.list.header.managed_by.label": "dikelola oleh {nama akun}",
+      "workspace.workspace.list.not_found.description": "Tidak ada ruang kerja yang sesuai kriteria pencarian Anda.",
+      "workspace.workspace.list.not_found.title": "Ruang Kerja Tidak Ditemukan",
+      "workspace.workspace.list.summary.business_unit_total.label": "Total Unit Usaha",
+      "workspace.workspace.list.summary.company_total.label": "Total Perusahaan",
       "workspace_detail.company_list.empty.cta_button": "Tambah Perusahaan",
       "workspace_detail.company_list.empty.description": "Saat ini belum ada perusahaan yang dapat Anda akses di Ruang Kerja ini.",
-      "workspace_detail.company_list.empty.title": "Belum Ada Perusahaan"
+      "workspace_detail.company_list.empty.title": "Belum Ada Perusahaan",
+      "workspace_detail.detailrk.company_list": "Daftar Perusahaan",
+      "workspace_detail.detailrk.data_info": "Informasi Ruang Kerja",
+      "workspace_detail.detailrk.name_ws": "Nama Ruang Kerja",
+      "workspace_detail.detailrk.owned_by": "Dikelola oleh",
+      "workspace_detail.detailrk.sumbusiness_unit": "Jumlah Unit Usaha",
+      "workspace_detail.detailrk.sumcompany": "Jumlah Perusahaan",
+      "workspace_detail.workspace_detail.action.add_company.button": "Tambah Perusahaan",
+      "workspace_detail.workspace_detail.company_add.modal.title": "Tambah Perusahaan",
+      "workspace_detail.workspace_detail.page_title": "Detail Ruang Kerja"
     }
   }
 }

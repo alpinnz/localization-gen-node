@@ -187,6 +187,9 @@
       "action": {
         "delete": {
           "label": "Delete Business Unit"
+        },
+        "deactivate": {
+          "label": "Deactivate Business Unit"
         }
       }
     },

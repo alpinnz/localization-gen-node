@@ -5,6 +5,7 @@ import { emitRuntimeFiles } from "../emitter/emit-runtime-files.js";
 import { emitReportFiles } from "../emitter/emit-report-files.js";
 import { ensureOutputDirs } from "../emitter/ensure-output-dirs.js";
 import { createWatchService } from "../watch/create-watch-service.js";
+import { renderTerminalReport } from "../diagnostics/render-terminal-report.js";
 
 export async function runGenerate(options: { cwd?: string; watch?: boolean } = {}): Promise<void> {
   const cwd = resolve(options.cwd ?? process.cwd());
@@ -15,6 +16,10 @@ export async function runGenerate(options: { cwd?: string; watch?: boolean } = {
     const compiled = await compileProject(cwd, config);
     await emitRuntimeFiles(cwd, config, compiled);
     await emitReportFiles(cwd, config, compiled);
+    if (compiled.diagnostics.length > 0) {
+      // eslint-disable-next-line no-console
+      console.error(renderTerminalReport(compiled.diagnostics));
+    }
     if (compiled.diagnostics.some((d) => d.severity === "error") && config.strict) {
       throw new Error("Localization generation failed with diagnostics.");
     }

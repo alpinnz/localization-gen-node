@@ -7,5 +7,26 @@
       "description": "There are currently no companies you can access in this workspace.",
       "cta_button": "Add Company"
     }
+  },
+  "workspace_detail": {
+    "page_title": "Workspace Detail",
+    "action": {
+      "add_company": {
+        "button": "Add Company"
+      }
+    },
+    "company_add": {
+      "modal": {
+        "title": "Add Company"
+      }
+    }
+  },
+  "detailrk": {
+    "data_info": "Workspace Information",
+    "name_ws": "Workspace Name",
+    "owned_by": "Owned by",
+    "sumcompany": "Total Companies",
+    "sumbusiness_unit": "Total Business Unit",
+    "company_list": "Company List"
   }
 }

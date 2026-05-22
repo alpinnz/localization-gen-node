@@ -1,6 +1,22 @@
 {
   "@@locale": "id",
   "@@module": "error",
+  "error": {
+    "bad_request": "Permintaan tidak dapat diproses. Periksa kembali input Anda lalu coba lagi.",
+    "forbidden": "Anda tidak memiliki akses untuk menjalankan aksi ini.",
+    "unauthorized": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+    "not_found": "Data yang diminta tidak ditemukan.",
+    "conflict": "Data bertabrakan dengan data yang sudah ada. Periksa kembali lalu coba lagi.",
+    "validation_error": "Validasi gagal. Periksa kembali input Anda lalu coba lagi.",
+    "internal_server_error": "Terjadi gangguan pada server. Silakan coba lagi nanti.",
+    "service_unavailable": "Layanan sedang tidak tersedia. Silakan coba lagi nanti.",
+    "bad_gateway": "Layanan tidak dapat dijangkau. Silakan coba lagi nanti.",
+    "gateway_timeout": "Permintaan melewati batas waktu. Silakan coba lagi nanti.",
+    "session_expired": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+    "expired_token": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+    "account_not_linked": "Akun ini belum terhubung. Gunakan metode masuk lainnya.",
+    "unknown_error": "Terjadi kesalahan. Silakan coba lagi."
+  },
   "logo": {
     "size": "Ukuran file terlalu besar. Maksimal 2 MB.",
     "format": "Format file tidak didukung. Gunakan PNG, JPG, JPEG, atau WEBP."

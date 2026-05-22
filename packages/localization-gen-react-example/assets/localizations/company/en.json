@@ -73,6 +73,56 @@
   "website": {
     "label": "Website"
   },
+  "error": {
+    "bad_request": "The request could not be processed. Please check your input and try again.",
+    "forbidden": "You do not have permission to perform this action.",
+    "unauthorized": "Your session has expired. Please sign in again.",
+    "not_found": "The requested data could not be found.",
+    "conflict": "The data conflicts with existing records. Please review and try again.",
+    "validation_error": "Validation failed. Please check your input and try again.",
+    "internal_server_error": "A server error occurred. Please try again later.",
+    "service_unavailable": "The service is temporarily unavailable. Please try again later.",
+    "bad_gateway": "The service could not be reached. Please try again later.",
+    "gateway_timeout": "The request timed out. Please try again later.",
+    "session_expired": "Your session has expired. Please sign in again.",
+    "expired_token": "Your session has expired. Please sign in again.",
+    "account_not_linked": "This account is not linked yet. Please use another sign-in method.",
+    "unknown_error": "Something went wrong. Please try again.",
+    "confirm_name": {
+      "mismatch": "Company name does not match."
+    },
+    "has_transaction": "Company cannot be deleted because it has transactions.",
+    "unit_has_transaction": "Company cannot be deleted because its business units have transactions.",
+    "has_active_units": "Company cannot be deleted because it still has active business units.",
+    "is_default": "Default company cannot be deleted. Change default company first.",
+    "name": {
+      "required": "Company name is required.",
+      "duplicate": "Company name already exists in this workspace. Please use another name.",
+      "min": "Company name must be at least 3 characters."
+    },
+    "business_type": {
+      "invalid": "Please select a business type."
+    },
+    "postal_code": {
+      "invalid": "Postal code must contain 5 digits."
+    },
+    "country_code": {
+      "invalid": "Country must be selected."
+    },
+    "email": {
+      "invalid": "Invalid email format. Please enter a valid email address."
+    },
+    "phone": {
+      "duplicate": "Phone number is already used by another company."
+    },
+    "npwp": {
+      "invalid": "NPWP must contain 16 digits.",
+      "duplicate": "NPWP already exists for another company in this workspace."
+    },
+    "nib": {
+      "duplicate": "NIB already exists for another company in this workspace."
+    }
+  },
   "established_date": {
     "label": "Company Establishment Date"
   },
@@ -106,6 +156,23 @@
     },
     "additional_info": {
       "label": "Additional Information"
+    },
+    "option": {
+      "business_type": {
+        "jasa": "Services",
+        "retail": "Retail",
+        "manufaktur": "Manufacturing"
+      },
+      "country": {
+        "indonesia": "Indonesia"
+      },
+      "currency": {
+        "idr": "IDR (Rupiah)"
+      },
+      "pkp_status": {
+        "pkp": "PKP",
+        "non_pkp": "NON PKP"
+      }
     },
     "section": {
       "identity": {
@@ -323,6 +390,13 @@
   "profile": {
     "header": {
       "title": "Company Profile"
+    },
+    "option": {
+      "currency": {
+        "idr": "IDR (Rupiah)",
+        "usd": "USD (US Dollar)",
+        "sgd": "SGD (Singapore Dollar)"
+      }
     },
     "modal": {
       "edit_prefix": "Edit"

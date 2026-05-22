@@ -21,5 +21,8 @@
     "language": "Bahasa",
     "theme": "Tema",
     "notifications": "Notifikasi"
+  },
+  "company_setting": {
+    "page_title": "Pengaturan Perusahaan"
   }
 }

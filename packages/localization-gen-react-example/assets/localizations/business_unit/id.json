@@ -187,6 +187,9 @@
       "action": {
         "delete": {
           "label": "Hapus Unit Usaha"
+        },
+        "deactivate": {
+          "label": "Nonaktifkan Unit Usaha"
         }
       }
     },

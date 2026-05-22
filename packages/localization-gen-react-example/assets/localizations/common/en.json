@@ -2,5 +2,11 @@
   "@@locale": "en",
   "@@module": "common",
   "app_title": "GroApp",
-  "app_powered": "Powered by Ada Ide Langsung Jalan"
+  "app_powered": "Powered by Ada Ide Langsung Jalan",
+  "app_shell": {
+    "menu": {
+      "dashboard": "Dashboard",
+      "chart_of_account": "Chart of Accounts (CoA)"
+    }
+  }
 }

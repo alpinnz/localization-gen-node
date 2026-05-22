@@ -1,10 +1,4 @@
 {
-  "auth.banner.email_first.message": [
-    "d"
-  ],
-  "auth.banner.wa_first.message": [
-    "d"
-  ],
   "auth.login_by_google_account.error.nama.invalid_char": [
     "x"
   ],
@@ -16,6 +10,9 @@
   ],
   "auth.otp_whatsapp.message": [
     "otp_code"
+  ],
+  "auth.popup.message": [
+    "time"
   ],
   "auth.resend_email.resend.button.disabled": [
     "seconds"
@@ -43,5 +40,8 @@
   ],
   "delete.company.impact.summary.unit_count": [
     "totalBusinessUnit"
+  ],
+  "user.invite_email.subject": [
+    "company_name"
   ]
 }
