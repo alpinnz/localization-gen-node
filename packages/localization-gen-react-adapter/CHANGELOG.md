@@ -2,7 +2,39 @@
 
 All notable changes to `localization-gen-react-adapter` are documented in this file.
 
-## [0.0.7] - 2026-05-18
+## [0.0.9] - 2026-05-23
+
+### Added
+
+- **Nullable translation helpers** — three new methods on `useLocalization()` and `NamespacedLocalizer` that return `null` instead of a fallback string when a key does not exist in any locale:
+  - `translateOrNull(key)` — returns `string | null`; use for conditional UI rendering
+  - `formatOrNull(key, params)` — returns `string | null`; safe interpolation when a key may be absent
+  - `pluralOrNull(key, count)` — returns `string | null`; safe plural resolution when a structured key may be absent
+- All three methods are also available through `namespace(scope)` (e.g. `ns.translateOrNull("title")`)
+- A key is considered "found" when it exists in the **active locale OR the fallback locale**; only truly missing keys produce `null`
+
+## [0.0.8] - 2026-05-21
+
+### Added
+
+- **Pluggable locale storage** — `LocalizationProvider` now accepts an optional `storage` prop (`LocaleStorage` interface) to persist the selected locale across page reloads
+- Built-in storage strategy factories:
+  - `localStorageStrategy(options?)` — persists in `window.localStorage`
+  - `sessionStorageStrategy(options?)` — persists in `window.sessionStorage` (cleared on tab close)
+  - `cookieStrategy(options?)` — persists as an HTTP cookie; supports `domain`, `path`, `maxAge`, `secure`, and `sameSite` options for SSR/middleware compatibility
+  - `memoryStrategy(options?)` — in-memory only, no persistence (useful for testing or SSR)
+  - `composeStorage(...storages)` — combines multiple strategies: reads from the first with a value, writes to all
+- All strategy factories and the `LocaleStorage` interface are exported from the package root
+- `LocalizationProviderProps` interface exported from the package root
+
+### Changed
+
+- `LocalizationProvider` locale resolution priority: `storage.get()` → `initialLocale` prop → `manifest.base_locale`
+- `setLocale()` now automatically calls `storage.set(locale)` when a `storage` is provided — no consumer changes required
+- Stored locale values that are not present in `manifest.locales` are silently ignored (falls through to `initialLocale`)
+- **Backwards compatible** — existing usage without `storage` prop is unaffected
+
+
 
 ### Changed
 

@@ -1,0 +1,53 @@
+{
+  "@@locale": "id",
+  "@@module": "error",
+  "logo": {
+    "size": "Ukuran file terlalu besar. Maksimal 2 MB.",
+    "format": "Format file tidak didukung. Gunakan PNG, JPG, JPEG, atau WEBP."
+  },
+  "company": {
+    "name": {
+      "required": "Nama perusahaan wajib diisi.",
+      "min": "Nama perusahaan minimal 3 karakter.",
+      "max": "Nama perusahaan maksimal 60 karakter.",
+      "invalid_character": "Nama perusahaan hanya boleh berisi huruf, angka, titik, dan koma.",
+      "duplicate": "Nama perusahaan sudah digunakan di ruang kerja ini. Gunakan nama lain."
+    }
+  },
+  "business_type": {
+    "required": "Jenis usaha wajib dipilih."
+  },
+  "country": {
+    "required": "Negara wajib dipilih."
+  },
+  "currency": {
+    "required": "Mata uang utama wajib dipilih."
+  },
+  "postal_code": {
+    "invalid": "Kode pos harus terdiri dari 5 digit angka."
+  },
+  "npwp": {
+    "invalid": "NPWP harus terdiri dari 16 digit angka.",
+    "duplicate": "NPWP sudah terdaftar pada perusahaan lain di ruang kerja ini."
+  },
+  "nib": {
+    "invalid": "NIB harus terdiri dari 13 digit angka.",
+    "duplicate": "NIB sudah terdaftar pada perusahaan lain di ruang kerja ini."
+  },
+  "email": {
+    "invalid": "Format email tidak valid. Masukkan alamat email yang benar."
+  },
+  "phone": {
+    "invalid": "Nomor telepon harus berupa angka.",
+    "max": "Nomor telepon maksimal 13 digit.",
+    "duplicate": "Nomor telepon sudah digunakan oleh perusahaan lain."
+  },
+  "whatsapp": {
+    "invalid": "Masukkan nomor WhatsApp dengan format yang benar.",
+    "max": "Nomor WhatsApp maksimal 13 digit.",
+    "duplicate": "Nomor WhatsApp sudah digunakan oleh perusahaan lain."
+  },
+  "website": {
+    "invalid": "Format website tidak valid. Gunakan format seperti: www.domain.com"
+  }
+}

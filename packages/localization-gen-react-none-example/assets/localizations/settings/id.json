@@ -1,0 +1,85 @@
+{
+  "@@module": "settings",
+  "@@locale": "id",
+  "strings": {
+    "settings_title": "Pengaturan",
+    "privacy_title": "Privasi"
+  },
+  "placeholders": {
+    "auto_lock_minutes": {
+      "@value": "Kunci otomatis setelah {minutes} menit.",
+      "@description": "Label waktu tunggu kunci otomatis.",
+      "@example": "Kunci otomatis setelah 10 menit.",
+      "@placeholders": {
+        "minutes": "Jumlah menit"
+      }
+    },
+    "region_value": {
+      "@value": "Wilayah saat ini: {region}.",
+      "@description": "Menampilkan wilayah yang dipilih.",
+      "@example": "Wilayah saat ini: APAC.",
+      "@placeholders": {
+        "region": "Kode atau nama wilayah"
+      }
+    }
+  },
+  "structured": {
+    "devices": {
+      "@plural": {
+        "zero": "Tidak ada perangkat terhubung",
+        "one": "1 perangkat terhubung",
+        "other": "{count} perangkat terhubung"
+      },
+      "@devices": {
+        "description": "Jumlah perangkat terhubung.",
+        "placeholders": {
+          "count": "Jumlah perangkat"
+        }
+      }
+    },
+    "backup_status": {
+      "@context": {
+        "synced": "Cadangan sudah terbaru",
+        "pending": "Cadangan tertunda",
+        "error": "Cadangan gagal"
+      },
+      "@backup_status": {
+        "description": "Status cadangan berdasarkan konteks."
+      }
+    },
+    "owner_label": {
+      "@gender": {
+        "male": "Dimiliki Bpk. {last_name}",
+        "female": "Dimiliki Ibu {last_name}",
+        "other": "Dimiliki Sdr. {last_name}"
+      },
+      "@owner_label": {
+        "description": "Label pemilik berdasarkan gender.",
+        "placeholders": {
+          "last_name": "Nama keluarga pemilik"
+        }
+      }
+    }
+  },
+  "title": "Pengaturan",
+  "profile": {
+    "title": "Profil",
+    "edit_profile": "Edit Profil",
+    "change_password": "Ubah Kata Sandi",
+    "logout": {
+      "button": "Logout",
+      "popup": {
+        "title": "Konfirmasi Logout",
+        "message": "Apakah Anda yakin ingin keluar dari akun ini?",
+        "confirm": "Ya, Logout",
+        "cancel": "Batal"
+      }
+    }
+  },
+  "preferences": {
+    "title": "Preferensi",
+    "language": "Bahasa",
+    "theme": "Tema",
+    "notifications": "Notifikasi"
+  }
+}

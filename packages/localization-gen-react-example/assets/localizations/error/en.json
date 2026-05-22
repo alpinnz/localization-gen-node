@@ -1,0 +1,53 @@
+{
+  "@@locale": "en",
+  "@@module": "error",
+  "logo": {
+    "size": "File size is too large. Maximum 2 MB.",
+    "format": "File format is not supported. Use PNG, JPG, JPEG, or WEBP."
+  },
+  "company": {
+    "name": {
+      "required": "Company name is required.",
+      "min": "Company name must be at least 3 characters.",
+      "max": "Company name must not exceed 60 characters.",
+      "invalid_character": "Company name may only contain letters, numbers, periods, and commas.",
+      "duplicate": "Company name already exists in this workspace. Please use another name."
+    }
+  },
+  "business_type": {
+    "required": "Business type must be selected."
+  },
+  "country": {
+    "required": "Country must be selected."
+  },
+  "currency": {
+    "required": "Primary currency must be selected."
+  },
+  "postal_code": {
+    "invalid": "Postal code must contain 5 digits."
+  },
+  "npwp": {
+    "invalid": "NPWP must contain 16 digits.",
+    "duplicate": "NPWP already exists for another company in this workspace."
+  },
+  "nib": {
+    "invalid": "NIB must contain 13 digits.",
+    "duplicate": "NIB already exists for another company in this workspace."
+  },
+  "email": {
+    "invalid": "Invalid email format. Please enter a valid email address."
+  },
+  "phone": {
+    "invalid": "Phone number must contain numbers only.",
+    "max": "Phone number must not exceed 13 digits.",
+    "duplicate": "Phone number is already used by another company."
+  },
+  "whatsapp": {
+    "invalid": "Please enter a valid WhatsApp number.",
+    "max": "WhatsApp number must not exceed 13 digits.",
+    "duplicate": "WhatsApp number is already used by another company."
+  },
+  "website": {
+    "invalid": "Invalid website format. Use format like: www.domain.com"
+  }
+}

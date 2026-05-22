@@ -95,85 +95,71 @@ export default function App() {
                 ))}
                 <span style={{alignSelf: "center", color: "#555"}}>Active locale: <strong>{locale}</strong></span>
             </div>
-            <h1>login.page_title :{translate("login.page_title")}</h1>
+            <h1>auth.login.page_title :{translate(appLocalization.login.page_title)}</h1>
 
             <Section title="(1) Common merged keys">
-                <Row label={appLocalization.common.app_title} value={translate(appLocalization.common.app_title)}/>
-                <Row label={appLocalization.common.app_powered} value={translate(appLocalization.common.app_powered)}/>
+                <Row label={appLocalization.app_title} value={translate(appLocalization.app_title)}/>
+                <Row label={appLocalization.app_powered} value={translate(appLocalization.app_powered)}/>
             </Section>
 
-            <Section title="(2) Auth detailed + merged keys">
-                <Row label={appLocalization.auth.strings.login_title}
-                     value={translate(appLocalization.auth.strings.login_title)}/>
-                <Row label={appLocalization.auth.placeholders.welcome_back}
-                     value={format(appLocalization.auth.placeholders.welcome_back, {name: "Alfin"})}/>
-                <Row label={appLocalization.auth.placeholders.otp_sent}
-                     value={format(appLocalization.auth.placeholders.otp_sent, {
-                         phone: "+62-812-0000-1111",
-                         expires_in: "01:30"
-                     })}/>
-                <Row label={`${appLocalization.auth.structured.lock_message}(3)`}
-                     value={plural(appLocalization.auth.structured.lock_message, 3)}/>
-                <Row label={`${appLocalization.auth.structured.channel_label}(email)`}
-                     value={context(appLocalization.auth.structured.channel_label, "email")}/>
-                <Row label={`${appLocalization.auth.structured.account_title}(other)`}
-                     value={gender(appLocalization.auth.structured.account_title, "other", {last_name: "Doe"})}/>
-                <Row label={`${appLocalization.auth.consent.privacy_policy} (preview)`}
-                     value={translate(appLocalization.auth.consent.privacy_policy).slice(0, 120) + "..."}/>
-                <Row label={`${appLocalization.auth.consent.terms_conditions} (preview)`}
-                     value={translate(appLocalization.auth.consent.terms_conditions).slice(0, 120) + "..."}/>
+            <Section title="(2) Auth — login keys">
+                <Row label={appLocalization.login.page_title}
+                     value={translate(appLocalization.login.page_title)}/>
+                <Row label={appLocalization.login.form.email_wa.label}
+                     value={translate(appLocalization.login.form.email_wa.label)}/>
+                <Row label={appLocalization.login.form.submit.button}
+                     value={translate(appLocalization.login.form.submit.button)}/>
+                <Row label={`${appLocalization.login.banner.error.mismatch}(attempts=3)`}
+                     value={format(appLocalization.login.banner.error.mismatch, {attempts: 3})}/>
+                <Row label={`${appLocalization.verifikasi_wa.resend.button.disabled}(seconds=30)`}
+                     value={format(appLocalization.verifikasi_wa.resend.button.disabled, {seconds: 30})}/>
+                <Row label={`${appLocalization.consent.privacy_policy} (preview)`}
+                     value={translate(appLocalization.consent.privacy_policy).slice(0, 120) + "..."}/>
+                <Row label={`${appLocalization.consent.terms_conditions} (preview)`}
+                     value={translate(appLocalization.consent.terms_conditions).slice(0, 120) + "..."}/>
             </Section>
 
-            <Section title="(3) Home detailed keys">
-                <Row label={appLocalization.home.strings.home_title}
-                     value={translate(appLocalization.home.strings.home_title)}/>
-                <Row label={appLocalization.home.strings.headline}
-                     value={translate(appLocalization.home.strings.headline)}/>
-                <Row label={appLocalization.home.placeholders.greeting_time}
-                     value={format(appLocalization.home.placeholders.greeting_time, {
-                         time_of_day: "morning",
-                         name: "Alfin"
-                     })}/>
-                <Row label={appLocalization.home.placeholders.stats_summary}
-                     value={format(appLocalization.home.placeholders.stats_summary, {tasks: 4, points: 120})}/>
-                <Row label={`${appLocalization.home.structured.notifications}(2)`}
-                     value={plural(appLocalization.home.structured.notifications, 2)}/>
-                <Row label={`${appLocalization.home.structured.banner}(retention)`}
-                     value={context(appLocalization.home.structured.banner, "retention")}/>
-                <Row label={`${appLocalization.home.structured.host_title}(female)`}
-                     value={gender(appLocalization.home.structured.host_title, "female", {last_name: "Rahma"})}/>
+            <Section title="(3) Settings keys">
+                <Row label={appLocalization.title}
+                     value={translate(appLocalization.title)}/>
+                <Row label={appLocalization.preferences.title}
+                     value={translate(appLocalization.preferences.title)}/>
+                <Row label={appLocalization.preferences.language}
+                     value={translate(appLocalization.preferences.language)}/>
+                <Row label={appLocalization.preferences.theme}
+                     value={translate(appLocalization.preferences.theme)}/>
+                <Row label={appLocalization.preferences.notifications}
+                     value={translate(appLocalization.preferences.notifications)}/>
+                <Row label={appLocalization.profile.edit_profile}
+                     value={translate(appLocalization.profile.edit_profile)}/>
+                <Row label={appLocalization.profile.change_password}
+                     value={translate(appLocalization.profile.change_password)}/>
             </Section>
 
-            <Section title="(4) Settings detailed + legacy keys">
-                <Row label={appLocalization.settings.strings.settings_title}
-                     value={translate(appLocalization.settings.strings.settings_title)}/>
-                <Row label={appLocalization.settings.strings.privacy_title}
-                     value={translate(appLocalization.settings.strings.privacy_title)}/>
-                <Row label={appLocalization.settings.placeholders.auto_lock_minutes}
-                     value={format(appLocalization.settings.placeholders.auto_lock_minutes, {minutes: 10})}/>
-                <Row label={appLocalization.settings.placeholders.region_value}
-                     value={format(appLocalization.settings.placeholders.region_value, {region: "APAC"})}/>
-                <Row label={`${appLocalization.settings.structured.devices}(1)`}
-                     value={plural(appLocalization.settings.structured.devices, 1)}/>
-                <Row label={`${appLocalization.settings.structured.backup_status}(synced)`}
-                     value={context(appLocalization.settings.structured.backup_status, "synced")}/>
-                <Row label={`${appLocalization.settings.structured.owner_label}(male)`}
-                     value={gender(appLocalization.settings.structured.owner_label, "male", {last_name: "Wijaya"})}/>
-                <Row label={`${appLocalization.settings.title} (legacy)`}
-                     value={translate(appLocalization.settings.title)}/>
-                <Row label={`${appLocalization.settings.preferences.language} (legacy)`}
-                     value={translate(appLocalization.settings.preferences.language)}/>
+            <Section title="(4) Company keys">
+                <Row label={appLocalization.list.action.add_company}
+                     value={translate(appLocalization.list.action.add_company)}/>
+                <Row label={appLocalization.list.empty_filtered.title}
+                     value={translate(appLocalization.list.empty_filtered.title)}/>
+                <Row label={appLocalization.list.empty_filtered.description}
+                     value={translate(appLocalization.list.empty_filtered.description)}/>
+                <Row label={`${appLocalization.list.ownership.shared_by}(name=Alfin)`}
+                     value={format(appLocalization.list.ownership.shared_by, {name: "Alfin"})}/>
+                <Row label={`${appLocalization.list.business_unit.active_label}(count=5)`}
+                     value={format(appLocalization.list.business_unit.active_label, {count: 5})}/>
+                <Row label={`${appLocalization.list.filter.select_workspace}(name=Workspace A)`}
+                     value={format(appLocalization.list.filter.select_workspace, {name: "Workspace A"})}/>
             </Section>
 
             <Section title="(5) HTTP + Fallback merged keys">
-                <Row label={appLocalization.http.http_404_title}
-                     value={translate(appLocalization.http.http_404_title)}/>
-                <Row label={appLocalization.http.http_404_message}
-                     value={translate(appLocalization.http.http_404_message)}/>
-                <Row label={appLocalization.fallback.fb500_h} value={translate(appLocalization.fallback.fb500_h)}/>
-                <Row label={appLocalization.fallback.fb500_d} value={translate(appLocalization.fallback.fb500_d)}/>
-                <Row label={appLocalization.fallback.support_label}
-                     value={translate(appLocalization.fallback.support_label)}/>
+                <Row label={appLocalization.http_404_title}
+                     value={translate(appLocalization.http_404_title)}/>
+                <Row label={appLocalization.http_404_message}
+                     value={translate(appLocalization.http_404_message)}/>
+                <Row label={appLocalization.fb500_h} value={translate(appLocalization.fb500_h)}/>
+                <Row label={appLocalization.fb500_d} value={translate(appLocalization.fb500_d)}/>
+                <Row label={appLocalization.support_label}
+                     value={translate(appLocalization.support_label)}/>
             </Section>
 
             <Section title="(6) All merged keys from active locale">

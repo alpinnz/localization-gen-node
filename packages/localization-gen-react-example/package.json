@@ -19,8 +19,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "localization-gen-core": "0.0.4",
-    "localization-gen-react-adapter": "0.0.4",
+    "localization-gen-core": "*",
+    "localization-gen-react-adapter": "^0.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -31,4 +31,3 @@
     "vite": "^5.4.10"
   }
 }
-

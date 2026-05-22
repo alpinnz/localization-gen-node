@@ -1,15 +1,15 @@
 {
   "totals": {
     "locales": 2,
-    "modules": 6,
-    "keys": 467
+    "modules": 15,
+    "keys": 972
   },
   "byLocale": {
     "en": {
-      "keys": 467
+      "keys": 972
     },
     "id": {
-      "keys": 467
+      "keys": 972
     }
   }
 }

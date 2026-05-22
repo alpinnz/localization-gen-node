@@ -1,0 +1,85 @@
+{
+  "@@module": "settings",
+  "@@locale": "en",
+  "strings": {
+    "settings_title": "Settings",
+    "privacy_title": "Privacy"
+  },
+  "placeholders": {
+    "auto_lock_minutes": {
+      "@value": "Auto-lock after {minutes} minutes.",
+      "@description": "Auto-lock timeout label.",
+      "@example": "Auto-lock after 10 minutes.",
+      "@placeholders": {
+        "minutes": "Number of minutes"
+      }
+    },
+    "region_value": {
+      "@value": "Current region: {region}.",
+      "@description": "Shows selected region.",
+      "@example": "Current region: APAC.",
+      "@placeholders": {
+        "region": "Region code or label"
+      }
+    }
+  },
+  "structured": {
+    "devices": {
+      "@plural": {
+        "zero": "No connected devices",
+        "one": "1 connected device",
+        "other": "{count} connected devices"
+      },
+      "@devices": {
+        "description": "Connected device count.",
+        "placeholders": {
+          "count": "Device count"
+        }
+      }
+    },
+    "backup_status": {
+      "@context": {
+        "synced": "Backup is up to date",
+        "pending": "Backup pending",
+        "error": "Backup failed"
+      },
+      "@backup_status": {
+        "description": "Backup status by context key."
+      }
+    },
+    "owner_label": {
+      "@gender": {
+        "male": "Owned by Mr. {last_name}",
+        "female": "Owned by Ms. {last_name}",
+        "other": "Owned by Mx. {last_name}"
+      },
+      "@owner_label": {
+        "description": "Owner label by gender.",
+        "placeholders": {
+          "last_name": "Owner family name"
+        }
+      }
+    }
+  },
+  "title": "Settings",
+  "profile": {
+    "title": "Profile",
+    "edit_profile": "Edit Profile",
+    "change_password": "Change Password",
+    "logout": {
+      "button": "Logout",
+      "popup": {
+        "title": "Logout Confirmation",
+        "message": "Are you sure you want to log out from this account?",
+        "confirm": "Yes, Logout",
+        "cancel": "Cancel"
+      }
+    }
+  },
+  "preferences": {
+    "title": "Preferences",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications"
+  }
+}

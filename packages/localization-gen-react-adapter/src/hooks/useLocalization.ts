@@ -13,8 +13,14 @@ export type GenderVariant = "male" | "female" | "other";
 
 export interface NamespacedLocalizer {
   translate(key: string, fallbackValue?: string | null): string;
+  /** Returns `null` when the key does not exist in any locale. */
+  translateOrNull(key: string): string | null;
   format(key: string, params: InterpolationParams): string;
+  /** Returns `null` when the key does not exist in any locale. */
+  formatOrNull(key: string, params: InterpolationParams): string | null;
   plural(key: string, count: number): string;
+  /** Returns `null` when the key does not exist in any locale. */
+  pluralOrNull(key: string, count: number): string | null;
   gender(key: string, gender: GenderVariant, params: InterpolationParams): string;
   context(key: string, context: string, params?: InterpolationParams): string;
 }
@@ -71,6 +77,17 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
     [runtimeContext]
   );
 
+  /**
+   * Returns `true` when `key` exists in the current locale **or** the fallback
+   * locale.  Used internally by `tryTranslate`, `tryFormat`, `tryPlural`.
+   */
+  const hasKey = useCallback(
+    (key: string): boolean =>
+      key in (manifest.messages[locale] ?? {}) ||
+      key in (manifest.messages[manifest.fallback_locale] ?? {}),
+    [locale, manifest.fallback_locale, manifest.messages]
+  );
+
   const translate = useCallback(
     (key: string, fallbackValue?: string | null): string => {
       const translatedValue = readTranslation(key);
@@ -88,6 +105,21 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
     [translate]
   );
 
+  // ── Nullable variants ─────────────────────────────────────────────────────
+
+  /** Returns `null` when the key does not exist in any locale. */
+  const translateOrNull = useCallback(
+    (key: string): string | null => (hasKey(key) ? translate(key) : null),
+    [hasKey, translate]
+  );
+
+  /** Returns `null` when the key does not exist in any locale. */
+  const formatOrNull = useCallback(
+    (key: string, params: InterpolationParams): string | null =>
+      hasKey(key) ? format(key, params) : null,
+    [hasKey, format]
+  );
+
   const raw = useCallback(
     (key: string) =>
       manifest.messages[locale]?.[key] ??
@@ -98,6 +130,13 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
   const plural = useCallback(
     (key: string, count: number) => pickStructuredPluralVariant(raw(key), count),
     [raw]
+  );
+
+  /** Returns `null` when the key does not exist in any locale. */
+  const pluralOrNull = useCallback(
+    (key: string, count: number): string | null =>
+      hasKey(key) ? plural(key, count) : null,
+    [hasKey, plural]
   );
 
   const gender = useCallback(
@@ -118,14 +157,17 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
     (scope: string): NamespacedLocalizer => ({
       translate: (key: string, fallbackValue?: string | null) =>
         translate(`${scope}.${key}`, fallbackValue),
+      translateOrNull: (key: string) => translateOrNull(`${scope}.${key}`),
       format: (key: string, params: InterpolationParams) => format(`${scope}.${key}`, params),
+      formatOrNull: (key: string, params: InterpolationParams) => formatOrNull(`${scope}.${key}`, params),
       plural: (key: string, count: number) => plural(`${scope}.${key}`, count),
+      pluralOrNull: (key: string, count: number) => pluralOrNull(`${scope}.${key}`, count),
       gender: (key: string, value: GenderVariant, params: InterpolationParams) =>
         gender(`${scope}.${key}`, value, params),
       context: (key: string, value: string, params?: InterpolationParams) =>
         contextValue(`${scope}.${key}`, value, params)
     }),
-    [translate, format, plural, gender, contextValue]
+    [translate, translateOrNull, format, formatOrNull, plural, pluralOrNull, gender, contextValue]
   );
 
   const entriesForLocale = useMemo(
@@ -139,8 +181,11 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
   return {
     ...context,
     translate,
+    translateOrNull,
     format,
+    formatOrNull,
     plural,
+    pluralOrNull,
     gender,
     context: contextValue,
     namespace,

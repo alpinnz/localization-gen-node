@@ -1,0 +1,11 @@
+{
+  "@@locale": "id",
+  "@@module": "workspace_detail",
+  "company_list": {
+    "empty": {
+      "title": "Belum Ada Perusahaan",
+      "description": "Saat ini belum ada perusahaan yang dapat Anda akses di Ruang Kerja ini.",
+      "cta_button": "Tambah Perusahaan"
+    }
+  }
+}
