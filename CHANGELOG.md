@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.0.9] - 2026-05-26
+
+### Changed
+
+- `localization-gen-react-adapter`: `translateOrNull`, `formatOrNull`, and `pluralOrNull` now accept `key` as `string | null | undefined` — passing `null` or `undefined` immediately returns `null` without any locale lookup
+- Same null-safe behavior applied to all three methods on `NamespacedLocalizer` (via `namespace(scope)`)
+
 ## [0.0.8] - 2026-05-23
 
 ### Fixed

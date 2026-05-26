@@ -65,6 +65,16 @@ describe("translateOrNull", () => {
     expect(translateOrNull("non.existing.key")).toBeNull();
   });
 
+  it("returns null when key is null", () => {
+    const { translateOrNull } = getHookResult();
+    expect(translateOrNull(null)).toBeNull();
+  });
+
+  it("returns null when key is undefined", () => {
+    const { translateOrNull } = getHookResult();
+    expect(translateOrNull(undefined)).toBeNull();
+  });
+
   it("returns translated string from fallback locale when key missing in current locale", () => {
     const fallbackManifest: RuntimeManifest = {
       ...manifest,
@@ -106,6 +116,16 @@ describe("formatOrNull", () => {
     const { formatOrNull } = getHookResult();
     expect(formatOrNull("ghost.key", { name: "Alice" })).toBeNull();
   });
+
+  it("returns null when key is null", () => {
+    const { formatOrNull } = getHookResult();
+    expect(formatOrNull(null, { name: "Alice" })).toBeNull();
+  });
+
+  it("returns null when key is undefined", () => {
+    const { formatOrNull } = getHookResult();
+    expect(formatOrNull(undefined, { name: "Alice" })).toBeNull();
+  });
 });
 
 // ─── pluralOrNull ───────────────────────────────────────────────────────────────
@@ -124,6 +144,16 @@ describe("pluralOrNull", () => {
   it("returns null when key does NOT exist", () => {
     const { pluralOrNull } = getHookResult();
     expect(pluralOrNull("ghost.plural.key", 3)).toBeNull();
+  });
+
+  it("returns null when key is null", () => {
+    const { pluralOrNull } = getHookResult();
+    expect(pluralOrNull(null, 3)).toBeNull();
+  });
+
+  it("returns null when key is undefined", () => {
+    const { pluralOrNull } = getHookResult();
+    expect(pluralOrNull(undefined, 3)).toBeNull();
   });
 });
 
@@ -170,6 +200,14 @@ describe("namespace — find* variants", () => {
     expect(getNamespace().translateOrNull("missing")).toBeNull();
   });
 
+  it("translateOrNull — returns null when key is null", () => {
+    expect(getNamespace().translateOrNull(null)).toBeNull();
+  });
+
+  it("translateOrNull — returns null when key is undefined", () => {
+    expect(getNamespace().translateOrNull(undefined)).toBeNull();
+  });
+
   it("formatOrNull — returns interpolated value for existing key", () => {
     expect(getNamespace().formatOrNull("welcome", { name: "Bob" })).toBe("Hello, Bob!");
   });
@@ -178,12 +216,28 @@ describe("namespace — find* variants", () => {
     expect(getNamespace().formatOrNull("missing", { name: "Bob" })).toBeNull();
   });
 
+  it("formatOrNull — returns null when key is null", () => {
+    expect(getNamespace().formatOrNull(null, { name: "Bob" })).toBeNull();
+  });
+
+  it("formatOrNull — returns null when key is undefined", () => {
+    expect(getNamespace().formatOrNull(undefined, { name: "Bob" })).toBeNull();
+  });
+
   it("pluralOrNull — returns plural value for existing key", () => {
     expect(getNamespace().pluralOrNull("count", 2)).toBe("2 items");
   });
 
   it("pluralOrNull — returns null for missing namespaced key", () => {
     expect(getNamespace().pluralOrNull("missing", 2)).toBeNull();
+  });
+
+  it("pluralOrNull — returns null when key is null", () => {
+    expect(getNamespace().pluralOrNull(null, 2)).toBeNull();
+  });
+
+  it("pluralOrNull — returns null when key is undefined", () => {
+    expect(getNamespace().pluralOrNull(undefined, 2)).toBeNull();
   });
 });
 

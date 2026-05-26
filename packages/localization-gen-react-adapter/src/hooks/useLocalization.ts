@@ -13,14 +13,14 @@ export type GenderVariant = "male" | "female" | "other";
 
 export interface NamespacedLocalizer {
   translate(key: string, fallbackValue?: string | null): string;
-  /** Returns `null` when the key does not exist in any locale. */
-  translateOrNull(key: string): string | null;
+  /** Returns `null` when the key does not exist in any locale, or when `key` is `null`/`undefined`. */
+  translateOrNull(key: string | null | undefined): string | null;
   format(key: string, params: InterpolationParams): string;
-  /** Returns `null` when the key does not exist in any locale. */
-  formatOrNull(key: string, params: InterpolationParams): string | null;
+  /** Returns `null` when the key does not exist in any locale, or when `key` is `null`/`undefined`. */
+  formatOrNull(key: string | null | undefined, params: InterpolationParams): string | null;
   plural(key: string, count: number): string;
-  /** Returns `null` when the key does not exist in any locale. */
-  pluralOrNull(key: string, count: number): string | null;
+  /** Returns `null` when the key does not exist in any locale, or when `key` is `null`/`undefined`. */
+  pluralOrNull(key: string | null | undefined, count: number): string | null;
   gender(key: string, gender: GenderVariant, params: InterpolationParams): string;
   context(key: string, context: string, params?: InterpolationParams): string;
 }
@@ -107,16 +107,21 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
 
   // ── Nullable variants ─────────────────────────────────────────────────────
 
-  /** Returns `null` when the key does not exist in any locale. */
+  /** Returns `null` when the key does not exist in any locale, or when `key` is `null`/`undefined`. */
   const translateOrNull = useCallback(
-    (key: string): string | null => (hasKey(key) ? translate(key) : null),
+    (key: string | null | undefined): string | null => {
+      if (key == null) return null;
+      return hasKey(key) ? translate(key) : null;
+    },
     [hasKey, translate]
   );
 
-  /** Returns `null` when the key does not exist in any locale. */
+  /** Returns `null` when the key does not exist in any locale, or when `key` is `null`/`undefined`. */
   const formatOrNull = useCallback(
-    (key: string, params: InterpolationParams): string | null =>
-      hasKey(key) ? format(key, params) : null,
+    (key: string | null | undefined, params: InterpolationParams): string | null => {
+      if (key == null) return null;
+      return hasKey(key) ? format(key, params) : null;
+    },
     [hasKey, format]
   );
 
@@ -132,10 +137,12 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
     [raw]
   );
 
-  /** Returns `null` when the key does not exist in any locale. */
+  /** Returns `null` when the key does not exist in any locale, or when `key` is `null`/`undefined`. */
   const pluralOrNull = useCallback(
-    (key: string, count: number): string | null =>
-      hasKey(key) ? plural(key, count) : null,
+    (key: string | null | undefined, count: number): string | null => {
+      if (key == null) return null;
+      return hasKey(key) ? plural(key, count) : null;
+    },
     [hasKey, plural]
   );
 
@@ -157,11 +164,14 @@ export function useLocalization(options: UseLocalizationOptions = {}) {
     (scope: string): NamespacedLocalizer => ({
       translate: (key: string, fallbackValue?: string | null) =>
         translate(`${scope}.${key}`, fallbackValue),
-      translateOrNull: (key: string) => translateOrNull(`${scope}.${key}`),
+      translateOrNull: (key: string | null | undefined) =>
+        key == null ? null : translateOrNull(`${scope}.${key}`),
       format: (key: string, params: InterpolationParams) => format(`${scope}.${key}`, params),
-      formatOrNull: (key: string, params: InterpolationParams) => formatOrNull(`${scope}.${key}`, params),
+      formatOrNull: (key: string | null | undefined, params: InterpolationParams) =>
+        key == null ? null : formatOrNull(`${scope}.${key}`, params),
       plural: (key: string, count: number) => plural(`${scope}.${key}`, count),
-      pluralOrNull: (key: string, count: number) => pluralOrNull(`${scope}.${key}`, count),
+      pluralOrNull: (key: string | null | undefined, count: number) =>
+        key == null ? null : pluralOrNull(`${scope}.${key}`, count),
       gender: (key: string, value: GenderVariant, params: InterpolationParams) =>
         gender(`${scope}.${key}`, value, params),
       context: (key: string, value: string, params?: InterpolationParams) =>
