@@ -2,7 +2,7 @@ import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { LocalizationGenConfig } from "../types/config.js";
 import type { CompiledProject } from "../compiler/compile-project.js";
-import { buildCoverageJson } from "../coverage/build-coverage-json.js";
+import { buildCoverageJson } from "../coverage-build/build-coverage-json.js";
 
 export async function emitReportFiles(cwd: string, config: LocalizationGenConfig, compiled: CompiledProject): Promise<void> {
   const reportDir = join(cwd, config.reporting.output_dir);

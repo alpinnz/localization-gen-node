@@ -6,6 +6,9 @@ All notable changes to `localization-gen-core` are documented in this file.
 
 ### Fixed
 
+- **`coverage` CLI command and reporting emit** — `src/coverage-build/build-coverage-json.ts` and `src/coverage-build/build-coverage-html.ts` were missing from the source tree, so `tsc` failed to resolve them and the monorepo build (`npm run build`) was broken before any package could be produced. The directory is named `coverage-build/` (not `coverage/`) so the root `.gitignore` rule `**/coverage/` (which excludes Istanbul/Jest coverage output) does not swallow the source. Both modules are now implemented:
+  - `buildCoverageJson(manifest)` returns `{ totals: { locales, modules, keys }, byLocale: { [locale]: { keys } } }`. `modules` counts distinct first dotted segments (or `_root` for keys without a segment); `byLocale[locale].keys` counts entries that have a translation in that locale.
+  - `buildCoverageHtml(report)` renders a self-contained HTML page (no external assets) with a per-locale coverage table; locale labels are HTML-escaped.
 - **Generated runtime identifiers now honor `class_name`** — previously, `buildReactRuntimeFiles` (used by both the React and Vue frameworks via `buildVueRuntimeFiles`) hardcoded the `AppLocalization*` types and `appLocalization*` consts and imported the types from a hardcoded `./app-localization.types` path. Non-default configs (e.g. `class_name: LibLocalizations` with `runtime_entry_file: lib-localization.ts` / `runtime_types_file: lib-localization.types.ts`) still emitted `App*` identifiers and pointed at a missing `./app-localization.types` import.
   - All emitted identifiers are now derived from `class_name`:
     - types `LibLocalizationManifest`, `LibLocalizationNode`
@@ -15,6 +18,10 @@ All notable changes to `localization-gen-core` are documented in this file.
   - The entry file's types import now follows `config.generated.runtime_types_file`, so renaming the output filenames no longer breaks the import
   - Default `class_name: AppLocalizations` produces byte-identical output to before — no existing project output changes
 - **`buildVueRuntimeFiles`** and **`compileProject`** now forward `config` to the builder so the new identifier derivation has the inputs it needs
+
+### Tests
+
+- `coverage.test.ts`: 5 new tests covering `buildCoverageJson` totals/per-locale counts, module count fallback for keys without a dotted segment, empty-manifest edge case, `buildCoverageHtml` row rendering and coverage percentage formatting, and HTML escaping of hostile locale labels.
 
 ## [0.0.7] - 2026-05-23
 
