@@ -2,6 +2,20 @@
 
 All notable changes to `localization-gen-core` are documented in this file.
 
+## [0.0.8] - 2026-06-28
+
+### Fixed
+
+- **Generated runtime identifiers now honor `class_name`** — previously, `buildReactRuntimeFiles` (used by both the React and Vue frameworks via `buildVueRuntimeFiles`) hardcoded the `AppLocalization*` types and `appLocalization*` consts and imported the types from a hardcoded `./app-localization.types` path. Non-default configs (e.g. `class_name: LibLocalizations` with `runtime_entry_file: lib-localization.ts` / `runtime_types_file: lib-localization.types.ts`) still emitted `App*` identifiers and pointed at a missing `./app-localization.types` import.
+  - All emitted identifiers are now derived from `class_name`:
+    - types `LibLocalizationManifest`, `LibLocalizationNode`
+    - accessor tree alias `LibLocalization`
+    - consts `libLocalizationManifest`, `libLocalization`
+    - general rule: `${Base}Manifest`, `${Base}Node`, `${Base}`, `${base}Manifest`, `${base}` where `Base` strips a trailing `s` from `class_name` and `base` is `Base` camelCased
+  - The entry file's types import now follows `config.generated.runtime_types_file`, so renaming the output filenames no longer breaks the import
+  - Default `class_name: AppLocalizations` produces byte-identical output to before — no existing project output changes
+- **`buildVueRuntimeFiles`** and **`compileProject`** now forward `config` to the builder so the new identifier derivation has the inputs it needs
+
 ## [0.0.7] - 2026-05-23
 
 ### Fixed
