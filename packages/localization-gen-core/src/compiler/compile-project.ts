@@ -19,7 +19,7 @@ export async function compileProject(cwd: string, config: LocalizationGenConfig)
   const diagnostics = validateProject(normalized, config);
   const manifest = buildManifest(normalized, config);
 
-  const files = config.framework === "react" ? buildReactRuntimeFiles(manifest) : buildVueRuntimeFiles(manifest);
+  const files = config.framework === "react" ? buildReactRuntimeFiles(manifest, config) : buildVueRuntimeFiles(manifest, config);
 
   const placeholders = Object.fromEntries(
     manifest.entries
@@ -36,4 +36,3 @@ export async function compileProject(cwd: string, config: LocalizationGenConfig)
     placeholders
   };
 }
-
