@@ -30,7 +30,7 @@ export interface AppLocalizationManifest {
 }
 
 /**
- * Base shape for the generated appLocalization accessor tree.
+ * Base shape for the generated accessor tree.
  * Every leaf is a fully-qualified message key string;
  * every branch is a nested AppLocalizationNode.
  */

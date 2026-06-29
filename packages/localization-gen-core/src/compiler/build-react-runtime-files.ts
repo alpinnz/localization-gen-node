@@ -10,12 +10,30 @@ import { buildRuntimeModel } from "./build-runtime-model.js";
  *   - manifest type:        `${Base}Manifest`      (e.g. `AppLocalizationManifest`)
  *   - accessor node type:   `${Base}Node`          (e.g. `AppLocalizationNode`)
  *   - accessor tree alias:  `${Base}`              (e.g. `AppLocalization`)
- *   - manifest const:       `${base}Manifest`      (e.g. `appManifest`)
- *   - accessor const:       `${base}Localization`  (e.g. `appLocalization`)
+ *   - manifest const:       `${shortBase}Manifest` (e.g. `appManifest`, `libManifest`)
+ *   - accessor const:       `${base}Localization`  (e.g. `appLocalization`, `libLocalization`)
  *
  * `Base` strips a trailing "s" from `class_name` and preserves the rest.
  * `base` is the camelCase form of `Base` (first letter lowercased).
+ * `shortBase` is the camelCase form of the leading PascalCase segment of `Base`
+ * (split on common boundary words like "Localization"). This keeps the manifest
+ * constant name short — `LibLocalizations` → `libManifest`, not
+ * `libLocalizationManifest`.
  */
+function splitPascalSegments(pascal: string): string {
+  // Split on common boundary words so `LibLocalization` → `lib`,
+  // `AppLocalization` → `app`, `Vendor` → `vendor`. We recognize the
+  // boundary words we currently emit: "Localization", "Localization".
+  const boundaries = ["Localization"];
+  for (const word of boundaries) {
+    const idx = pascal.lastIndexOf(word);
+    if (idx > 0) {
+      return pascal.slice(0, idx);
+    }
+  }
+  return pascal;
+}
+
 function deriveRuntimeNames(className: string): {
   ManifestType: string;
   NodeType: string;
@@ -25,11 +43,13 @@ function deriveRuntimeNames(className: string): {
 } {
   const pascal = className.endsWith("s") && className.length > 1 ? className.slice(0, -1) : className;
   const camel = pascal.charAt(0).toLowerCase() + pascal.slice(1);
+  const shortPascal = splitPascalSegments(pascal);
+  const shortCamel = shortPascal.charAt(0).toLowerCase() + shortPascal.slice(1);
   return {
     ManifestType: `${pascal}Manifest`,
     NodeType: `${pascal}Node`,
     RootType: pascal,
-    manifestConst: `${camel}Manifest`,
+    manifestConst: `${shortCamel}Manifest`,
     accessorConst: camel
   };
 }
@@ -50,7 +70,7 @@ export function buildReactRuntimeFiles(
 
 import type { ${names.ManifestType}, ${names.NodeType} } from "./${typesImportPath}";
 
-const ${names.manifestConst}: ${names.ManifestType} = ${JSON.stringify(manifest, null, 2)} as const;
+export const ${names.manifestConst}: ${names.ManifestType} = ${JSON.stringify(manifest, null, 2)} as const;
 
 /**
  * Type-safe accessor tree — property names preserve source key segments.
@@ -63,8 +83,6 @@ export const ${names.accessorConst} = ${JSON.stringify(model.stringsTree, null, 
  * Preserves all literal string types at every leaf.
  */
 export type ${names.RootType} = typeof ${names.accessorConst};
-
-export default ${names.manifestConst};
 `;
 
   const types = `/* eslint-disable */

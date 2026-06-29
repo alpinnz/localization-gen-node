@@ -16,7 +16,7 @@ export interface RuntimeManifestEntry {
 /**
  * Runtime manifest consumed by adapter/provider at application runtime.
  */
-export interface AppLocalizationManifest {
+export interface LibLocalizationManifest {
   /** Default locale used when app starts. */
   base_locale: string;
   /** Locale used when key is missing in active locale. */
@@ -30,10 +30,10 @@ export interface AppLocalizationManifest {
 }
 
 /**
- * Base shape for the generated appLocalization accessor tree.
+ * Base shape for the generated accessor tree.
  * Every leaf is a fully-qualified message key string;
- * every branch is a nested AppLocalizationNode.
+ * every branch is a nested LibLocalizationNode.
  */
-export type AppLocalizationNode = {
-  readonly [key: string]: string | AppLocalizationNode;
+export type LibLocalizationNode = {
+  readonly [key: string]: string | LibLocalizationNode;
 };

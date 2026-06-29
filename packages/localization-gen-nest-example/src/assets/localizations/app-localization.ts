@@ -5,7 +5,7 @@
 
 import type { AppLocalizationManifest, AppLocalizationNode } from "./app-localization.types";
 
-const manifest: AppLocalizationManifest = {
+export const appManifest: AppLocalizationManifest = {
   "base_locale": "en",
   "fallback_locale": "en",
   "locales": [
@@ -155,5 +155,3 @@ export const appLocalization = {
  * Preserves all literal string types at every leaf.
  */
 export type AppLocalization = typeof appLocalization;
-
-export default manifest;

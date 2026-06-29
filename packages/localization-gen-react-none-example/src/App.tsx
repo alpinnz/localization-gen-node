@@ -1,6 +1,6 @@
 import {useLocalization} from "localization-gen-react-adapter";
 import * as React from "react";
-import {appLocalization} from "./assets/localizations/app-localization";
+import {libLocalization} from "./assets/localizations/lib-localization";
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 function Row({label, value}: { label: string; value: string }) {
@@ -98,82 +98,82 @@ export default function App() {
             <h1>login.page_title :{translate("login.page_title")}</h1>
 
             <Section title="(1) Common merged keys">
-                <Row label={appLocalization.app_title} value={translate(appLocalization.app_title)}/>
-                <Row label={appLocalization.app_powered} value={translate(appLocalization.app_powered)}/>
+                <Row label={libLocalization.app_title} value={translate(libLocalization.app_title)}/>
+                <Row label={libLocalization.app_powered} value={translate(libLocalization.app_powered)}/>
             </Section>
 
             <Section title="(2) Auth detailed + merged keys">
-                <Row label={appLocalization.strings.login_title}
-                     value={translate(appLocalization.strings.login_title)}/>
-                <Row label={appLocalization.placeholders.welcome_back}
-                     value={format(appLocalization.placeholders.welcome_back, {name: "Alfin"})}/>
-                <Row label={appLocalization.placeholders.otp_sent}
-                     value={format(appLocalization.placeholders.otp_sent, {
+                <Row label={libLocalization.strings.login_title}
+                     value={translate(libLocalization.strings.login_title)}/>
+                <Row label={libLocalization.placeholders.welcome_back}
+                     value={format(libLocalization.placeholders.welcome_back, {name: "Alfin"})}/>
+                <Row label={libLocalization.placeholders.otp_sent}
+                     value={format(libLocalization.placeholders.otp_sent, {
                          phone: "+62-812-0000-1111",
                          expires_in: "01:30"
                      })}/>
-                <Row label={`${appLocalization.structured.lock_message}(3)`}
-                     value={plural(appLocalization.structured.lock_message, 3)}/>
-                <Row label={`${appLocalization.structured.channel_label}(email)`}
-                     value={context(appLocalization.structured.channel_label, "email")}/>
-                <Row label={`${appLocalization.structured.account_title}(other)`}
-                     value={gender(appLocalization.structured.account_title, "other", {last_name: "Doe"})}/>
-                <Row label={`${appLocalization.consent.privacy_policy} (preview)`}
-                     value={translate(appLocalization.consent.privacy_policy).slice(0, 120) + "..."}/>
-                <Row label={`${appLocalization.consent.terms_conditions} (preview)`}
-                     value={translate(appLocalization.consent.terms_conditions).slice(0, 120) + "..."}/>
+                <Row label={`${libLocalization.structured.lock_message}(3)`}
+                     value={plural(libLocalization.structured.lock_message, 3)}/>
+                <Row label={`${libLocalization.structured.channel_label}(email)`}
+                     value={context(libLocalization.structured.channel_label, "email")}/>
+                <Row label={`${libLocalization.structured.account_title}(other)`}
+                     value={gender(libLocalization.structured.account_title, "other", {last_name: "Doe"})}/>
+                <Row label={`${libLocalization.consent.privacy_policy} (preview)`}
+                     value={translate(libLocalization.consent.privacy_policy).slice(0, 120) + "..."}/>
+                <Row label={`${libLocalization.consent.terms_conditions} (preview)`}
+                     value={translate(libLocalization.consent.terms_conditions).slice(0, 120) + "..."}/>
             </Section>
 
             <Section title="(3) Home detailed keys">
-                <Row label={appLocalization.strings.home_title}
-                     value={translate(appLocalization.strings.home_title)}/>
-                <Row label={appLocalization.strings.headline}
-                     value={translate(appLocalization.strings.headline)}/>
-                <Row label={appLocalization.placeholders.greeting_time}
-                     value={format(appLocalization.placeholders.greeting_time, {
+                <Row label={libLocalization.strings.home_title}
+                     value={translate(libLocalization.strings.home_title)}/>
+                <Row label={libLocalization.strings.headline}
+                     value={translate(libLocalization.strings.headline)}/>
+                <Row label={libLocalization.placeholders.greeting_time}
+                     value={format(libLocalization.placeholders.greeting_time, {
                          time_of_day: "morning",
                          name: "Alfin"
                      })}/>
-                <Row label={appLocalization.placeholders.stats_summary}
-                     value={format(appLocalization.placeholders.stats_summary, {tasks: 4, points: 120})}/>
-                <Row label={`${appLocalization.structured.notifications}(2)`}
-                     value={plural(appLocalization.structured.notifications, 2)}/>
-                <Row label={`${appLocalization.structured.banner}(retention)`}
-                     value={context(appLocalization.structured.banner, "retention")}/>
-                <Row label={`${appLocalization.structured.host_title}(female)`}
-                     value={gender(appLocalization.structured.host_title, "female", {last_name: "Rahma"})}/>
+                <Row label={libLocalization.placeholders.stats_summary}
+                     value={format(libLocalization.placeholders.stats_summary, {tasks: 4, points: 120})}/>
+                <Row label={`${libLocalization.structured.notifications}(2)`}
+                     value={plural(libLocalization.structured.notifications, 2)}/>
+                <Row label={`${libLocalization.structured.banner}(retention)`}
+                     value={context(libLocalization.structured.banner, "retention")}/>
+                <Row label={`${libLocalization.structured.host_title}(female)`}
+                     value={gender(libLocalization.structured.host_title, "female", {last_name: "Rahma"})}/>
             </Section>
 
             <Section title="(4) Settings detailed + legacy keys">
-                <Row label={appLocalization.strings.settings_title}
-                     value={translate(appLocalization.strings.settings_title)}/>
-                <Row label={appLocalization.strings.privacy_title}
-                     value={translate(appLocalization.strings.privacy_title)}/>
-                <Row label={appLocalization.placeholders.auto_lock_minutes}
-                     value={format(appLocalization.placeholders.auto_lock_minutes, {minutes: 10})}/>
-                <Row label={appLocalization.placeholders.region_value}
-                     value={format(appLocalization.placeholders.region_value, {region: "APAC"})}/>
-                <Row label={`${appLocalization.structured.devices}(1)`}
-                     value={plural(appLocalization.structured.devices, 1)}/>
-                <Row label={`${appLocalization.structured.backup_status}(synced)`}
-                     value={context(appLocalization.structured.backup_status, "synced")}/>
-                <Row label={`${appLocalization.structured.owner_label}(male)`}
-                     value={gender(appLocalization.structured.owner_label, "male", {last_name: "Wijaya"})}/>
-                <Row label={`${appLocalization.title} (legacy)`}
-                     value={translate(appLocalization.title)}/>
-                <Row label={`${appLocalization.preferences.language} (legacy)`}
-                     value={translate(appLocalization.preferences.language)}/>
+                <Row label={libLocalization.strings.settings_title}
+                     value={translate(libLocalization.strings.settings_title)}/>
+                <Row label={libLocalization.strings.privacy_title}
+                     value={translate(libLocalization.strings.privacy_title)}/>
+                <Row label={libLocalization.placeholders.auto_lock_minutes}
+                     value={format(libLocalization.placeholders.auto_lock_minutes, {minutes: 10})}/>
+                <Row label={libLocalization.placeholders.region_value}
+                     value={format(libLocalization.placeholders.region_value, {region: "APAC"})}/>
+                <Row label={`${libLocalization.structured.devices}(1)`}
+                     value={plural(libLocalization.structured.devices, 1)}/>
+                <Row label={`${libLocalization.structured.backup_status}(synced)`}
+                     value={context(libLocalization.structured.backup_status, "synced")}/>
+                <Row label={`${libLocalization.structured.owner_label}(male)`}
+                     value={gender(libLocalization.structured.owner_label, "male", {last_name: "Wijaya"})}/>
+                <Row label={`${libLocalization.title} (legacy)`}
+                     value={translate(libLocalization.title)}/>
+                <Row label={`${libLocalization.preferences.language} (legacy)`}
+                     value={translate(libLocalization.preferences.language)}/>
             </Section>
 
             <Section title="(5) HTTP + Fallback merged keys">
-                <Row label={appLocalization.http_404_title}
-                     value={translate(appLocalization.http_404_title)}/>
-                <Row label={appLocalization.http_404_message}
-                     value={translate(appLocalization.http_404_message)}/>
-                <Row label={appLocalization.fb500_h} value={translate(appLocalization.fb500_h)}/>
-                <Row label={appLocalization.fb500_d} value={translate(appLocalization.fb500_d)}/>
-                <Row label={appLocalization.support_label}
-                     value={translate(appLocalization.support_label)}/>
+                <Row label={libLocalization.http_404_title}
+                     value={translate(libLocalization.http_404_title)}/>
+                <Row label={libLocalization.http_404_message}
+                     value={translate(libLocalization.http_404_message)}/>
+                <Row label={libLocalization.fb500_h} value={translate(libLocalization.fb500_h)}/>
+                <Row label={libLocalization.fb500_d} value={translate(libLocalization.fb500_d)}/>
+                <Row label={libLocalization.support_label}
+                     value={translate(libLocalization.support_label)}/>
             </Section>
 
             <Section title="(6) All merged keys from active locale">

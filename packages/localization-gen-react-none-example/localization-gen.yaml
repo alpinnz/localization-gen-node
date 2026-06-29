@@ -2,7 +2,7 @@ input_dir: assets/localizations
 output_dir: src/assets/localizations
 
 framework: react
-class_name: AppLocalizations
+class_name: LibLocalizations
 
 base_locale: en
 fallback_locale: en
@@ -17,9 +17,9 @@ strict: true
 namespace_prefix: none
 
 generated:
-  runtime_entry_file: app-localization.ts
-  runtime_types_file: app-localization.types.ts
-  runtime_manifest_file: app-localization.manifest.json
+  runtime_entry_file: lib-localization.ts
+  runtime_types_file: lib-localization.types.ts
+  runtime_manifest_file: lib-localization.manifest.json
 
 validation:
   max_depth: 10

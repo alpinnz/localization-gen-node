@@ -2,6 +2,13 @@
 
 All notable changes to `localization-gen-core` are documented in this file.
 
+## [0.0.9] - 2026-06-29
+
+### Fixed
+
+- **Generated manifest constant is now a named export — `export default` removed** — previously the generated `*localization.ts` emitted the manifest as `const manifest: ${Type}Manifest` with a trailing `export default manifest`. The manifest is now `export const ${shortBase}Manifest: ${Type}Manifest` (e.g. `export const libManifest: LibLocalizationManifest`) and no default export is emitted. Consumers must use a named import: `import { libManifest } from "./lib-localization"`.
+- **`libManifest` short-form naming** — the manifest constant now uses a short camelCase name derived from the leading segment of `class_name` (e.g. `LibLocalizations` → `libManifest`, `AppLocalizations` → `appManifest`) instead of the previous `${base}Manifest` form (`libLocalizationManifest`, `appLocalizationManifest`).
+
 ## [0.0.8] - 2026-06-28
 
 ### Fixed
@@ -11,12 +18,14 @@ All notable changes to `localization-gen-core` are documented in this file.
   - `buildCoverageHtml(report)` renders a self-contained HTML page (no external assets) with a per-locale coverage table; locale labels are HTML-escaped.
 - **Generated runtime identifiers now honor `class_name`** — previously, `buildReactRuntimeFiles` (used by both the React and Vue frameworks via `buildVueRuntimeFiles`) hardcoded the `AppLocalization*` types and `appLocalization*` consts and imported the types from a hardcoded `./app-localization.types` path. Non-default configs (e.g. `class_name: LibLocalizations` with `runtime_entry_file: lib-localization.ts` / `runtime_types_file: lib-localization.types.ts`) still emitted `App*` identifiers and pointed at a missing `./app-localization.types` import.
   - All emitted identifiers are now derived from `class_name`:
-    - types `LibLocalizationManifest`, `LibLocalizationNode`
-    - accessor tree alias `LibLocalization`
-    - consts `libLocalizationManifest`, `libLocalization`
-    - general rule: `${Base}Manifest`, `${Base}Node`, `${Base}`, `${base}Manifest`, `${base}` where `Base` strips a trailing `s` from `class_name` and `base` is `Base` camelCased
+    - types `${Base}Manifest`, `${Base}Node` (e.g. `LibLocalizationManifest`, `LibLocalizationNode`)
+    - accessor tree alias `${Base}` (e.g. `LibLocalization`)
+    - manifest const `${shortBase}Manifest` (e.g. `libManifest`, `appManifest`)
+    - accessor const `${base}Localization` (e.g. `libLocalization`, `appLocalization`)
+    - `Base` strips a trailing `s` from `class_name` and `base` is `Base` camelCased; `shortBase` is the leading PascalCase segment of `Base` split on the `Localization` boundary, keeping the manifest constant name short
   - The entry file's types import now follows `config.generated.runtime_types_file`, so renaming the output filenames no longer breaks the import
-  - Default `class_name: AppLocalizations` produces byte-identical output to before — no existing project output changes
+  - The manifest constant is now emitted as a named `export const` and the previous `export default` is removed — consumers should import the manifest by name (e.g. `import { libManifest } from "./lib-localization"`)
+  - Default `class_name: AppLocalizations` produces byte-identical type/accessor identifiers to before, but the manifest constant is renamed from `appManifest` (which previously had no explicit export) to an exported `appManifest` and the default export is gone — **this is a breaking change for any consumer that imported the manifest as the default export**.
 - **`buildVueRuntimeFiles`** and **`compileProject`** now forward `config` to the builder so the new identifier derivation has the inputs it needs
 
 ### Tests
